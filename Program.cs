@@ -9,7 +9,7 @@ namespace CSharpRef
     class Program
     {
         static void Main(string[] args)
-        {
+        {   //This reference based on learning from 6warni youtube channel
             int x = 4, y = 3;
             Console.WriteLine("         ----------------Welcome To My Reference----------------\n\n\n");
             Console.WriteLine("Hello World!  "+y);
@@ -26,7 +26,7 @@ namespace CSharpRef
             /** Multi
               * Line
               * Comment Bettty Compliant Or not i don't know ":
-              **/
+              */
             Console.WriteLine("1 or no 1 ?");
             userValue = Console.ReadLine();
             string message = (userValue == "1") ? " A Car" : "Nothing";
@@ -48,11 +48,11 @@ namespace CSharpRef
             char[] arr = name.ToCharArray();
             Array.Reverse(arr);
             Console.WriteLine(arr);
-            string concated = String.Concat(arr);
+            string concatenated = String.Concat(arr);
 
-            Console.WriteLine(print(concated));
+            Console.WriteLine(print(concatenated));
 
-            foreach (char ca in concated)
+            foreach (char ca in concatenated)
                 Console.WriteLine(ca);
 
             int[] myNums = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
@@ -65,18 +65,17 @@ namespace CSharpRef
 
 
             int[] randomNums = new int[20];
+            Console.WriteLine("The next output is rondom generated number filling an array with length of 20 int");
             while (randomNums.Length < 20)
             {
                 Random randomNum = new Random();
                 int myRandomNum = randomNum.Next(1, 20);
-                randomNums[randomNums.Length] = myRandomNum;
-                Console.WriteLine(myRandomNum);
-                
+                randomNums[randomNums.Length] = myRandomNum;                
             }
             foreach (int z in randomNums)
                 Console.Write(z);
 
-            Console.WriteLine("----------------End Context----------------");
+            Console.WriteLine("----------------End of Context----------------");
             Console.ReadLine();
             //Console.ReadKey();
             
