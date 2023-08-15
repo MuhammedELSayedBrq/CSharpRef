@@ -81,6 +81,7 @@ namespace CSharpRef
             
             Console.WriteLine("\n\nThe next number is string "+ 1.ToString());
             */
+            /*
             //String
             string myStr = @"go to c:\  take the same string \n without interpret ";
             string myStr2 = string.Format("{0} and {1} this number will be more readable {2:N} ","1" , "1", 1091231231);
@@ -99,7 +100,22 @@ namespace CSharpRef
                 myStr3.Append(i);
             }
             Console.WriteLine(myStr3);
+            */
 
+
+            //Date and Time
+            DateTime nowTime = DateTime.Now;
+            Console.WriteLine(nowTime + "\n" + nowTime.ToShortDateString() + "\n" + nowTime.ToLongDateString());
+            Console.WriteLine(nowTime.ToShortTimeString());     
+            Console.WriteLine(nowTime.AddDays(3).ToShortDateString());     
+            Console.WriteLine(nowTime.AddMonths(3));
+            Console.WriteLine(nowTime.Month);
+
+            DateTime myBirthday = new DateTime(1999, 11, 01 , 4 , 16 , 55);
+            DateTime myBirthday1 = DateTime.Parse("01-11-1999");
+            DateTime myBirthday2 = DateTime.Parse("01/11/1999");
+            TimeSpan myAge = DateTime.Now - myBirthday; //outpus: days,hours,mins,secs,femtosecs
+            Console.WriteLine(myAge.TotalDays);
 
 
             Console.WriteLine("----------------End of Context----------------");
