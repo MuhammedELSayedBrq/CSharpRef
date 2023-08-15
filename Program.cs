@@ -9,7 +9,9 @@ namespace CSharpRef
     class Program
     {
         static void Main(string[] args)
+            
         {   //This reference based on learning from 6warni youtube channel
+            /*
             int x = 4, y = 3;
             Console.WriteLine("         ----------------Welcome To My Reference----------------\n\n\n");
             Console.WriteLine("Hello World!  "+y);
@@ -22,11 +24,13 @@ namespace CSharpRef
                 Console.WriteLine("Colon Input.");
             else
                 Console.WriteLine("Not Known.");
+            */
 
             /** Multi
               * Line
               * Comment Bettty Compliant Or not i don't know ":
               */
+            /*
             Console.WriteLine("1 or no 1 ?");
             userValue = Console.ReadLine();
             string message = (userValue == "1") ? " A Car" : "Nothing";
@@ -74,6 +78,29 @@ namespace CSharpRef
             }
             foreach (int z in randomNums)
                 Console.Write(z);
+            
+            Console.WriteLine("\n\nThe next number is string "+ 1.ToString());
+            */
+            //String
+            string myStr = @"go to c:\  take the same string \n without interpret ";
+            string myStr2 = string.Format("{0} and {1} this number will be more readable {2:N} ","1" , "1", 1091231231);
+            string phoneNum = string.Format("+2 {0:### #### ####}", 01067318767);
+            string subString = myStr.Substring(5, 11);
+            string upper = myStr.ToUpper();
+            string replaced = myStr.Replace(" ", "-");
+            string removed = myStr.Remove(5);
+            Console.WriteLine(myStr + myStr2 + "\n" + phoneNum);
+
+            //StringBuilder is used when dealing with large string to handle memory more efficient
+            StringBuilder myStr3 = new StringBuilder();
+            for(int i=0; i< 100; i++)
+            {
+                myStr3.Append("--");
+                myStr3.Append(i);
+            }
+            Console.WriteLine(myStr3);
+
+
 
             Console.WriteLine("----------------End of Context----------------");
             Console.ReadLine();
