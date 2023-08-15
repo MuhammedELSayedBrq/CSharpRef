@@ -102,7 +102,7 @@ namespace CSharpRef
             Console.WriteLine(myStr3);
             */
 
-
+            /*
             //Date and Time
             DateTime nowTime = DateTime.Now;
             Console.WriteLine(nowTime + "\n" + nowTime.ToShortDateString() + "\n" + nowTime.ToLongDateString());
@@ -116,12 +116,27 @@ namespace CSharpRef
             DateTime myBirthday2 = DateTime.Parse("01/11/1999");
             TimeSpan myAge = DateTime.Now - myBirthday; //outpus: days,hours,mins,secs,femtosecs
             Console.WriteLine(myAge.TotalDays);
+            */
 
+            //Classes 
+            Car car1 = new Car();
+            car1.Make = "BMW";
+            car1.Color = "Grey";
+            car1.Model = "2019";
+            car1.Year = 2024;
+
+            Console.WriteLine(MarketValue(car1));
 
             Console.WriteLine("----------------End of Context----------------");
             Console.ReadLine();
             //Console.ReadKey();
             
+        }
+
+        private static decimal MarketValue(Car car)
+        {
+            decimal carValue = 1000.0m;
+            return carValue;
         }
         
         public static string print(string name)
@@ -130,4 +145,16 @@ namespace CSharpRef
             return (welcomeMessage);
         }
     }
+
+    class Car
+    {
+        public string Make { get; set; }
+        public string Model { get; set; }
+        public int Year { get; set; }
+        public string Color { get; set; }
+
+
+
+    }
+
 }
