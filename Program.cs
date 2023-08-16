@@ -9,7 +9,7 @@ namespace CSharpRef
     class Program
     {
         static void Main(string[] args)
-            
+
         {   //This reference based on learning from 6warni youtube channel
             /*
             int x = 4, y = 3;
@@ -118,6 +118,7 @@ namespace CSharpRef
             Console.WriteLine(myAge.TotalDays);
             */
 
+            /*
             //Classes 
             Car car1 = new Car();
             car1.Make = "BMW";
@@ -126,11 +127,17 @@ namespace CSharpRef
             car1.Year = 2024;
 
             Console.WriteLine(MarketValue(car1));
+            */
+
+            //Lesson 19
+            cycle myCycle = new cycle("Ferrari", "off-road", 2023, "grey with red seats");
+            cycle.printCount();
+
 
             Console.WriteLine("----------------End of Context----------------");
             Console.ReadLine();
             //Console.ReadKey();
-            
+
         }
 
         private static decimal MarketValue(Car car)
@@ -138,7 +145,7 @@ namespace CSharpRef
             decimal carValue = 1000.0m;
             return carValue;
         }
-        
+
         public static string print(string name)
         {
             string welcomeMessage = "Welcome " + name;
@@ -155,6 +162,32 @@ namespace CSharpRef
 
 
 
+    }
+
+    class cycle
+    {
+        public cycle()
+        {
+            Make = "Skyline";
+        }
+
+        public cycle(string make, string model, int year, string color)
+        {
+            Make = make;
+            Model = model;
+            Year = year;
+            Color = color;
+            count++;
+        }
+        public string Make { get; set; }
+        public string Model { get; set; }
+        public int Year { get; set; }
+        public string Color { get; set; }
+
+        public static int count { get; set; }
+        public static void printCount(){
+            Console.WriteLine("Number of cycles is {0}", cycle.count);
+        }
     }
 
 }
