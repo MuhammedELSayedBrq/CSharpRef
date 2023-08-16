@@ -137,7 +137,10 @@ namespace CSharpRef
 
             //Lesson 20 : variables in same class can be used anywhere in class
 
-            //Lesson 21
+            //Lesson 21 Encapsulation : private variable or function of class cannot be accessed in global scope
+
+            //Lesson 22 
+
 
 
 
