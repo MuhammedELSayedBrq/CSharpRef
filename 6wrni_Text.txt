@@ -1,0 +1,1405 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar" class="" data-skin="light" prefix="og: http://ogp.me/ns#" prefix="og: https://ogp.me/ns#">
+<head><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>class RocketLazyLoadScripts{constructor(e){this.triggerEvents=e,this.eventOptions={passive:!0},this.userEventListener=this.triggerListener.bind(this),this.delayedScripts={normal:[],async:[],defer:[]},this.allJQueries=[]}_addUserInteractionListener(e){this.triggerEvents.forEach((t=>window.addEventListener(t,e.userEventListener,e.eventOptions)))}_removeUserInteractionListener(e){this.triggerEvents.forEach((t=>window.removeEventListener(t,e.userEventListener,e.eventOptions)))}triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}async _loadEverythingNow(){this._delayEventListeners(),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async),await this._triggerDOMContentLoaded(),await this._triggerWindowLoad(),window.dispatchEvent(new Event("rocket-allScriptsLoaded"))}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((e=>{e.hasAttribute("src")?e.hasAttribute("async")&&!1!==e.async?this.delayedScripts.async.push(e):e.hasAttribute("defer")&&!1!==e.defer||"module"===e.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(e):this.delayedScripts.normal.push(e):this.delayedScripts.normal.push(e)}))}async _transformScript(e){return await this._requestAnimFrame(),new Promise((t=>{const n=document.createElement("script");let i;[...e.attributes].forEach((e=>{let t=e.nodeName;"type"!==t&&("data-rocket-type"===t&&(t="type",i=e.nodeValue),n.setAttribute(t,e.nodeValue))})),e.hasAttribute("src")&&this._isValidScriptType(i)?(n.addEventListener("load",t),n.addEventListener("error",t)):(n.text=e.text,t()),e.parentNode.replaceChild(n,e)}))}_isValidScriptType(e){return!e||""===e||"string"==typeof e&&["text/javascript","text/x-javascript","text/ecmascript","text/jscript","application/javascript","application/x-javascript","application/ecmascript","application/jscript","module"].includes(e.toLowerCase())}async _loadScriptsFromList(e){const t=e.shift();return t?(await this._transformScript(t),this._loadScriptsFromList(e)):Promise.resolve()}_preloadAllScripts(){var e=document.createDocumentFragment();[...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async].forEach((t=>{const n=t.getAttribute("src");if(n){const t=document.createElement("link");t.href=n,t.rel="preload",t.as="script",e.appendChild(t)}})),document.head.appendChild(e)}_delayEventListeners(){let e={};function t(t,n){!function(t){function n(n){return e[t].eventsToRewrite.indexOf(n)>=0?"rocket-"+n:n}e[t]||(e[t]={originalFunctions:{add:t.addEventListener,remove:t.removeEventListener},eventsToRewrite:[]},t.addEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.add.apply(t,arguments)},t.removeEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.remove.apply(t,arguments)})}(t),e[t].eventsToRewrite.push(n)}function n(e,t){let n=e[t];Object.defineProperty(e,t,{get:()=>n||function(){},set(i){e["rocket"+t]=n=i}})}t(document,"DOMContentLoaded"),t(window,"DOMContentLoaded"),t(window,"load"),t(window,"pageshow"),t(document,"readystatechange"),n(document,"onreadystatechange"),n(window,"onload"),n(window,"onpageshow")}_delayJQueryReady(e){let t=window.jQuery;Object.defineProperty(window,"jQuery",{get:()=>t,set(n){if(n&&n.fn&&!e.allJQueries.includes(n)){n.fn.ready=n.fn.init.prototype.ready=function(t){e.domReadyFired?t.bind(document)(n):document.addEventListener("rocket-DOMContentLoaded",(()=>t.bind(document)(n)))};const t=n.fn.on;n.fn.on=n.fn.init.prototype.on=function(){if(this[0]===window){function e(e){return e.split(" ").map((e=>"load"===e||0===e.indexOf("load.")?"rocket-jquery-load":e)).join(" ")}"string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=e(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach((t=>{delete Object.assign(arguments[0],{[e(t)]:arguments[0][t]})[t]}))}return t.apply(this,arguments),this},e.allJQueries.push(n)}t=n}})}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._requestAnimFrame(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._requestAnimFrame(),window.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._requestAnimFrame(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._requestAnimFrame(),document.rocketonreadystatechange&&document.rocketonreadystatechange()}async _triggerWindowLoad(){await this._requestAnimFrame(),window.dispatchEvent(new Event("rocket-load")),await this._requestAnimFrame(),window.rocketonload&&window.rocketonload(),await this._requestAnimFrame(),this.allJQueries.forEach((e=>e(window).trigger("rocket-jquery-load"))),window.dispatchEvent(new Event("rocket-pageshow")),await this._requestAnimFrame(),window.rocketonpageshow&&window.rocketonpageshow()}_handleDocumentWrite(){const e=new Map;document.write=document.writeln=function(t){const n=document.currentScript;n||console.error("WPRocket unable to document.write this: "+t);const i=document.createRange(),r=n.parentElement;let a=e.get(n);void 0===a&&(a=n.nextSibling,e.set(n,a));const o=document.createDocumentFragment();i.setStart(o,0),o.appendChild(i.createContextualFragment(t)),r.insertBefore(o,a)}}async _requestAnimFrame(){return new Promise((e=>requestAnimationFrame(e)))}static run(){const e=new RocketLazyLoadScripts(["keydown","mousemove","touchmove","touchstart","touchend","wheel"]);e._addUserInteractionListener(e)}}RocketLazyLoadScripts.run();
+</script>
+	<meta charset="UTF-8" />
+	<link rel="profile" href="http://gmpg.org/xfn/11" />
+	
+<meta http-equiv='x-dns-prefetch-control' content='on'>
+<link rel='dns-prefetch' href='//cdnjs.cloudflare.com' />
+<link rel='dns-prefetch' href='//ajax.googleapis.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//fonts.gstatic.com' />
+<link rel='dns-prefetch' href='//s.gravatar.com' />
+<link rel='dns-prefetch' href='//www.google-analytics.com' />
+<link rel='preload' as='image' href='https://6wrni.com/wp-content/uploads/2021/01/6wr.png'>
+<link rel='preload' as='image' href='https://6wrni.com/wp-content/uploads/2021/03/08-Game-history.jpg'>
+<link rel='preload' as='image' href='https://6wrni.com/wp-content/uploads/2021/01/wp4458578-pubg-vs-fortnite-wallpapers.jpg'>
+<link rel='preload' as='image' href='https://6wrni.com/wp-content/uploads/2020/01/22.jpg'>
+<link rel='preload' as='image' href='https://6wrni.com/wp-content/uploads/2019/06/film.jpg'>
+<link rel='preload' as='image' href='https://6wrni.com/wp-content/uploads/2019/06/admob.jpg'>
+<link rel='preload' as='image' href='https://6wrni.com/wp-content/uploads/2019/05/21.jpg'>
+<link rel='preload' as='font' href='https://6wrni.com/wp-content/themes/jannah/assets/fonts/tielabs-fonticon/tielabs-fonticon.woff' type='font/woff' crossorigin='anonymous' />
+<link rel='preload' as='font' href='https://6wrni.com/wp-content/themes/jannah/assets/fonts/fontawesome/fa-solid-900.woff2' type='font/woff2' crossorigin='anonymous' />
+<link rel='preload' as='font' href='https://6wrni.com/wp-content/themes/jannah/assets/fonts/fontawesome/fa-brands-400.woff2' type='font/woff2' crossorigin='anonymous' />
+<link rel='preload' as='font' href='https://6wrni.com/wp-content/themes/jannah/assets/fonts/fontawesome/fa-regular-400.woff2' type='font/woff2' crossorigin='anonymous' />
+<link rel='preload' as='script' href='https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js'>
+
+<!-- Search Engine Optimization by Rank Math - https://s.rankmath.com/home -->
+<title>Ù…ÙÙ†ÙŽØµÙ‘ÙŽØ©Ù Ø·ÙŽÙˆÙ‘ÙØ±Ù’Ù†ÙÙŠ Ø§Ù„ØªÙŽØ¹Ù’Ù„ÙŠÙ…ÙÙŠØ©</title><style id="rocket-critical-css">@-ms-viewport{width:device-width}button::-moz-focus-inner{padding:0;border:0}html{-ms-touch-action:manipulation;touch-action:manipulation;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}aside,header,nav,section{display:block}a{background-color:transparent}img{border-style:none}button,input{font:inherit}button,input{overflow:visible}button,input{margin:0}button{text-transform:none}button,[type="submit"]{-webkit-appearance:button}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}button:-moz-focusring,input:-moz-focusring{outline:1px dotted ButtonText}[type="checkbox"]{box-sizing:border-box;padding:0}[type="search"]{-webkit-appearance:textfield}[type="search"]::-webkit-search-cancel-button,[type="search"]::-webkit-search-decoration{-webkit-appearance:none}*{padding:0;margin:0;list-style:none;border:0;outline:none;box-sizing:border-box}*:before,*:after{box-sizing:border-box}body{background:#F7F7F7;color:#2c2f34;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue","Open Sans",Arial,sans-serif;font-size:13px;line-height:21px}h1,h2,h3,.the-subtitle{line-height:1.4;font-weight:600}h1{font-size:41px;font-weight:700}h2{font-size:27px}h3{font-size:23px}.the-subtitle{font-size:17px}a{color:#333;text-decoration:none}img{max-width:100%;height:auto}iframe{max-width:100%}p{line-height:21px}.screen-reader-text{clip:rect(1px,1px,1px,1px);position:absolute!important;height:1px;width:1px;overflow:hidden}.tie-icon:before,[class^="tie-icon-"],[class*=" tie-icon-"]{font-family:'tiefonticon'!important;speak:never;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;display:inline-block}body.tie-no-js a.remove,body.tie-no-js .menu-sub-content{display:none!important}body.tie-no-js .tie-icon:before,body.tie-no-js [class^="tie-icon-"],body.tie-no-js [class*=" tie-icon-"]{visibility:hidden!important}body.tie-no-js [class^="tie-icon-"]:before,body.tie-no-js [class*=" tie-icon-"]:before{content:"\f105"}.tie-popup,#autocomplete-suggestions{display:none}.container{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}.container:after{content:"";display:table;clear:both}@media (min-width:768px){.container{width:100%}}@media (min-width:1200px){.container{max-width:1200px}}.tie-row{margin-left:-15px;margin-right:-15px}.tie-row:after{content:"";display:table;clear:both}.tie-col-md-12{position:relative;min-height:1px;padding-left:15px;padding-right:15px}@media (min-width:992px){.tie-col-md-12{float:left}.tie-col-md-12{width:100%}}.tie-alignleft{float:left}.tie-alignright{float:right}.fullwidth{width:100%!important}.clearfix:before,.clearfix:after{content:"\0020";display:block;height:0;overflow:hidden}.clearfix:after{clear:both}.tie-container,#tie-wrapper{height:100%;min-height:650px}.tie-container{position:relative;overflow:hidden}#tie-wrapper{background:#ffffff;position:relative;z-index:108;height:100%;margin:0 auto}.container-wrapper{background:#ffffff;border:1px solid rgba(0,0,0,0.1);border-radius:2px;padding:30px}.theme-header{background:#ffffff;position:relative;z-index:999}.theme-header:after{content:"";display:table;clear:both}.theme-header.has-shadow{box-shadow:0 0 10px 5px rgba(0,0,0,0.1)}#logo{margin-top:40px;margin-bottom:40px;display:block;float:left}#logo img{vertical-align:middle}#logo a{display:inline-block}#logo .h1-off{position:absolute;top:-9000px;left:-9000px}@media (max-width:991px){#theme-header.has-normal-width-logo #logo{margin:14px 0!important;text-align:left;line-height:1}#theme-header.has-normal-width-logo #logo img{width:auto;height:auto;max-width:190px}}@media (max-width:479px){#theme-header.has-normal-width-logo #logo img{max-width:160px;max-height:60px!important}}@media (max-width:991px){#theme-header.mobile-header-default.header-layout-1 .header-layout-1-logo{-webkit-flex-grow:10;-ms-flex-positive:10;flex-grow:10}}.components{float:right}.components>li{position:relative;float:right;list-style:none}.components>li.social-icons-item{margin:0}.components>li>a{display:block;position:relative;width:30px;text-align:center;line-height:inherit;font-size:16px}.header-layout-1 #menu-components-wrap{display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end}.header-layout-1 .main-menu-wrapper{display:table;width:100%}.header-layout-1 #logo{line-height:1;float:left;margin-top:20px;margin-bottom:20px}.header-layout-1 .header-layout-1-logo{display:table-cell;vertical-align:middle;float:none}@media (max-width:991px){.header-layout-1 .main-menu-wrapper{border-width:0;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-flow:row nowrap;-ms-flex-flow:row nowrap;flex-flow:row nowrap;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}}.mobile-header-components{display:none;z-index:10;height:30px;line-height:30px;-webkit-flex-wrap:nowrap;-ms-flex-wrap:nowrap;flex-wrap:nowrap;-webkit-flex:1 1 0%;-ms-flex:1 1 0%;flex:1 1 0%}.mobile-header-components .components{float:none;display:-webkit-flex!important;display:-ms-flexbox!important;display:flex!important;-webkit-justify-content:stretch;-ms-flex-pack:stretch;justify-content:stretch}.mobile-header-components .components li.custom-menu-link{display:inline-block;float:none}.mobile-header-components .components li.custom-menu-link>a{width:20px;padding-bottom:15px}.mobile-header-components [class^="tie-icon-"]{font-size:18px;width:20px;height:20px;vertical-align:middle}.mobile-header-components .tie-mobile-menu-icon{font-size:20px}.mobile-header-components .nav-icon{display:inline-block;width:20px;height:2px;background-color:#2c2f34;position:relative;top:-4px}.mobile-header-components .nav-icon:before,.mobile-header-components .nav-icon:after{position:absolute;right:0;background-color:#2c2f34;content:'';display:block;width:100%;height:100%;-webkit-transform:translateZ(0);transform:translateZ(0);-webkit-backface-visibility:hidden;backface-visibility:hidden}.mobile-header-components .nav-icon:before{-webkit-transform:translateY(-7px);-ms-transform:translateY(-7px);transform:translateY(-7px)}.mobile-header-components .nav-icon:after{-webkit-transform:translateY(7px);-ms-transform:translateY(7px);transform:translateY(7px)}#mobile-header-components-area_1 .components li.custom-menu-link>a{margin-right:15px}#mobile-header-components-area_2 .components{-webkit-flex-direction:row-reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}#mobile-header-components-area_2 .components li.custom-menu-link>a{margin-left:15px}@media (max-width:991px){#tie-body #mobile-container,.mobile-header-components{display:block}#slide-sidebar-widgets{display:none}}.top-nav{background-color:#ffffff;position:relative;z-index:10;line-height:35px;border:1px solid rgba(0,0,0,0.1);border-width:1px 0;color:#2c2f34}.main-nav-below.top-nav-above .top-nav{border-top-width:0}.top-nav a:not(.button):not(:hover){color:#2c2f34}.topbar-wrapper{display:-webkit-flex;display:-ms-flexbox;display:flex;min-height:35px}.top-nav .tie-alignleft,.top-nav .tie-alignright{-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;position:relative}.top-nav-dark .top-nav{background-color:#2c2e32;color:#ccc}.top-nav-dark .top-nav *{border-color:rgba(255,255,255,0.1)}.top-nav-dark .top-nav .components>li>a,.top-nav-dark .top-nav .components>li.social-icons-item .social-link:not(:hover) span{color:#ccc}@media (max-width:991px){.top-nav:not(.has-breaking-news),.theme-header .components{display:none}}.main-nav-wrapper{position:relative;z-index:4}.main-nav{position:relative;border:1px solid rgba(0,0,0,0.1);border-width:1px 0}.main-menu-wrapper{border:0 solid rgba(0,0,0,0.1);position:relative}@media (min-width:992px){.header-menu{float:left}.header-menu .menu li{display:block;float:left}.header-menu .menu a{display:block;position:relative}.header-menu .menu ul{box-shadow:0 2px 5px rgba(0,0,0,0.1)}.header-menu .menu ul li{position:relative}.header-menu .menu ul a{border-width:0 0 1px}#main-nav{z-index:9;line-height:60px}.main-menu .menu>li>a{padding:0 14px;font-size:13px;font-weight:600}.main-menu .menu>li>.menu-sub-content{border-top:2px solid #08f}.main-menu .menu>li.tie-current-menu{border-bottom:5px solid #08f;margin-bottom:-5px}.main-menu .menu>li.tie-current-menu>a:after{content:"";width:20px;height:2px;position:absolute;margin-top:17px;left:50%;top:50%;bottom:auto;right:auto;-webkit-transform:translateX(-50%) translateY(-50%);-ms-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%);background:#2c2f34}.main-menu .menu ul{line-height:20px;z-index:1}.main-menu .menu-sub-content{display:none;padding:15px;width:230px;position:absolute;box-shadow:0 2px 2px rgba(0,0,0,0.15)}.main-menu .menu-sub-content a{width:200px}nav.main-nav .menu>li.tie-current-menu>a{background-color:#08f;color:#fff}.main-nav-light .main-nav{background-color:#ffffff;color:#2c2f34}.main-nav-light .main-nav .menu-sub-content{background:#ffffff}.main-nav-light .main-nav .menu a,.main-nav-light .main-nav .components li a{color:#2c2f34}}@media (min-width:992px){.menu-item-has-children>a:before,.mega-menu>a:before{content:'';position:absolute;right:12px;margin-top:2px;top:50%;bottom:auto;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%);width:0;height:0;border:4px solid transparent;border-top:4px solid #ffffff}.menu>.menu-item-has-children:not(.is-icon-only)>a,.menu .mega-menu:not(.is-icon-only)>a{padding-right:25px}.main-menu .menu>li.tie-current-menu>a:before{border-top-color:#fff}.main-nav-light .main-nav .menu-item-has-children>a:before,.main-nav-light .mega-menu>a:before{border-top-color:#2c2f34}}@media (min-width:992px){.header-layout-1.main-nav-below.top-nav-above .main-nav{margin-top:-1px}.header-layout-1.main-nav-below.top-nav-above .top-nav{border-top-width:0}}.header-layout-1.has-shadow:not(.top-nav-below) .main-nav{border-bottom:0!important}@media only screen and (min-width:992px) and (max-width:1100px){.main-nav .menu>li:not(.is-icon-only)>a{padding-left:7px;padding-right:7px}.main-nav .menu>li:not(.is-icon-only)>a:before{display:none}}@media (max-width:991px){#tie-wrapper header#theme-header{box-shadow:none;background:transparent!important}.header-layout-1 .main-nav{border-width:0;box-shadow:0 3px 7px 0 rgba(0,0,0,0.1)}.header-layout-1 .main-nav{background-color:#ffffff}.header-layout-1 #menu-components-wrap{display:none}.main-menu-wrapper .tie-alignleft{width:100%}}@media (min-width:992px){.mega-menu .mega-menu-block{left:0;width:100%;padding:30px}.mega-menu .mega-menu-block a{width:auto}.sub-menu-columns{margin:0 -15px}.mega-links .mega-menu-block{padding-bottom:15px}.main-menu .mega-links-head{width:100%;font-weight:600;background:transparent!important;border-bottom:2px solid rgba(0,0,0,0.08);border-top:0;line-height:40px;font-size:14px;margin-bottom:10px}.main-menu .mega-links-head:before{display:none}.main-menu .mega-links-head:after{display:block;content:"";width:50px;height:2px;background:#08f;position:absolute;bottom:-2px;left:0}.mega-link-column{margin-bottom:10px;padding:0 15px;width:50%}.mega-links-5col .mega-link-column{width:20%}.mega-links-5col .mega-link-column:nth-child(5n+6){clear:left}.main-menu .mega-cat-wrapper{overflow:hidden;height:auto;clear:both}.main-menu .mega-ajax-content{min-height:200px;position:relative}.main-menu .mega-cat .mega-menu-content{clear:both}.main-menu .mega-cat .mega-menu-block{padding:0}.main-menu .mega-cat-content{padding:30px}.main-menu .horizontal-posts{width:100%}}input{border:1px solid rgba(0,0,0,0.1);color:#2c2f34;font-size:13px;outline:none;padding:5px;line-height:23px;border-radius:2px;max-width:100%;background-color:transparent}input:not([type="checkbox"]):not([type="radio"]){-webkit-appearance:none;-moz-appearance:none;appearance:none;outline:none}@media (max-width:767px){input:not([type="submit"]){font-size:16px!important}}.button,[type="submit"]{width:auto;position:relative;background-color:#08f;color:#fff;padding:7px 15px;margin:0;font-weight:normal;font-size:13px;display:inline-block;text-align:center;line-height:21px;border:none;text-decoration:none;vertical-align:middle;border-radius:2px;-webkit-appearance:none;-moz-appearance:none;appearance:none}.background-overlay{background-attachment:fixed}.full-width .main-content{width:100%}.post-thumb{position:relative;height:100%;display:block;-webkit-backface-visibility:hidden;backface-visibility:hidden;-webkit-transform:rotate(0);-ms-transform:rotate(0);transform:rotate(0)}.post-thumb img{width:100%;display:block}.post-thumb .post-cat-wrap{position:absolute;bottom:10px;margin:0;right:10px}.media-overlay .tie-media-icon:before{border:2px solid #ffffff;border-radius:50%;width:40px;height:40px;line-height:36px;display:block;content:"\f030";text-align:center;font-size:17px;background:rgba(0,0,0,0.3);z-index:2}.media-overlay .tie-standard .tie-media-icon{display:none}.post-meta{margin:10px 0 8px;font-size:12px;overflow:hidden}.post-meta{color:#767676}.post-meta .meta-item{margin-right:8px;display:inline-block}.post-meta .meta-item.tie-icon:before{padding-right:3px}.post-meta .meta-item.date:before{content:"\f017"}.post-cat-wrap{position:relative;z-index:3;margin-bottom:5px;font-weight:normal;font-family:inherit!important;line-height:0;display:block}.post-cat{display:inline-block;background:#08f;color:#fff;padding:0 6px;font-size:12px;line-height:1.85em;margin-right:4px;position:relative;white-space:nowrap;word-wrap:normal;letter-spacing:0;border-radius:2px}.post-cat:first-child:last-child{margin:0}.tie-slider-nav{width:100%;position:absolute;z-index:1;*height:0;top:50%;margin-top:-23px}@media (min-width:992px){.tie-slider-nav{opacity:0}}.social-icons-item{float:right;margin-left:6px;position:relative}.social-icons-item .social-link span{color:#2c2f34}.social-icons-widget .social-icons-item .social-link{width:24px;height:24px;line-height:24px;padding:0;display:block;text-align:center;border-radius:2px}.top-nav .components>li.social-icons-item .social-link:not(:hover) span{color:#2c2f34}.social-icons-item .facebook-social-icon{background-color:#4080FF!important}.social-icons-item .facebook-social-icon span{color:#4080FF}.social-icons-item .twitter-social-icon{background-color:#40bff5!important}.social-icons-item .twitter-social-icon span{color:#40bff5}.social-icons-item .instagram-social-icon{background-color:#c13584!important}.social-icons-item .instagram-social-icon span{color:#c13584}.social-icons-item .youtube-social-icon{background-color:#ef4e41!important}.social-icons-item .youtube-social-icon span{color:#ef4e41}ul:not(.solid-social-icons) .social-icons-item a:not(:hover){background-color:transparent!important}.solid-social-icons .social-link{background-color:#2c2f34}.dark-skin .solid-social-icons .social-link{background-color:#27292d;border-color:#27292d}.solid-social-icons .social-link span{color:#ffffff!important}@media (max-width:767px){.container-wrapper{padding:20px 15px}}#mobile-container{display:none;padding:10px 30px 30px}#mobile-menu{margin-bottom:20px;position:relative;padding-top:15px}#mobile-social-icons{margin-bottom:15px}#mobile-social-icons ul{text-align:center;overflow:hidden}#mobile-social-icons ul .social-icons-item{float:none;display:inline-block}#mobile-social-icons .social-icons-item{margin:0}#mobile-social-icons .social-icons-item .social-link{background:transparent;border:none}#mobile-search .search-form{overflow:hidden}#mobile-search .search-form:after{position:absolute;content:"\f002";font-family:'tiefonticon';top:4px;right:10px;line-height:30px;width:30px;font-size:16px;border-radius:50%;text-align:center;color:#fff}#mobile-search .search-field{background-color:rgba(0,0,0,0.05);border-color:rgba(255,255,255,0.1);color:#ffffff;width:100%;border-radius:50px;padding:7px 45px 7px 20px}#mobile-search .search-submit{background:transparent;font-size:0;width:35px;height:38px;position:absolute;top:0;right:5px;z-index:1}#mobile-search input::-webkit-input-placeholder{color:rgba(255,255,255,0.6)}#mobile-search input::-moz-placeholder{color:rgba(255,255,255,0.6)}#mobile-search input:-moz-placeholder{color:rgba(255,255,255,0.6)}#mobile-search input:-ms-input-placeholder{color:rgba(255,255,255,0.6)}.block-head-1 .the-global-title{position:relative;font-size:17px;padding:0 0 15px;border-bottom:2px solid rgba(0,0,0,0.1);margin-bottom:20px}.block-head-1 .the-global-title:after{content:"";background:#2c2f34;width:40px;height:2px;position:absolute;bottom:-2px;left:0}.block-head-1 .the-global-title:before{content:"";width:0;height:0;position:absolute;bottom:-5px;left:0;border-left:0;border-right:5px solid transparent;border-top:5px solid #2c2f34}.block-head-1 .dark-skin .widget-title:after{background:#ffffff}.block-head-1 .dark-skin .widget-title:before{border-top-color:#ffffff}.block-head-1 .dark-skin .the-global-title{color:#ffffff;border-bottom-color:rgba(255,255,255,0.1)}.section-item{position:relative;padding:30px 0 0;clear:both}@media (max-width:991px){.section-item{padding-top:15px}}.has-background .section-item{overflow:hidden;background-size:cover;background-repeat:no-repeat;background-position:50% 50%}.mag-box{margin-bottom:30px;clear:both}@media (max-width:991px){.mag-box{margin-bottom:15px}}.video-playlist-wrapper{background-color:#27292d;position:relative;width:66%;height:434px;float:left}.video-playlist-wrapper iframe{height:434px;width:100%}.video-player-wrapper{position:relative;z-index:2}.video-frame{visibility:hidden}.video-playlist-nav-wrapper{width:34%;float:right;height:434px;overflow:hidden;background:#ffffff;position:relative;border-width:0 1px 1px 0}.video-playlist-nav-wrapper:after{content:"";position:absolute;right:0;top:0;height:100%;width:1px;background:rgba(0,0,0,0.05)}.video-playlist-nav-wrapper:before{content:"";position:absolute;right:0;background:rgba(0,0,0,0.05);width:100%;height:1px;bottom:0;top:auto}.playlist-title{background:#08f;color:#fff;height:70px;width:100%;padding:0 15px;line-height:17px;z-index:9}.playlist-title h2{padding-top:14px;font-size:18px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.videos-number{font-size:11px;display:block;float:left}.playlist-title-icon{font-size:27px;float:left;margin-right:10px;height:70px;line-height:70px;width:40px;text-align:center;font-weight:normal}.video-paused-icon,.video-play-icon{float:left;width:20px;text-align:left;line-height:46px;font-size:11px;color:#333}.video-play-icon{display:none;color:#08f}.video-paused-icon{display:none}@media only screen and (min-width:768px) and (max-width:991px){.video-playlist-nav-wrapper,.video-playlist-wrapper,.video-playlist-wrapper iframe{height:383px}}@media (max-width:767px){.video-playlist-wrapper{width:100%;height:auto}.video-playlist-wrapper iframe{position:absolute;top:0;left:0;width:100%;height:100%}.video-player-wrapper{position:relative;padding-bottom:56.25%;height:0}.video-playlist-nav-wrapper{height:auto!important;width:100%}}.dark-skin .mag-box:not(.tabs-box){background-color:transparent}.dark-skin .mag-box .videos-block{background:#27292d}.dark-skin .mag-box .video-playlist-nav-wrapper{background:#1a1b1f}.dark-skin .mag-box .playlist-title{background:#131416;color:#ffffff}.dark-skin .mag-box .video-paused-icon{color:#ccc}.thumb-overlay{position:absolute;width:100%;height:100%;top:0;left:0;padding:30px;border-radius:2px}.thumb-overlay .thumb-content{position:absolute;bottom:0;left:0;padding:0 30px 20px;z-index:3;width:100%;-webkit-backface-visibility:hidden;backface-visibility:hidden}.thumb-overlay .thumb-title a{color:#ffffff!important}.thumb-overlay .thumb-title{font-size:30px;color:#ffffff}.thumb-overlay .thumb-meta{margin:0 0 5px}.thumb-overlay{-webkit-backface-visibility:hidden;backface-visibility:hidden}.thumb-overlay:after{content:"";position:absolute;z-index:1;left:0;right:0;bottom:0;height:65%;background-image:linear-gradient(to bottom,transparent,rgba(0,0,0,0.75));-webkit-backface-visibility:hidden;backface-visibility:hidden}.wide-slider-wrapper .thumb-overlay:after{height:85%}.slider-area{position:relative;overflow:hidden}.slider-area .tie-media-icon{position:relative;float:right;margin:-9px -5px 0 10px;height:40px;width:40px;color:#ffffff;text-align:center;font-size:32px;line-height:32px;z-index:8}.slider-area .tie-media-icon{-webkit-backface-visibility:hidden;backface-visibility:hidden}@media (max-width:767px){.slider-area .tie-media-icon{display:none}}.slider-area-inner{position:relative}.main-slider{position:relative;z-index:3}.main-slider .slider-main-container{max-width:100%;width:100%;padding:0}.main-slider .slide{position:relative;overflow:hidden;background-repeat:no-repeat;background-position:center top;background-size:cover}.main-slider .tie-slick-slider:not(.slick-initialized) .slide{display:none}.main-slider .tie-slick-slider:not(.slick-initialized) .tie-slider-nav+.slide{display:block}.main-slider .thumb-meta{color:#ffffff}@media (max-width:479px){.main-slider .thumb-title{font-size:16px!important}}@media (max-width:320px){.main-slider .thumb-meta{display:none}}.all-over-thumb-link{position:absolute;width:100%;height:100%;top:0;z-index:2}.wide-slider-wrapper .slide{height:400px}.wide-slider-wrapper .thumb-overlay{padding:40px}.wide-slider-wrapper .thumb-overlay .container{position:relative;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%);z-index:2}.wide-slider-wrapper .thumb-overlay .container:before{clear:both}.wide-slider-wrapper .thumb-title{font-size:40px;color:#ffffff;line-height:1.2}.wide-slider-wrapper span.tie-media-icon{margin:-5px 0 0 0}@media (min-width:992px){.wide-slider-wrapper .thumb-title{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis;max-height:4em}.full-width .wide-slider-wrapper .slide{height:500px}.full-width .wide-slider-wrapper .thumb-title{font-size:50px}}@media (max-width:767px){.wide-slider-wrapper .slide{height:300px}.wide-slider-wrapper .thumb-overlay{padding:40px 60px 0}.wide-slider-wrapper .thumb-title{font-size:25px}}@media (max-width:479px){.wide-slider-wrapper .slide{height:220px}.wide-slider-wrapper .thumb-overlay{padding:40px 40px 0}}.fullwidth-slider-wrapper{overflow:hidden;background:transparent}.fullwidth-slider-wrapper .thumb-overlay .container{max-width:850px;padding:0}.fullwidth-slider-wrapper .thumb-content{top:0;position:relative;padding:0}@media (max-width:479px){.fullwidth-slider-wrapper .thumb-meta{display:none}}#tie-wrapper:after{position:absolute;z-index:1000;top:-10%;left:-50%;width:0;height:0;background:rgba(0,0,0,0.2);content:'';opacity:0}.side-aside{position:fixed;top:0;z-index:111;visibility:hidden;width:350px;max-width:100%;height:100%;background:#161619;background-repeat:no-repeat;background-position:center top;background-size:cover;overflow-y:auto}@media (min-width:992px){.side-aside{right:0;-webkit-transform:translate(350px,0);-ms-transform:translate(350px,0);transform:translate(350px,0)}}@media (max-width:991px){.side-aside.appear-from-left{left:0;-webkit-transform:translate(-100%,0);-ms-transform:translate(-100%,0);transform:translate(-100%,0)}.side-aside.is-fullwidth{width:100%}}.is-desktop .side-aside .has-custom-scroll{padding:50px 0 0}.side-aside.dark-skin .container-wrapper{border-radius:0;border:0;background:transparent}.side-aside:after{position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.2);content:'';opacity:1}.side-aside .container-wrapper{padding:30px!important}.site-footer .widget-title-icon{display:none}.dark-skin{background-color:#1f2024;color:#ffffff}.dark-skin input:not([type="submit"]){color:#ccc}.dark-skin a:not(:hover){color:#ffffff}.dark-skin .post-meta{color:#ccc!important}.dark-skin input:not([type=submit]){border-color:rgba(255,255,255,0.1)}.dark-skin .video-playlist-wrapper{background:#18191c}.dark-skin .container-wrapper{background-color:#1f2024;border-color:rgba(255,255,255,0.1)}.dark-skin .widget a:not(:hover),.dark-skin .widget-title{color:#ffffff}.dark-skin .widget-title-icon{color:#ccc}.widget-title{position:relative}.widget-title .the-subtitle{font-size:15px;min-height:15px}.widget-title-icon{position:absolute;right:0;top:1px;color:#b9bec3;font-size:15px}.widget-title-icon:before{content:"\f08d"}.post-widget-body{padding-left:125px}.post-widget-body .post-title{font-size:14px;line-height:1.4;margin-bottom:5px}.post-widget-thumbnail{float:left;margin-right:15px;position:relative}.post-widget-thumbnail img.tie-small-image{width:110px}.widget li{padding:6px 0}.widget li:first-child{padding-top:0}.widget li:last-child{padding-bottom:0;border-bottom:0}.widget li:after{clear:both;display:table;content:""}.widget .post-meta{margin:2px 0 0;font-size:11px;line-height:17px}.posts-list .widget-title-icon:before{content:"\f0f6"}.widget-posts-list-container{position:relative}.posts-list-big-first .posts-list-items li:first-child{padding-bottom:20px}.posts-list-big-first li:first-child .post-widget-thumbnail{width:100%;margin-right:0;margin-bottom:10px}.posts-list-big-first li:first-child .post-widget-thumbnail a{min-height:40px}.posts-list-big-first li:first-child .post-widget-body{padding-left:0}.posts-list-big-first li:first-child .post-title{font-size:18px}@media (max-width:991px){.posts-list-big-first .posts-list-items{overflow:hidden}.posts-list-big-first li{width:48%;float:left}.posts-list-big-first li:nth-child(2){padding-top:0}.posts-list-big-first li:nth-child(2n){float:right}.posts-list-big-first li:nth-child(2n+1){clear:both}.posts-list-big-first li:nth-child(2),.posts-list-big-first li:nth-child(3){float:right;clear:none}.posts-list-big-first li:nth-child(n+5){display:none}}@media (max-width:670px){.posts-list-big-first li{width:100%}.posts-list-big-first li:nth-child(2){padding-top:12px}.posts-list-big-first li:nth-child(n+5){display:block}}form.search-form{overflow:auto;position:relative;width:100%;margin-top:10px}.search-field{float:left;width:73%;padding:8px 15px}.search-submit[type="submit"]{float:right;padding:10px 5px;margin-left:2%;width:25%}.login-widget .widget-title-icon:before{content:"\f023"}.login-widget form input[type="text"],.login-widget form input[type="password"]{width:100%;float:none;margin-bottom:15px}.login-widget .pass-container{position:relative}.login-widget .pass-container input[type="password"]{padding-right:70px}.login-widget .forget-text{position:absolute;right:10px;line-height:37px;top:0;font-size:12px}.login-widget .forget-text:not(:hover){color:#2c2f34}.login-widget .rememberme{display:block;margin-bottom:15px}.login-widget .register-link{margin:8px 0 0;display:block;text-align:center}.widget_tag_cloud .widget-title-icon:before{content:"\f02c"}li.widget-post-list{padding:7px 0;position:relative}.social-icons-widget ul{margin:0 -3px}.social-icons-widget .social-icons-item{float:left;margin:3px;border-bottom:0;padding:0}.social-icons-widget .social-icons-item .social-link{width:40px;height:40px;line-height:40px;font-size:18px}@media (max-width:479px){.social-icons-widget .social-icons-item{float:none;display:inline-block}}a.remove{position:absolute;top:0;right:0;display:block;speak:never;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;width:20px;height:20px;display:block;line-height:20px;text-align:center;font-size:15px}a.remove:before{content:"\e117";font-family:'tiefonticon';color:#e74c3c}a.remove.big-btn{width:25px;height:25px;line-height:25px;font-size:22px}a.remove.light-btn:not(:hover):before{color:#ffffff}.side-aside a.remove{z-index:1;top:15px;left:50%;right:auto;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%)}.tie-popup a.remove{-webkit-transform:scale(0.2);-ms-transform:scale(0.2);transform:scale(0.2);opacity:0;top:15px;right:15px;z-index:1}.side-aside,.has-custom-scroll{overflow-x:hidden;scrollbar-width:thin}.side-aside::-webkit-scrollbar,.has-custom-scroll::-webkit-scrollbar{width:5px}.side-aside::-webkit-scrollbar-track,.has-custom-scroll::-webkit-scrollbar-track{background:transparent}.side-aside::-webkit-scrollbar-thumb,.has-custom-scroll::-webkit-scrollbar-thumb{border-radius:20px;background:rgba(0,0,0,0.2)}.dark-skin .has-custom-scroll::-webkit-scrollbar-thumb{background:#000}.tie-popup{position:fixed;z-index:99999;left:0;top:0;height:100%;width:100%;background-color:rgba(0,0,0,0.9);display:none;-webkit-perspective:600px;perspective:600px}.tie-popup-container{position:relative;z-index:100;width:90%;max-width:420px;margin:10em auto 0;border-radius:2px;box-shadow:0 0 20px rgba(0,0,0,0.2);will-change:transform,opacity;-webkit-transform:scale(0.5);-ms-transform:scale(0.5);transform:scale(0.5);opacity:0}.tie-popup-container .login-submit{padding-top:15px;padding-bottom:15px}.tie-popup-container .container-wrapper{padding:60px;background-color:#fff!important;border-radius:5px}@media (max-width:479px){.tie-popup-container .container-wrapper{padding:30px}}.pop-up-live-search{will-change:transform,opacity;-webkit-transform:scale(0.7);-ms-transform:scale(0.7);transform:scale(0.7);opacity:0}.tie-popup-search-wrap::-webkit-input-placeholder{color:#ffffff}.tie-popup-search-wrap::-moz-placeholder{color:#ffffff}.tie-popup-search-wrap:-moz-placeholder{color:#ffffff}.tie-popup-search-wrap:-ms-input-placeholder{color:#ffffff}.tie-popup-search-wrap form{position:relative;height:80px;margin-bottom:20px}.popup-search-wrap-inner{position:relative;padding:80px 15px 0;margin:0 auto;max-width:800px}input.tie-popup-search-input{width:100%;height:80px;line-height:80px;background:rgba(0,0,0,0.7)!important;font-weight:500;font-size:22px;border:0;padding-right:80px;padding-left:30px;color:#ffffff}button.tie-popup-search-submit{font-size:28px;color:#666;position:absolute;right:10px;top:20px;background:transparent!important}#tie-popup-search-mobile .popup-search-wrap-inner{padding-top:50px}#tie-popup-search-mobile input.tie-popup-search-input{height:50px;line-height:1;padding-left:20px;padding-right:50px}#tie-popup-search-mobile button.tie-popup-search-submit{font-size:16px;top:9px;right:0}#autocomplete-suggestions{overflow:auto;padding:20px;color:#eee;position:absolute;display:none;width:370px;z-index:9999}@font-face{font-family:'tiefonticon';src:url(https://6wrni.com/wp-content/themes/jannah/assets/fonts/tielabs-fonticon/tielabs-fonticon.eot);src:url(https://6wrni.com/wp-content/themes/jannah/assets/fonts/tielabs-fonticon/tielabs-fonticon.eot#iefix) format("embedded-opentype"),url(https://6wrni.com/wp-content/themes/jannah/assets/fonts/tielabs-fonticon/tielabs-fonticon.woff) format("woff"),url(https://6wrni.com/wp-content/themes/jannah/assets/fonts/tielabs-fonticon/tielabs-fonticon.ttf) format("truetype"),url(https://6wrni.com/wp-content/themes/jannah/assets/fonts/tielabs-fonticon/tielabs-fonticon.svg#tielabs-fonticon) format("svg");font-weight:normal;font-style:normal;font-display:block}.tie-icon-facebook:before{content:"\f09a"}.tie-icon-search:before{content:"\f002"}.tie-icon-author:before{content:"\f007"}.tie-icon-search:before{content:"\f002"}.tie-icon-play:before{content:"\f04b"}.tie-icon-pause:before{content:"\f04c"}.tie-icon-random:before{content:"\f074"}.tie-icon-twitter:before{content:"\f099"}.tie-icon-navicon:before{content:"\f0c9"}.tie-icon-youtube:before{content:"\f16a"}.tie-icon-instagram:before{content:"\f16d"}.tie-icon-facebook:before{content:"\f09a"}html{direction:rtl}@media (min-width:992px){.tie-col-md-12{float:right}}.tie-alignleft{float:right}.tie-alignright{float:left}.post-cat{margin-right:0;margin-left:4px}.search-field{float:right}.search-submit[type="submit"]{float:left;margin-right:2%;margin-left:0}.post-meta .meta-item{margin-left:8px;margin-right:0}.post-meta .tie-icon:before{padding-left:3px;padding-right:0!important}.tie-popup-search-wrap input[type="text"]{padding-right:20px;padding-left:80px}button.tie-popup-search-submit{left:25px;right:auto}a.remove{left:0;right:auto}.tie-popup a.remove{left:15px;right:auto}#tie-popup-search-mobile button.tie-popup-search-submit{right:auto;left:0}#tie-popup-search-mobile input.tie-popup-search-input{padding-right:20px;padding-left:50px}#logo,.header-layout-1 #logo{float:right}.header-layout-1 .main-menu{float:left}@media (min-width:992px){.menu-item-has-children>a:before,.mega-menu>a:before{left:12px;right:auto}#theme-header .menu>li.menu-item-has-children:not(.is-icon-only)>a,#theme-header .main-menu li.mega-menu:not(.is-icon-only)>a{padding-left:25px;padding-right:15px}.main-menu,.header-menu .menu li{float:right}.components,.components>li{float:left}.main-menu ul li .mega-links-head:after{right:0;left:auto}}@media (max-width:991px){#theme-header.has-normal-width-logo #logo{text-align:right}.mobile-header-components{left:15px;right:auto}.header-layout-1 .mobile-header-components{left:0;right:auto}}#mobile-header-components-area_1 .components{-webkit-flex-direction:row-reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}#mobile-header-components-area_2 .components{-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row}#mobile-search .search-form:after{left:10px;right:auto}#mobile-search .search-field{padding-left:45px;padding-right:20px}#mobile-search .search-submit{right:auto;left:5px}@media (max-width:991px){.header-layout-1 .main-menu-wrapper{-webkit-flex-direction:row-reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}}.slider-area .tie-media-icon{float:left;margin:-9px 10px 0 -5px}.post-thumb .post-cat-wrap{left:10px;right:auto}.playlist-title-icon{float:right;margin-right:0;margin-left:10px}.videos-number,.video-play-icon,.video-paused-icon{float:right;text-align:right}.block-head-1 .the-global-title:after{right:0;left:auto}.block-head-1 .the-global-title:before{right:0;left:auto;border-left:5px solid transparent;border-right:0}.widget-title-icon{left:0;right:auto}.post-widget-body{padding-left:0;padding-right:125px}.post-widget-thumbnail{float:right;margin-left:15px;margin-right:0}.login-widget .pass-container input[type="password"]{padding-left:70px;padding-right:10px}.login-widget .forget-text{left:10px;right:auto}.posts-list-big-first li:first-child .post-widget-thumbnail{margin-left:0}.posts-list-big-first li:first-child .post-widget-body{padding-right:0}@media (max-width:991px){.posts-list-big-first li{float:right}.posts-list-big-first li:nth-child(2n){float:left}.posts-list-big-first li:first-child{float:right;clear:left}.posts-list-big-first li:nth-child(n+2){float:left}}.social-icons-widget .social-icons-item{float:right}</style><link rel="preload" href="https://6wrni.com/wp-content/cache/min/1/d6ec9a2223209c169fd1bbeafbb020f6.css" data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" media="all" data-minify="1" />
+<meta name="description" content="Ù…Ù†ØµØ© ØªØ¹Ù„ÙŠÙ…ÙŠØ© Ù†Ø§Ø·Ù‚Ø© Ø¨Ø§Ù„Ø¹Ø±Ø¨ÙŠØ© Ù…Ø¬Ø§Ù†ÙŠØ© 100% ØªÙ‡ØªÙ… Ø¨ØªØ·ÙˆÙŠØ± Ø§Ù„Ø£Ù„Ø¹Ø§Ø¨ Ø¨Ø´ÙƒÙ„ Ø®Ø§ØµØŒ ØªØªÙ…ÙŠØ² Ø¨ØªØ·Ø¨ÙŠÙ‚Ù‡Ø§ Ø¹Ù„Ù‰ Ø§Ù„Ù‡ÙˆØ§ØªÙ Ø§Ù„Ø°ÙƒÙŠØ©ØŒ Ø­ÙŠØ« ÙŠÙ…ÙƒÙ†Ùƒ Ø§Ù„Ø­ØµÙˆÙ„ Ø¹Ù„Ù‰ Ø´Ù‡Ø§Ø¯Ø© Ø¥ÙƒÙ…Ø§Ù„ Ù…Ù†Ù‡Ø§ ÙÙŠ Ù…ÙˆØ§Ø¯Ù‡Ø§."/>
+<meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
+<link rel="canonical" href="https://6wrni.com/" />
+<meta property="og:locale" content="ar_AR" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Ù…ÙÙ†ÙŽØµÙ‘ÙŽØ©Ù Ø·ÙŽÙˆÙ‘ÙØ±Ù’Ù†ÙÙŠ Ø§Ù„ØªÙŽØ¹Ù’Ù„ÙŠÙ…ÙÙŠØ©" />
+<meta property="og:description" content="Ù…Ù†ØµØ© ØªØ¹Ù„ÙŠÙ…ÙŠØ© Ù†Ø§Ø·Ù‚Ø© Ø¨Ø§Ù„Ø¹Ø±Ø¨ÙŠØ© Ù…Ø¬Ø§Ù†ÙŠØ© 100% ØªÙ‡ØªÙ… Ø¨ØªØ·ÙˆÙŠØ± Ø§Ù„Ø£Ù„Ø¹Ø§Ø¨ Ø¨Ø´ÙƒÙ„ Ø®Ø§ØµØŒ ØªØªÙ…ÙŠØ² Ø¨ØªØ·Ø¨ÙŠÙ‚Ù‡Ø§ Ø¹Ù„Ù‰ Ø§Ù„Ù‡ÙˆØ§ØªÙ Ø§Ù„Ø°ÙƒÙŠØ©ØŒ Ø­ÙŠØ« ÙŠÙ…ÙƒÙ†Ùƒ Ø§Ù„Ø­ØµÙˆÙ„ Ø¹Ù„Ù‰ Ø´Ù‡Ø§Ø¯Ø© Ø¥ÙƒÙ…Ø§Ù„ Ù…Ù†Ù‡Ø§ ÙÙŠ Ù…ÙˆØ§Ø¯Ù‡Ø§." />
+<meta property="og:url" content="https://6wrni.com/" />
+<meta property="og:site_name" content="Ø·ÙˆÙ‘Ø±Ù†ÙÙŠ" />
+<meta property="og:updated_time" content="2021-02-03T19:00:29+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Ù…ÙÙ†ÙŽØµÙ‘ÙŽØ©Ù Ø·ÙŽÙˆÙ‘ÙØ±Ù’Ù†ÙÙŠ Ø§Ù„ØªÙŽØ¹Ù’Ù„ÙŠÙ…ÙÙŠØ©" />
+<meta name="twitter:description" content="Ù…Ù†ØµØ© ØªØ¹Ù„ÙŠÙ…ÙŠØ© Ù†Ø§Ø·Ù‚Ø© Ø¨Ø§Ù„Ø¹Ø±Ø¨ÙŠØ© Ù…Ø¬Ø§Ù†ÙŠØ© 100% ØªÙ‡ØªÙ… Ø¨ØªØ·ÙˆÙŠØ± Ø§Ù„Ø£Ù„Ø¹Ø§Ø¨ Ø¨Ø´ÙƒÙ„ Ø®Ø§ØµØŒ ØªØªÙ…ÙŠØ² Ø¨ØªØ·Ø¨ÙŠÙ‚Ù‡Ø§ Ø¹Ù„Ù‰ Ø§Ù„Ù‡ÙˆØ§ØªÙ Ø§Ù„Ø°ÙƒÙŠØ©ØŒ Ø­ÙŠØ« ÙŠÙ…ÙƒÙ†Ùƒ Ø§Ù„Ø­ØµÙˆÙ„ Ø¹Ù„Ù‰ Ø´Ù‡Ø§Ø¯Ø© Ø¥ÙƒÙ…Ø§Ù„ Ù…Ù†Ù‡Ø§ ÙÙŠ Ù…ÙˆØ§Ø¯Ù‡Ø§." />
+<meta name="twitter:site" content="@6wrni" />
+<meta name="twitter:creator" content="@6wrni" />
+<script type="application/ld+json" class="rank-math-schema">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://6wrni.com/#organization","name":"\u0637\u0648\u0631\u0646\u064a","url":"https://6wrni.com"},{"@type":"WebSite","@id":"https://6wrni.com/#website","url":"https://6wrni.com","name":"\u0637\u0648\u0631\u0646\u064a","publisher":{"@id":"https://6wrni.com/#organization"},"inLanguage":"ar","potentialAction":{"@type":"SearchAction","target":"https://6wrni.com/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"Person","@id":"https://6wrni.com/author/yaman/","name":"Yaman","image":{"@type":"ImageObject","@id":"https://secure.gravatar.com/avatar/9c59ab53c4b506a3f07674cd78a34993?s=96&amp;r=g","url":"https://secure.gravatar.com/avatar/9c59ab53c4b506a3f07674cd78a34993?s=96&amp;r=g","caption":"Yaman","inLanguage":"ar"},"worksFor":{"@id":"https://6wrni.com/#organization"}},{"@type":"WebPage","@id":"https://6wrni.com/#webpage","url":"https://6wrni.com/","name":"\u0645\u0650\u0646\u064e\u0635\u0651\u064e\u0629\u064f \u0637\u064e\u0648\u0651\u0650\u0631\u0652\u0646\u0650\u064a \u0627\u0644\u062a\u064e\u0639\u0652\u0644\u064a\u0645\u0650\u064a\u0629","datePublished":"2021-01-09T14:23:51+00:00","dateModified":"2021-02-03T19:00:29+00:00","author":{"@id":"https://6wrni.com/author/yaman/"},"isPartOf":{"@id":"https://6wrni.com/#website"},"inLanguage":"ar"},{"@type":"Article","headline":"\u0645\u0650\u0646\u064e\u0635\u0651\u064e\u0629\u064f \u0637\u064e\u0648\u0651\u0650\u0631\u0652\u0646\u0650\u064a \u0627\u0644\u062a\u064e\u0639\u0652\u0644\u064a\u0645\u0650\u064a\u0629","datePublished":"2021-01-09T14:23:51+00:00","dateModified":"2021-02-03T19:00:29+00:00","author":{"@type":"Person","name":"Yaman"},"publisher":{"@id":"https://6wrni.com/#organization"},"description":"\u0645\u0646\u0635\u0629 \u062a\u0639\u0644\u064a\u0645\u064a\u0629 \u0646\u0627\u0637\u0642\u0629 \u0628\u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u0645\u062c\u0627\u0646\u064a\u0629 100% \u062a\u0647\u062a\u0645 \u0628\u062a\u0637\u0648\u064a\u0631 \u0627\u0644\u0623\u0644\u0639\u0627\u0628 \u0628\u0634\u0643\u0644 \u062e\u0627\u0635\u060c \u062a\u062a\u0645\u064a\u0632 \u0628\u062a\u0637\u0628\u064a\u0642\u0647\u0627 \u0639\u0644\u0649 \u0627\u0644\u0647\u0648\u0627\u062a\u0641 \u0627\u0644\u0630\u0643\u064a\u0629\u060c \u062d\u064a\u062b \u064a\u0645\u0643\u0646\u0643 \u0627\u0644\u062d\u0635\u0648\u0644 \u0639\u0644\u0649 \u0634\u0647\u0627\u062f\u0629 \u0625\u0643\u0645\u0627\u0644 \u0645\u0646\u0647\u0627 \u0641\u064a \u0645\u0648\u0627\u062f\u0647\u0627.","name":"\u0645\u0650\u0646\u064e\u0635\u0651\u064e\u0629\u064f \u0637\u064e\u0648\u0651\u0650\u0631\u0652\u0646\u0650\u064a \u0627\u0644\u062a\u064e\u0639\u0652\u0644\u064a\u0645\u0650\u064a\u0629","@id":"https://6wrni.com/#richSnippet","isPartOf":{"@id":"https://6wrni.com/#webpage"},"inLanguage":"ar","mainEntityOfPage":{"@id":"https://6wrni.com/#webpage"}}]}</script>
+<meta name="google-site-verification" content="U0Hocp0VW2iDAVpqqgrdoBwntElBTnm0jic2x5UsZkQ" />
+<meta name="msvalidate.01" content="7143d54734c440fdb333d440000c5bd1" />
+<!-- /Rank Math WordPress SEO plugin -->
+
+
+<link rel="alternate" type="application/rss+xml" title="Ø·ÙˆÙ‘Ø±Ù†ÙÙŠ &laquo; Ø§Ù„Ø®Ù„Ø§ØµØ©" href="https://6wrni.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Ø·ÙˆÙ‘Ø±Ù†ÙÙŠ &laquo; Ø®Ù„Ø§ØµØ© Ø§Ù„ØªØ¹Ù„ÙŠÙ‚Ø§Øª" href="https://6wrni.com/comments/feed/" />
+
+<meta property="og:title" content="Ø·ÙˆÙ‘Ø±Ù†ÙÙŠ" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="Ù…Ù†ØµØ© ØªØ¹Ù„ÙŠÙ…ÙŠØ© Ù„ØªØ¹Ù„ÙŠÙ… ØªØ·ÙˆÙŠØ± Ø§Ù„Ø£Ù„Ø¹Ø§Ø¨" />
+<meta property="og:url" content="https://6wrni.com/" />
+<meta property="og:site_name" content="Ø·ÙˆÙ‘Ø±Ù†ÙÙŠ" />
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style id='tie-theme-child-css-inline-css' type='text/css'>
+.wf-active .logo-text,.wf-active h1,.wf-active h2,.wf-active h3,.wf-active h4,.wf-active h5,.wf-active h6,.wf-active .the-subtitle{font-family: 'Cairo';}.wf-active #main-nav .main-menu > ul > li > a{font-family: 'Cairo';}#main-nav .main-menu > ul > li > a{text-transform: uppercase;}.brand-title,a:hover,.tie-popup-search-submit,#logo.text-logo a,.theme-header nav .components #search-submit:hover,.theme-header .header-nav .components > li:hover > a,.theme-header .header-nav .components li a:hover,.main-menu ul.cats-vertical li a.is-active,.main-menu ul.cats-vertical li a:hover,.main-nav li.mega-menu .post-meta a:hover,.main-nav li.mega-menu .post-box-title a:hover,.search-in-main-nav.autocomplete-suggestions a:hover,#main-nav .menu ul:not(.cats-horizontal) li:hover > a,#main-nav .menu ul li.current-menu-item:not(.mega-link-column) > a,.top-nav .menu li:hover > a,.top-nav .menu > .tie-current-menu > a,.search-in-top-nav.autocomplete-suggestions .post-title a:hover,div.mag-box .mag-box-options .mag-box-filter-links a.active,.mag-box-filter-links .flexMenu-viewMore:hover > a,.stars-rating-active,body .tabs.tabs .active > a,.video-play-icon,.spinner-circle:after,#go-to-content:hover,.comment-list .comment-author .fn,.commentlist .comment-author .fn,blockquote::before,blockquote cite,blockquote.quote-simple p,.multiple-post-pages a:hover,#story-index li .is-current,.latest-tweets-widget .twitter-icon-wrap span,.wide-slider-nav-wrapper .slide,.wide-next-prev-slider-wrapper .tie-slider-nav li:hover span,.review-final-score h3,#mobile-menu-icon:hover .menu-text,body .entry a,.dark-skin body .entry a,.entry .post-bottom-meta a:hover,.comment-list .comment-content a,q a,blockquote a,.widget.tie-weather-widget .icon-basecloud-bg:after,.site-footer a:hover,.site-footer .stars-rating-active,.site-footer .twitter-icon-wrap span,.site-info a:hover{color: #9b59b6;}#instagram-link a:hover{color: #9b59b6 !important;border-color: #9b59b6 !important;}[type='submit'],.button,.generic-button a,.generic-button button,.theme-header .header-nav .comp-sub-menu a.button.guest-btn:hover,.theme-header .header-nav .comp-sub-menu a.checkout-button,nav.main-nav .menu > li.tie-current-menu > a,nav.main-nav .menu > li:hover > a,.main-menu .mega-links-head:after,.main-nav .mega-menu.mega-cat .cats-horizontal li a.is-active,#mobile-menu-icon:hover .nav-icon,#mobile-menu-icon:hover .nav-icon:before,#mobile-menu-icon:hover .nav-icon:after,.search-in-main-nav.autocomplete-suggestions a.button,.search-in-top-nav.autocomplete-suggestions a.button,.spinner > div,.post-cat,.pages-numbers li.current span,.multiple-post-pages > span,#tie-wrapper .mejs-container .mejs-controls,.mag-box-filter-links a:hover,.slider-arrow-nav a:not(.pagination-disabled):hover,.comment-list .reply a:hover,.commentlist .reply a:hover,#reading-position-indicator,#story-index-icon,.videos-block .playlist-title,.review-percentage .review-item span span,.tie-slick-dots li.slick-active button,.tie-slick-dots li button:hover,.digital-rating-static,.timeline-widget li a:hover .date:before,#wp-calendar #today,.posts-list-counter li:before,.cat-counter a + span,.tie-slider-nav li span:hover,.fullwidth-area .widget_tag_cloud .tagcloud a:hover,.magazine2:not(.block-head-4) .dark-widgetized-area ul.tabs a:hover,.magazine2:not(.block-head-4) .dark-widgetized-area ul.tabs .active a,.magazine1 .dark-widgetized-area ul.tabs a:hover,.magazine1 .dark-widgetized-area ul.tabs .active a,.block-head-4.magazine2 .dark-widgetized-area .tabs.tabs .active a,.block-head-4.magazine2 .dark-widgetized-area .tabs > .active a:before,.block-head-4.magazine2 .dark-widgetized-area .tabs > .active a:after,.demo_store,.demo #logo:after,.demo #sticky-logo:after,.widget.tie-weather-widget,span.video-close-btn:hover,#go-to-top,.latest-tweets-widget .slider-links .button:not(:hover){background-color: #9b59b6;color: #FFFFFF;}.tie-weather-widget .widget-title .the-subtitle,.block-head-4.magazine2 #footer .tabs .active a:hover{color: #FFFFFF;}pre,code,.pages-numbers li.current span,.theme-header .header-nav .comp-sub-menu a.button.guest-btn:hover,.multiple-post-pages > span,.post-content-slideshow .tie-slider-nav li span:hover,#tie-body .tie-slider-nav li > span:hover,.slider-arrow-nav a:not(.pagination-disabled):hover,.main-nav .mega-menu.mega-cat .cats-horizontal li a.is-active,.main-nav .mega-menu.mega-cat .cats-horizontal li a:hover,.main-menu .menu > li > .menu-sub-content{border-color: #9b59b6;}.main-menu .menu > li.tie-current-menu{border-bottom-color: #9b59b6;}.top-nav .menu li.tie-current-menu > a:before,.top-nav .menu li.menu-item-has-children:hover > a:before{border-top-color: #9b59b6;}.main-nav .main-menu .menu > li.tie-current-menu > a:before,.main-nav .main-menu .menu > li:hover > a:before{border-top-color: #FFFFFF;}header.main-nav-light .main-nav .menu-item-has-children li:hover > a:before,header.main-nav-light .main-nav .mega-menu li:hover > a:before{border-left-color: #9b59b6;}.rtl header.main-nav-light .main-nav .menu-item-has-children li:hover > a:before,.rtl header.main-nav-light .main-nav .mega-menu li:hover > a:before{border-right-color: #9b59b6;border-left-color: transparent;}.top-nav ul.menu li .menu-item-has-children:hover > a:before{border-top-color: transparent;border-left-color: #9b59b6;}.rtl .top-nav ul.menu li .menu-item-has-children:hover > a:before{border-left-color: transparent;border-right-color: #9b59b6;}#footer-widgets-container{border-top: 8px solid #9b59b6;-webkit-box-shadow: 0 -5px 0 rgba(0,0,0,0.07); -moz-box-shadow: 0 -8px 0 rgba(0,0,0,0.07); box-shadow: 0 -8px 0 rgba(0,0,0,0.07);}::-moz-selection{background-color: #9b59b6;color: #FFFFFF;}::selection{background-color: #9b59b6;color: #FFFFFF;}circle.circle_bar{stroke: #9b59b6;}#reading-position-indicator{box-shadow: 0 0 10px rgba( 155,89,182,0.7);}#logo.text-logo a:hover,body .entry a:hover,.dark-skin body .entry a:hover,.comment-list .comment-content a:hover,.block-head-4.magazine2 .site-footer .tabs li a:hover,q a:hover,blockquote a:hover{color: #692784;}.button:hover,input[type='submit']:hover,.generic-button a:hover,.generic-button button:hover,a.post-cat:hover,.site-footer .button:hover,.site-footer [type='submit']:hover,.search-in-main-nav.autocomplete-suggestions a.button:hover,.search-in-top-nav.autocomplete-suggestions a.button:hover,.theme-header .header-nav .comp-sub-menu a.checkout-button:hover{background-color: #692784;color: #FFFFFF;}.theme-header .header-nav .comp-sub-menu a.checkout-button:not(:hover),body .entry a.button{color: #FFFFFF;}#story-index.is-compact .story-index-content{background-color: #9b59b6;}#story-index.is-compact .story-index-content a,#story-index.is-compact .story-index-content .is-current{color: #FFFFFF;}#tie-body .mag-box-title h3 a,#tie-body .block-more-button{color: #9b59b6;}#tie-body .mag-box-title h3 a:hover,#tie-body .block-more-button:hover{color: #692784;}#tie-body .mag-box-title{color: #9b59b6;}#tie-body .mag-box-title:before{border-top-color: #9b59b6;}#tie-body .mag-box-title:after,#tie-body #footer .widget-title:after{background-color: #9b59b6;}.brand-title,a:hover,.tie-popup-search-submit,#logo.text-logo a,.theme-header nav .components #search-submit:hover,.theme-header .header-nav .components > li:hover > a,.theme-header .header-nav .components li a:hover,.main-menu ul.cats-vertical li a.is-active,.main-menu ul.cats-vertical li a:hover,.main-nav li.mega-menu .post-meta a:hover,.main-nav li.mega-menu .post-box-title a:hover,.search-in-main-nav.autocomplete-suggestions a:hover,#main-nav .menu ul:not(.cats-horizontal) li:hover > a,#main-nav .menu ul li.current-menu-item:not(.mega-link-column) > a,.top-nav .menu li:hover > a,.top-nav .menu > .tie-current-menu > a,.search-in-top-nav.autocomplete-suggestions .post-title a:hover,div.mag-box .mag-box-options .mag-box-filter-links a.active,.mag-box-filter-links .flexMenu-viewMore:hover > a,.stars-rating-active,body .tabs.tabs .active > a,.video-play-icon,.spinner-circle:after,#go-to-content:hover,.comment-list .comment-author .fn,.commentlist .comment-author .fn,blockquote::before,blockquote cite,blockquote.quote-simple p,.multiple-post-pages a:hover,#story-index li .is-current,.latest-tweets-widget .twitter-icon-wrap span,.wide-slider-nav-wrapper .slide,.wide-next-prev-slider-wrapper .tie-slider-nav li:hover span,.review-final-score h3,#mobile-menu-icon:hover .menu-text,body .entry a,.dark-skin body .entry a,.entry .post-bottom-meta a:hover,.comment-list .comment-content a,q a,blockquote a,.widget.tie-weather-widget .icon-basecloud-bg:after,.site-footer a:hover,.site-footer .stars-rating-active,.site-footer .twitter-icon-wrap span,.site-info a:hover{color: #9b59b6;}#instagram-link a:hover{color: #9b59b6 !important;border-color: #9b59b6 !important;}[type='submit'],.button,.generic-button a,.generic-button button,.theme-header .header-nav .comp-sub-menu a.button.guest-btn:hover,.theme-header .header-nav .comp-sub-menu a.checkout-button,nav.main-nav .menu > li.tie-current-menu > a,nav.main-nav .menu > li:hover > a,.main-menu .mega-links-head:after,.main-nav .mega-menu.mega-cat .cats-horizontal li a.is-active,#mobile-menu-icon:hover .nav-icon,#mobile-menu-icon:hover .nav-icon:before,#mobile-menu-icon:hover .nav-icon:after,.search-in-main-nav.autocomplete-suggestions a.button,.search-in-top-nav.autocomplete-suggestions a.button,.spinner > div,.post-cat,.pages-numbers li.current span,.multiple-post-pages > span,#tie-wrapper .mejs-container .mejs-controls,.mag-box-filter-links a:hover,.slider-arrow-nav a:not(.pagination-disabled):hover,.comment-list .reply a:hover,.commentlist .reply a:hover,#reading-position-indicator,#story-index-icon,.videos-block .playlist-title,.review-percentage .review-item span span,.tie-slick-dots li.slick-active button,.tie-slick-dots li button:hover,.digital-rating-static,.timeline-widget li a:hover .date:before,#wp-calendar #today,.posts-list-counter li:before,.cat-counter a + span,.tie-slider-nav li span:hover,.fullwidth-area .widget_tag_cloud .tagcloud a:hover,.magazine2:not(.block-head-4) .dark-widgetized-area ul.tabs a:hover,.magazine2:not(.block-head-4) .dark-widgetized-area ul.tabs .active a,.magazine1 .dark-widgetized-area ul.tabs a:hover,.magazine1 .dark-widgetized-area ul.tabs .active a,.block-head-4.magazine2 .dark-widgetized-area .tabs.tabs .active a,.block-head-4.magazine2 .dark-widgetized-area .tabs > .active a:before,.block-head-4.magazine2 .dark-widgetized-area .tabs > .active a:after,.demo_store,.demo #logo:after,.demo #sticky-logo:after,.widget.tie-weather-widget,span.video-close-btn:hover,#go-to-top,.latest-tweets-widget .slider-links .button:not(:hover){background-color: #9b59b6;color: #FFFFFF;}.tie-weather-widget .widget-title .the-subtitle,.block-head-4.magazine2 #footer .tabs .active a:hover{color: #FFFFFF;}pre,code,.pages-numbers li.current span,.theme-header .header-nav .comp-sub-menu a.button.guest-btn:hover,.multiple-post-pages > span,.post-content-slideshow .tie-slider-nav li span:hover,#tie-body .tie-slider-nav li > span:hover,.slider-arrow-nav a:not(.pagination-disabled):hover,.main-nav .mega-menu.mega-cat .cats-horizontal li a.is-active,.main-nav .mega-menu.mega-cat .cats-horizontal li a:hover,.main-menu .menu > li > .menu-sub-content{border-color: #9b59b6;}.main-menu .menu > li.tie-current-menu{border-bottom-color: #9b59b6;}.top-nav .menu li.tie-current-menu > a:before,.top-nav .menu li.menu-item-has-children:hover > a:before{border-top-color: #9b59b6;}.main-nav .main-menu .menu > li.tie-current-menu > a:before,.main-nav .main-menu .menu > li:hover > a:before{border-top-color: #FFFFFF;}header.main-nav-light .main-nav .menu-item-has-children li:hover > a:before,header.main-nav-light .main-nav .mega-menu li:hover > a:before{border-left-color: #9b59b6;}.rtl header.main-nav-light .main-nav .menu-item-has-children li:hover > a:before,.rtl header.main-nav-light .main-nav .mega-menu li:hover > a:before{border-right-color: #9b59b6;border-left-color: transparent;}.top-nav ul.menu li .menu-item-has-children:hover > a:before{border-top-color: transparent;border-left-color: #9b59b6;}.rtl .top-nav ul.menu li .menu-item-has-children:hover > a:before{border-left-color: transparent;border-right-color: #9b59b6;}#footer-widgets-container{border-top: 8px solid #9b59b6;-webkit-box-shadow: 0 -5px 0 rgba(0,0,0,0.07); -moz-box-shadow: 0 -8px 0 rgba(0,0,0,0.07); box-shadow: 0 -8px 0 rgba(0,0,0,0.07);}::-moz-selection{background-color: #9b59b6;color: #FFFFFF;}::selection{background-color: #9b59b6;color: #FFFFFF;}circle.circle_bar{stroke: #9b59b6;}#reading-position-indicator{box-shadow: 0 0 10px rgba( 155,89,182,0.7);}#logo.text-logo a:hover,body .entry a:hover,.dark-skin body .entry a:hover,.comment-list .comment-content a:hover,.block-head-4.magazine2 .site-footer .tabs li a:hover,q a:hover,blockquote a:hover{color: #692784;}.button:hover,input[type='submit']:hover,.generic-button a:hover,.generic-button button:hover,a.post-cat:hover,.site-footer .button:hover,.site-footer [type='submit']:hover,.search-in-main-nav.autocomplete-suggestions a.button:hover,.search-in-top-nav.autocomplete-suggestions a.button:hover,.theme-header .header-nav .comp-sub-menu a.checkout-button:hover{background-color: #692784;color: #FFFFFF;}.theme-header .header-nav .comp-sub-menu a.checkout-button:not(:hover),body .entry a.button{color: #FFFFFF;}#story-index.is-compact .story-index-content{background-color: #9b59b6;}#story-index.is-compact .story-index-content a,#story-index.is-compact .story-index-content .is-current{color: #FFFFFF;}#tie-body .mag-box-title h3 a,#tie-body .block-more-button{color: #9b59b6;}#tie-body .mag-box-title h3 a:hover,#tie-body .block-more-button:hover{color: #692784;}#tie-body .mag-box-title{color: #9b59b6;}#tie-body .mag-box-title:before{border-top-color: #9b59b6;}#tie-body .mag-box-title:after,#tie-body #footer .widget-title:after{background-color: #9b59b6;}#top-nav a:not(:hover),#top-nav input,#top-nav #search-submit,#top-nav .fa-spinner,#top-nav .dropdown-social-icons li a span,#top-nav .components > li .social-link:not(:hover) span,.search-in-top-nav.autocomplete-suggestions a{color: #ffffff;}#top-nav .menu-item-has-children > a:before{border-top-color: #ffffff;}#top-nav li .menu-item-has-children > a:before{border-top-color: transparent;border-left-color: #ffffff;}.rtl #top-nav .menu li .menu-item-has-children > a:before{border-left-color: transparent;border-right-color: #ffffff;}#top-nav input::-moz-placeholder{color: #ffffff;}#top-nav input:-moz-placeholder{color: #ffffff;}#top-nav input:-ms-input-placeholder{color: #ffffff;}#top-nav input::-webkit-input-placeholder{color: #ffffff;}#top-nav,#top-nav .comp-sub-menu,#top-nav .tie-weather-widget{color: #ffffff;}.search-in-top-nav.autocomplete-suggestions .post-meta,.search-in-top-nav.autocomplete-suggestions .post-meta a:not(:hover){color: rgba( 255,255,255,0.7 );}#top-nav .weather-icon .icon-cloud,#top-nav .weather-icon .icon-basecloud-bg,#top-nav .weather-icon .icon-cloud-behind{color: #ffffff !important;}#tie-wrapper #theme-header{background-color: #ffffff;}#logo.text-logo a,#logo.text-logo a:hover{color: #000000;}@media (max-width: 991px){#tie-wrapper #theme-header .logo-container.fixed-nav{background-color: rgba(255,255,255,0.95);}}@media (max-width: 991px){#tie-wrapper #theme-header .logo-container{background-color: #ffffff;}}.tie-cat-391,.tie-cat-item-391 > span{background-color:#e67e22 !important;color:#FFFFFF !important;}.tie-cat-391:after{border-top-color:#e67e22 !important;}.tie-cat-391:hover{background-color:#c86004 !important;}.tie-cat-391:hover:after{border-top-color:#c86004 !important;}.tie-cat-398,.tie-cat-item-398 > span{background-color:#2ecc71 !important;color:#FFFFFF !important;}.tie-cat-398:after{border-top-color:#2ecc71 !important;}.tie-cat-398:hover{background-color:#10ae53 !important;}.tie-cat-398:hover:after{border-top-color:#10ae53 !important;}.tie-cat-402,.tie-cat-item-402 > span{background-color:#9b59b6 !important;color:#FFFFFF !important;}.tie-cat-402:after{border-top-color:#9b59b6 !important;}.tie-cat-402:hover{background-color:#7d3b98 !important;}.tie-cat-402:hover:after{border-top-color:#7d3b98 !important;}.tie-cat-405,.tie-cat-item-405 > span{background-color:#34495e !important;color:#FFFFFF !important;}.tie-cat-405:after{border-top-color:#34495e !important;}.tie-cat-405:hover{background-color:#162b40 !important;}.tie-cat-405:hover:after{border-top-color:#162b40 !important;}.tie-cat-406,.tie-cat-item-406 > span{background-color:#795548 !important;color:#FFFFFF !important;}.tie-cat-406:after{border-top-color:#795548 !important;}.tie-cat-406:hover{background-color:#5b372a !important;}.tie-cat-406:hover:after{border-top-color:#5b372a !important;}.tie-cat-407,.tie-cat-item-407 > span{background-color:#4CAF50 !important;color:#FFFFFF !important;}.tie-cat-407:after{border-top-color:#4CAF50 !important;}.tie-cat-407:hover{background-color:#2e9132 !important;}.tie-cat-407:hover:after{border-top-color:#2e9132 !important;}@media (max-width: 991px){.side-aside #mobile-menu .menu > li{border-color: rgba(255,255,255,0.05);}}@media (max-width: 991px){.side-aside.dark-skin{background-color: #9b59b6;}}
+</style>
+<style id='rocket-lazyload-inline-css' type='text/css'>
+.rll-youtube-player{position:relative;padding-bottom:56.23%;height:0;overflow:hidden;max-width:100%;}.rll-youtube-player iframe{position:absolute;top:0;left:0;width:100%;height:100%;z-index:100;background:0 0}.rll-youtube-player img{bottom:0;display:block;left:0;margin:auto;max-width:100%;width:100%;position:absolute;right:0;top:0;border:none;height:auto;cursor:pointer;-webkit-transition:.4s all;-moz-transition:.4s all;transition:.4s all}.rll-youtube-player img:hover{-webkit-filter:brightness(75%)}.rll-youtube-player .play{height:72px;width:72px;left:50%;top:50%;margin-left:-36px;margin-top:-36px;position:absolute;background:url(https://6wrni.com/wp-content/plugins/wp-rocket/assets/img/youtube.png) no-repeat;cursor:pointer}
+</style>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://6wrni.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.0' id='jquery-core-js'></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://6wrni.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1' id='jquery-migrate-js' defer></script>
+<script type='text/javascript' id='sdm-scripts-js-extra'>
+/* <![CDATA[ */
+var sdm_ajax_script = {"ajaxurl":"https:\/\/6wrni.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='https://6wrni.com/wp-content/cache/min/1/wp-content/plugins/simple-download-monitor/js/sdm_wp_scripts.js?ver=1634458415' id='sdm-scripts-js' defer></script>
+<link rel="https://api.w.org/" href="https://6wrni.com/wp-json/" /><link rel="alternate" type="application/json" href="https://6wrni.com/wp-json/wp/v2/pages/26454" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://6wrni.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.3" />
+<link rel='shortlink' href='https://6wrni.com/' />
+<link rel="alternate" type="application/json+oembed" href="https://6wrni.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2F6wrni.com%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://6wrni.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2F6wrni.com%2F&#038;format=xml" />
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript'>
+/* <![CDATA[ */
+var taqyeem = {"ajaxurl":"https://6wrni.com/wp-admin/admin-ajax.php" , "your_rating":"ØªÙ‚ÙŠÙŠÙ…Ùƒ:"};
+/* ]]> */
+</script>
+
+<style id="ctcc-css" type="text/css" media="screen">
+				#catapult-cookie-bar {
+					box-sizing: border-box;
+					max-height: 0;
+					opacity: 0;
+					z-index: 99999;
+					overflow: hidden;
+					color: #ddd;
+					position: fixed;
+					left: 0;
+					bottom: 0;
+					width: 100%;
+					background-color: #464646;
+				}
+				#catapult-cookie-bar a {
+					color: #fff;
+				}
+				#catapult-cookie-bar .x_close span {
+					background-color: ;
+				}
+				button#catapultCookie {
+					background:;
+					color: ;
+					border: 0; padding: 6px 9px; border-radius: 3px;
+				}
+				#catapult-cookie-bar h3 {
+					color: #ddd;
+				}
+				.has-cookie-bar #catapult-cookie-bar {
+					opacity: 1;
+					max-height: 999px;
+					min-height: 30px;
+				}</style><meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="theme-color" content="#9b59b6" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="twitter:widgets:csp" content="on"><meta name="twitter:widgets:link-color" content="#000000"><meta name="twitter:widgets:border-color" content="#000000"><meta name="twitter:partner" content="tfwp"><link rel="icon" href="https://6wrni.com/wp-content/uploads/2016/11/cropped-6wrni-header2-32x32.jpg" sizes="32x32" />
+<link rel="icon" href="https://6wrni.com/wp-content/uploads/2016/11/cropped-6wrni-header2-192x192.jpg" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://6wrni.com/wp-content/uploads/2016/11/cropped-6wrni-header2-180x180.jpg" />
+<meta name="msapplication-TileImage" content="https://6wrni.com/wp-content/uploads/2016/11/cropped-6wrni-header2-270x270.jpg" />
+
+<meta name="twitter:card" content="summary"><meta name="twitter:title" content="Ø·ÙˆÙ‘Ø±Ù†ÙÙŠ"><meta name="twitter:site" content="@6wrni"><meta name="twitter:description" content="Ù…Ù†ØµØ© ØªØ¹Ù„ÙŠÙ…ÙŠØ© Ù„ØªØ¹Ù„ÙŠÙ… ØªØ·ÙˆÙŠØ± Ø§Ù„Ø£Ù„Ø¹Ø§Ø¨">
+<noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript><script type="rocketlazyloadscript">
+/*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
+(function(w){"use strict";if(!w.loadCSS){w.loadCSS=function(){}}
+var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.createElement("link").relList.supports("preload")}catch(e){ret=!1}
+return function(){return ret}})();rp.bindMediaToggle=function(link){var finalMedia=link.media||"all";function enableStylesheet(){link.media=finalMedia}
+if(link.addEventListener){link.addEventListener("load",enableStylesheet)}else if(link.attachEvent){link.attachEvent("onload",enableStylesheet)}
+setTimeout(function(){link.rel="stylesheet";link.media="only x"});setTimeout(enableStylesheet,3000)};rp.poly=function(){if(rp.support()){return}
+var links=w.document.getElementsByTagName("link");for(var i=0;i<links.length;i++){var link=links[i];if(link.rel==="preload"&&link.getAttribute("as")==="style"&&!link.getAttribute("data-loadcss")){link.setAttribute("data-loadcss",!0);rp.bindMediaToggle(link)}}};if(!rp.support()){rp.poly();var run=w.setInterval(rp.poly,500);if(w.addEventListener){w.addEventListener("load",function(){rp.poly();w.clearInterval(run)})}else if(w.attachEvent){w.attachEvent("onload",function(){rp.poly();w.clearInterval(run)})}}
+if(typeof exports!=="undefined"){exports.loadCSS=loadCSS}
+else{w.loadCSS=loadCSS}}(typeof global!=="undefined"?global:this))
+</script></head>
+
+<body id="tie-body" class="rtl home page-template-default page page-id-26454 tie-no-js block-head-1 magazine1 is-thumb-overlay-disabled is-desktop is-header-layout-1 has-builder hide_share_post_top hide_share_post_bottom">
+
+
+
+<div class="background-overlay">
+
+	<div id="tie-container" class="site tie-container">
+
+		
+		<div id="tie-wrapper">
+
+			
+<header id="theme-header" class="theme-header header-layout-1 main-nav-light main-nav-default-light main-nav-below no-stream-item top-nav-active top-nav-dark top-nav-default-dark top-nav-above has-shadow has-normal-width-logo mobile-header-default">
+	
+<nav id="top-nav"  class="has-menu-components top-nav header-nav" aria-label="Ø§Ù„Ø´Ø±ÙŠØ· Ø§Ù„Ø¹Ù„ÙˆÙŠ">
+	<div class="container">
+		<div class="topbar-wrapper">
+
+			
+			<div class="tie-alignleft">
+							</div><!-- .tie-alignleft /-->
+
+			<div class="tie-alignright">
+				<ul class="components">	<li class="side-aside-nav-icon menu-item custom-menu-link">
+		<a href="#">
+			<span class="tie-icon-navicon" aria-hidden="true"></span>
+			<span class="screen-reader-text">Ø¥Ø¶Ø§ÙØ© Ø¹Ù…ÙˆØ¯ Ø¬Ø§Ù†Ø¨ÙŠ</span>
+		</a>
+	</li>
+		<li class="random-post-icon menu-item custom-menu-link">
+		<a href="/?random-post=1" class="random-post" title="Ù…Ù‚Ø§Ù„ Ø¹Ø´ÙˆØ§Ø¦ÙŠ" rel="nofollow">
+			<span class="tie-icon-random" aria-hidden="true"></span>
+			<span class="screen-reader-text">Ù…Ù‚Ø§Ù„ Ø¹Ø´ÙˆØ§Ø¦ÙŠ</span>
+		</a>
+	</li>
+	
+	
+		<li class=" popup-login-icon menu-item custom-menu-link">
+			<a href="#" class="lgoin-btn tie-popup-trigger">
+				<span class="tie-icon-author" aria-hidden="true"></span>
+				<span class="screen-reader-text">ØªØ³Ø¬ÙŠÙ„ Ø§Ù„Ø¯Ø®ÙˆÙ„</span>			</a>
+		</li>
+
+			 <li class="social-icons-item"><a class="social-link instagram-social-icon" rel="external noopener nofollow" target="_blank" href="https://www.instagram.com/6wrni/"><span class="tie-social-icon tie-icon-instagram"></span><span class="screen-reader-text">Ø§Ù†Ø³ØªÙ‚Ø±Ø§Ù…</span></a></li><li class="social-icons-item"><a class="social-link youtube-social-icon" rel="external noopener nofollow" target="_blank" href="https://www.youtube.com/c/6wrni"><span class="tie-social-icon tie-icon-youtube"></span><span class="screen-reader-text">ÙŠÙˆØªÙŠÙˆØ¨</span></a></li><li class="social-icons-item"><a class="social-link twitter-social-icon" rel="external noopener nofollow" target="_blank" href="https://twitter.com/6wrni"><span class="tie-social-icon tie-icon-twitter"></span><span class="screen-reader-text">ØªÙˆÙŠØªØ±</span></a></li><li class="social-icons-item"><a class="social-link facebook-social-icon" rel="external noopener nofollow" target="_blank" href="https://www.facebook.com/6wrni"><span class="tie-social-icon tie-icon-facebook"></span><span class="screen-reader-text">ÙÙŠØ³Ø¨ÙˆÙƒ</span></a></li> </ul><!-- Components -->			</div><!-- .tie-alignright /-->
+
+		</div><!-- .topbar-wrapper /-->
+	</div><!-- .container /-->
+</nav><!-- #top-nav /-->
+
+<div class="main-nav-wrapper">
+	<nav id="main-nav" data-skin="search-in-main-nav" class="main-nav header-nav live-search-parent" style="line-height:105px" aria-label="Ø§Ù„Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø±Ø¦ÙŠØ³ÙŠØ©">
+		<div class="container">
+
+			<div class="main-menu-wrapper">
+
+				<div id="mobile-header-components-area_1" class="mobile-header-components"><ul class="components"><li class="mobile-component_menu custom-menu-link"><a href="#" id="mobile-menu-icon" class=""><span class="tie-mobile-menu-icon nav-icon is-layout-1"></span><span class="screen-reader-text">Ø§Ù„Ù‚Ø§Ø¦Ù…Ø©</span></a></li></ul></div>
+						<div class="header-layout-1-logo" style="width:250px">
+							
+		<div id="logo" class="image-logo" style="margin-top: 20px; margin-bottom: 20px;">
+
+			
+			<a title="Ø·ÙˆÙ‘Ø±Ù†ÙÙŠ" href="https://6wrni.com/">
+				
+				<picture class="tie-logo-default tie-logo-picture">
+					<source class="tie-logo-source-default tie-logo-source" data-lazy-srcset="https://6wrni.com/wp-content/uploads/2021/01/6wr.png">
+					<img class="tie-logo-img-default tie-logo-img" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20250%2065'%3E%3C/svg%3E" alt="Ø·ÙˆÙ‘Ø±Ù†ÙÙŠ" width="250" height="65" style="max-height:65px; width: auto;" data-lazy-src="https://6wrni.com/wp-content/uploads/2021/01/6wr.png" /><noscript><img class="tie-logo-img-default tie-logo-img" src="https://6wrni.com/wp-content/uploads/2021/01/6wr.png" alt="Ø·ÙˆÙ‘Ø±Ù†ÙÙŠ" width="250" height="65" style="max-height:65px; width: auto;" /></noscript>
+				</picture>
+			<h1 class="h1-off">Ø·ÙˆÙ‘Ø±Ù†ÙÙŠ</h1>			</a>
+
+			
+		</div><!-- #logo /-->
+
+								</div>
+
+						<div id="mobile-header-components-area_2" class="mobile-header-components"><ul class="components"><li class="mobile-component_search custom-menu-link">
+				<a href="#" class="tie-search-trigger-mobile">
+					<span class="tie-icon-search tie-search-icon" aria-hidden="true"></span>
+					<span class="screen-reader-text">Ø¨Ø­Ø« Ø¹Ù†</span>
+				</a>
+			</li></ul></div>
+				<div id="menu-components-wrap">
+
+					
+					<div class="main-menu main-menu-wrap tie-alignleft">
+						<div id="main-nav-menu" class="main-menu header-menu"><ul id="menu-%d8%a7%d9%84%d9%82%d8%a7%d8%a6%d9%85%d8%a9-%d8%a7%d9%84%d8%ac%d8%af%d9%8a%d8%af%d8%a9" class="menu" role="menubar"><li id="menu-item-26530" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-26454 current_page_item menu-item-26530 tie-current-menu"><a href="https://6wrni.com/">Ø§Ù„Ø±Ø¦ÙŠØ³ÙŠØ©</a></li>
+<li id="menu-item-26531" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26531"><a href="https://6wrni.com/app/">ØªØ·Ø¨ÙŠÙ‚ Ø·ÙˆØ±Ù†ÙŠ</a></li>
+<li id="menu-item-26534" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-26534 mega-menu mega-links mega-links-5col "><a href="https://6wrni.com/category/%d8%aa%d9%8e%d8%b9%d9%84%d9%8f%d9%85%d9%8f-%d8%a7%d9%84%d8%a8%d8%b1%d9%85%d8%ac%d8%a9%d9%90-%d9%84%d9%84%d9%85%d8%a8%d8%aa%d8%af%d8%a6%d9%8a%d9%86%d9%8e/">ØªÙŽØ¹Ù„ÙÙ…Ù Ø§Ù„Ø¨Ø±Ù…Ø¬Ø©Ù Ù„Ù„Ù…Ø¨ØªØ¯Ø¦ÙŠÙ†ÙŽ</a>
+<div class="mega-menu-block menu-sub-content">
+
+<ul class="sub-menu-columns">
+	<li id="menu-item-26540" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-26540 mega-link-column "><a class="mega-links-head"  href="https://6wrni.com/learn-programming-using-c-sharp-intro/">#1 Ø§Ù„Ù…Ù‚Ø¯Ù…Ø© â€“ Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C</a></li>
+	<li id="menu-item-26551" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-26551 mega-link-column "><a class="mega-links-head"  href="https://6wrni.com/why-c-sharp/">#2 Ù„Ù…Ø§Ø°Ø§ Ø§Ù„Ø³ÙŠ Ø´Ø§Ø±Ø¨ â€“ Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C</a></li>
+	<li id="menu-item-26555" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-26555 mega-link-column "><a class="mega-links-head"  href="https://6wrni.com/install-visual-studio/">#3 ØªÙ†ØµÙŠØ¨ Visual Studio â€“ Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C</a></li>
+	<li id="menu-item-26556" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-26556 mega-link-column "><a class="mega-links-head"  href="https://6wrni.com/write-first-program-hello-world/">#4 ÙƒØªØ§Ø¨Ø©Ù Ø§Ù„ØªØ·Ø¨ÙŠÙ‚Ù Ø§Ù„Ø£ÙˆÙ„ â€“ Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C</a></li>
+	<li id="menu-item-26557" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-26557 mega-link-column "><a class="mega-links-head"  href="https://6wrni.com/writing-rules-in-csharp/">#5 Ù‚ÙˆØ§Ø¹Ø¯Ù Ø§Ù„ÙƒØªØ§Ø¨Ø©Ù Syntax â€“ Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C</a></li>
+	<li id="menu-item-26558" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-26558 mega-link-column "><a class="mega-links-head"  href="https://6wrni.com/understand-first-program/">#6 ÙÙ‡Ù…Ù Ø§Ù„ØªØ·Ø¨ÙŠÙ‚Ù Ø§Ù„Ø£ÙˆÙ„ â€“ Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C</a></li>
+	<li id="menu-item-26559" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-26559 mega-link-column "><a class="mega-links-head"  href="https://6wrni.com/project-files/">#7 Ù…Ù„ÙØ§ØªÙ Ø§Ù„Ù…Ø´Ø±ÙˆØ¹Ù Project Files â€“ Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C</a></li>
+	<li id="menu-item-26560" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-26560 mega-link-column "><a class="mega-links-head"  href="https://6wrni.com/variables-01/">#8 Ø§Ù„Ù…ØªØºÙŠØ±Ø§Øª Variables â€“ Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C</a></li>
+	<li id="menu-item-26561" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-26561 mega-link-column "><a class="mega-links-head"  href="https://6wrni.com/variables-02/">#9 Ø§Ù„Ù…ØªØºÙŠØ± Ø§Ù„Ù†ØµÙŠ String â€“ Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C</a></li>
+	<li id="menu-item-26541" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-26541 mega-link-column "><a class="mega-links-head"  href="https://6wrni.com/if-statement/">#10 Ø§Ù„Ø¬Ù…Ù„Ø© Ø§Ù„Ø´Ø±Ø·ÙŠØ© IF â€“ Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C</a></li>
+	<li id="menu-item-26542" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-26542 mega-link-column "><a class="mega-links-head"  href="https://6wrni.com/operators-expressions-statements/">#11 Ø§Ù„ØªØ¹Ø¨ÙŠØ±Ø§Øª Expressions â€“ Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C</a></li>
+	<li id="menu-item-26543" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-26543 mega-link-column "><a class="mega-links-head"  href="https://6wrni.com/for-iteration-statement/">#12 Ø§Ù„Ø­Ù„Ù‚Ø© Ø§Ù„ØªÙƒØ±Ø§Ø±ÙŠØ© For â€“ Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C</a></li>
+	<li id="menu-item-26544" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-26544 mega-link-column "><a class="mega-links-head"  href="https://6wrni.com/understand-arrays-csharp/">#13 Ø§Ù„Ù…ØµÙÙˆÙØ§Øª Arrays â€“ Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C</a></li>
+	<li id="menu-item-26545" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-26545 mega-link-column "><a class="mega-links-head"  href="https://6wrni.com/csharp-methods/">#14 Ø§Ù„Ø¯ÙˆØ§Ù„ Methods â€“ Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C</a></li>
+	<li id="menu-item-26546" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-26546 mega-link-column "><a class="mega-links-head"  href="https://6wrni.com/csharp-while-loop/">#15 Ø§Ù„Ø­Ù„Ù‚Ø© Ø§Ù„ØªÙƒØ±Ø§Ø±ÙŠØ© While â€“ Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C</a></li>
+	<li id="menu-item-26547" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-26547 mega-link-column "><a class="mega-links-head"  href="https://6wrni.com/working-with-strings/">#16 Ø§Ù„ØªØ¹Ø§Ù…Ù„ Ù…Ø¹ Ø§Ù„Ù†ØµÙˆØµ Strings â€“ Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C</a></li>
+	<li id="menu-item-26548" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-26548 mega-link-column "><a class="mega-links-head"  href="https://6wrni.com/csharp-datetime/">#17 Ø§Ù„ØªØ§Ø±ÙŠØ® ÙˆØ§Ù„ÙˆÙ‚Øª DateTime â€“ Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C</a></li>
+	<li id="menu-item-26549" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-26549 mega-link-column "><a class="mega-links-head"  href="https://6wrni.com/csharp-working-with-classes/">#18 Ø§Ù„ÙØ¦Ø§Øª Classes â€“ Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C</a></li>
+	<li id="menu-item-26550" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-26550 mega-link-column "><a class="mega-links-head"  href="https://6wrni.com/csharp-classes-advance-topic/">#19 Ù…ÙˆØ§Ø¶ÙŠØ¹ Ù…ØªÙ‚Ø¯Ù…Ø© Ø¹Ù† Classes â€“ Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C</a></li>
+	<li id="menu-item-26552" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-26552 mega-link-column "><a class="mega-links-head"  href="https://6wrni.com/csharp-scope/">#20 Ø§Ù„Ù†Ø·Ø§Ù‚ Scope â€“ Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C</a></li>
+	<li id="menu-item-26553" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-26553 mega-link-column "><a class="mega-links-head"  href="https://6wrni.com/csharp-encapsulation/">#21 Ø§Ù„ØªØºÙ„ÙŠÙ Encapsulation â€“ Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C</a></li>
+	<li id="menu-item-26554" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-26554 mega-link-column "><a class="mega-links-head"  href="https://6wrni.com/csharp-namespace/">#22 Ù…ÙƒØªØ¨Ø§Øª Ø§Ù„Ø¯ÙˆØ§Ù„ Namespace â€“ Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C</a></li>
+</ul>
+
+</div><!-- .mega-menu-block --> 
+</li>
+<li id="menu-item-26535" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-26535 mega-menu mega-cat " data-id="414" ><a href="https://6wrni.com/category/%d9%85%d9%88%d8%a7%d8%b6%d9%8a%d8%b9-%d8%ad%d9%88%d9%84-%d9%85%d8%ad%d8%b1%d9%83-unity/">Ù…ÙˆØ§Ø¶ÙŠØ¹ Ø­ÙˆÙ„ Ù…Ø­Ø±Ùƒ Unity</a>
+<div class="mega-menu-block menu-sub-content">
+
+<div class="mega-menu-content">
+<div class="mega-cat-wrapper">
+<div class="mega-cat-content horizontal-posts">
+
+												<div class="mega-ajax-content mega-cat-posts-container clearfix">
+
+												</div><!-- .mega-ajax-content -->
+
+						</div><!-- .mega-cat-content -->
+
+					</div><!-- .mega-cat-Wrapper -->
+
+</div><!-- .mega-menu-content -->
+
+</div><!-- .mega-menu-block --> 
+</li>
+<li id="menu-item-26536" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-26536"><a href="https://6wrni.com/category/c-net/">C# .Net</a></li>
+<li id="menu-item-26537" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-26537"><a href="https://6wrni.com/category/%d8%a7%d9%84%d8%a8%d8%b1%d9%85%d8%ac%d8%a9/">Ø§Ù„Ø¨Ø±Ù…Ø¬Ø©</a></li>
+<li id="menu-item-26539" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-26539"><a href="https://6wrni.com/category/%d9%85%d8%af%d9%88%d9%86%d8%a9/">Ù…Ø¯ÙˆÙ†Ø©</a></li>
+<li id="menu-item-26533" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26533"><a href="https://6wrni.com/about/">Ø¹Ù† Ø·ÙˆØ±Ù†ÙŠ</a></li>
+<li id="menu-item-26532" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26532"><a href="https://6wrni.com/contact-us/">Ø±Ø§Ø³Ù„Ù†Ø§</a></li>
+</ul></div>					</div><!-- .main-menu.tie-alignleft /-->
+
+					<ul class="components">		<li class="search-compact-icon menu-item custom-menu-link">
+			<a href="#" class="tie-search-trigger">
+				<span class="tie-icon-search tie-search-icon" aria-hidden="true"></span>
+				<span class="screen-reader-text">Ø¨Ø­Ø« Ø¹Ù†</span>
+			</a>
+		</li>
+		</ul><!-- Components -->
+				</div><!-- #menu-components-wrap /-->
+			</div><!-- .main-menu-wrapper /-->
+		</div><!-- .container /-->
+	</nav><!-- #main-nav /-->
+</div><!-- .main-nav-wrapper /-->
+
+</header>
+
+
+
+<div id="tiepost-26454-section-4373" class="section-wrapper container normal-width without-background">
+	<div class="section-item is-first-section full-width" style="" >
+
+		
+			<section id="tie-block_1258" class="slider-area mag-box media-overlay">
+
+				
+				<div class="slider-area-inner">
+
+					<div id="tie-main-slider-1-block_1258" class="tie-main-slider main-slider fullwidth-slider-wrapper wide-slider-wrapper tie-slick-slider-wrapper" data-slider-id="1"  data-speed="3000">
+
+						
+						<div class="main-slider-inner">
+
+							
+								<div class="container slider-main-container">
+									<div class="tie-slick-slider">
+										<ul class="tie-slider-nav"></ul>
+
+										<div data-bg="https://6wrni.com/wp-content/uploads/2021/03/08-Game-history.jpg" style="" class="slide slide-id-26645 tie-slide-1 is-trending tie-standard rocket-lazyload">
+					<a href="https://6wrni.com/history-of-video-games/" class="all-over-thumb-link" aria-label="ØªØ§Ø±ÙŠØ® Ø£Ù„Ø¹Ø§Ø¨ Ø§Ù„ÙÙŠØ¯ÙŠÙˆ"></a>
+					<div class="thumb-overlay">
+								<span class="tie-icon tie-media-icon"></span>
+							<div class="container"><div class="thumb-content"><div class="thumb-meta"><span class="trending-post tie-icon-bolt " aria-hidden="true"></span><span class="date meta-item tie-icon">Ù…Ø§Ø±Ø³ 31, 2021</span></div>
+				<h2 class="thumb-title"><a href="https://6wrni.com/history-of-video-games/">ØªØ§Ø±ÙŠØ® Ø£Ù„Ø¹Ø§Ø¨ Ø§Ù„ÙÙŠØ¯ÙŠÙˆ</a></h2>
+			</div> <!-- .thumb-content /--></div><!-- .container -->
+					</div><!-- .thumb-overlay /-->
+				</div><!-- .slide || .grid-item /-->
+			<div data-bg="https://6wrni.com/wp-content/uploads/2021/01/wp4458578-pubg-vs-fortnite-wallpapers.jpg" style="" class="slide slide-id-26580 tie-slide-2 is-trending tie-standard rocket-lazyload">
+					<a href="https://6wrni.com/how-to-be-game-developer/" class="all-over-thumb-link" aria-label="ÙƒÙŠÙ ØªØµØ¨Ø­ Ù…Ø·ÙˆØ± Ø£Ù„Ø¹Ø§Ø¨"></a>
+					<div class="thumb-overlay">
+								<span class="tie-icon tie-media-icon"></span>
+							<div class="container"><div class="thumb-content"><div class="thumb-meta"><span class="trending-post tie-icon-bolt " aria-hidden="true"></span><span class="date meta-item tie-icon">ÙŠÙ†Ø§ÙŠØ± 25, 2021</span></div>
+				<h2 class="thumb-title"><a href="https://6wrni.com/how-to-be-game-developer/">ÙƒÙŠÙ ØªØµØ¨Ø­ Ù…Ø·ÙˆØ± Ø£Ù„Ø¹Ø§Ø¨</a></h2>
+			</div> <!-- .thumb-content /--></div><!-- .container -->
+					</div><!-- .thumb-overlay /-->
+				</div><!-- .slide || .grid-item /-->
+			<div data-bg="https://6wrni.com/wp-content/uploads/2020/01/22.jpg" style="" class="slide slide-id-26190 tie-slide-3 rocket-lazyload">
+					<a href="https://6wrni.com/csharp-namespace/" class="all-over-thumb-link" aria-label="#22 Ù…ÙƒØªØ¨Ø§Øª Ø§Ù„Ø¯ÙˆØ§Ù„ Namespace â€“ Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C"></a>
+					<div class="thumb-overlay">
+								<span class="tie-icon tie-media-icon"></span>
+							<div class="container"><div class="thumb-content"><div class="thumb-meta"><span class="date meta-item tie-icon">ÙŠÙ†Ø§ÙŠØ± 30, 2020</span></div>
+				<h2 class="thumb-title"><a href="https://6wrni.com/csharp-namespace/">#22 Ù…ÙƒØªØ¨Ø§Øª Ø§Ù„Ø¯ÙˆØ§Ù„ Namespace â€“ Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C</a></h2>
+			</div> <!-- .thumb-content /--></div><!-- .container -->
+					</div><!-- .thumb-overlay /-->
+				</div><!-- .slide || .grid-item /-->
+			<div data-bg="https://6wrni.com/wp-content/uploads/2019/06/film.jpg" style="" class="slide slide-id-26113 tie-slide-4 tie-standard rocket-lazyload">
+					<a href="https://6wrni.com/unity-film-production/" class="all-over-thumb-link" aria-label="ØµÙ†Ø§Ø¹Ø© Ø§Ù„Ø£ÙÙ„Ø§Ù… Ø¯Ø§Ø®Ù„ Ù…Ø­Ø±Ùƒ Unity"></a>
+					<div class="thumb-overlay">
+								<span class="tie-icon tie-media-icon"></span>
+							<div class="container"><div class="thumb-content"><div class="thumb-meta"><span class="date meta-item tie-icon">ÙŠÙˆÙ†ÙŠÙˆ 22, 2019</span></div>
+				<h2 class="thumb-title"><a href="https://6wrni.com/unity-film-production/">ØµÙ†Ø§Ø¹Ø© Ø§Ù„Ø£ÙÙ„Ø§Ù… Ø¯Ø§Ø®Ù„ Ù…Ø­Ø±Ùƒ Unity</a></h2>
+			</div> <!-- .thumb-content /--></div><!-- .container -->
+					</div><!-- .thumb-overlay /-->
+				</div><!-- .slide || .grid-item /-->
+			<div data-bg="https://6wrni.com/wp-content/uploads/2019/06/admob.jpg" style="" class="slide slide-id-26096 tie-slide-5 tie-standard rocket-lazyload">
+					<a href="https://6wrni.com/unity-admob/" class="all-over-thumb-link" aria-label="ØªØ¶Ù…ÙŠÙ† Ø¥Ø¹Ù„Ø§Ù†Ø§Øª Admob Ø¯Ø§Ø®Ù„ Unity"></a>
+					<div class="thumb-overlay">
+								<span class="tie-icon tie-media-icon"></span>
+							<div class="container"><div class="thumb-content"><div class="thumb-meta"><span class="date meta-item tie-icon">ÙŠÙˆÙ†ÙŠÙˆ 17, 2019</span></div>
+				<h2 class="thumb-title"><a href="https://6wrni.com/unity-admob/">ØªØ¶Ù…ÙŠÙ† Ø¥Ø¹Ù„Ø§Ù†Ø§Øª Admob Ø¯Ø§Ø®Ù„ Unity</a></h2>
+			</div> <!-- .thumb-content /--></div><!-- .container -->
+					</div><!-- .thumb-overlay /-->
+				</div><!-- .slide || .grid-item /-->
+			<div data-bg="https://6wrni.com/wp-content/uploads/2019/05/21.jpg" style="" class="slide slide-id-26076 tie-slide-6 rocket-lazyload">
+					<a href="https://6wrni.com/csharp-encapsulation/" class="all-over-thumb-link" aria-label="#21 Ø§Ù„ØªØºÙ„ÙŠÙ Encapsulation â€“ Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C"></a>
+					<div class="thumb-overlay">
+								<span class="tie-icon tie-media-icon"></span>
+							<div class="container"><div class="thumb-content"><div class="thumb-meta"><span class="date meta-item tie-icon">Ù…Ø§ÙŠÙˆ 27, 2019</span></div>
+				<h2 class="thumb-title"><a href="https://6wrni.com/csharp-encapsulation/">#21 Ø§Ù„ØªØºÙ„ÙŠÙ Encapsulation â€“ Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C</a></h2>
+			</div> <!-- .thumb-content /--></div><!-- .container -->
+					</div><!-- .thumb-overlay /-->
+				</div><!-- .slide || .grid-item /-->
+			<div data-bg="https://6wrni.com/wp-content/uploads/2019/05/20.jpg" style="" class="slide slide-id-26048 tie-slide-1 rocket-lazyload">
+					<a href="https://6wrni.com/csharp-scope/" class="all-over-thumb-link" aria-label="#20 Ø§Ù„Ù†Ø·Ø§Ù‚ Scope â€“ Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C"></a>
+					<div class="thumb-overlay">
+								<span class="tie-icon tie-media-icon"></span>
+							<div class="container"><div class="thumb-content"><div class="thumb-meta"><span class="date meta-item tie-icon">Ù…Ø§ÙŠÙˆ 23, 2019</span></div>
+				<h2 class="thumb-title"><a href="https://6wrni.com/csharp-scope/">#20 Ø§Ù„Ù†Ø·Ø§Ù‚ Scope â€“ Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C</a></h2>
+			</div> <!-- .thumb-content /--></div><!-- .container -->
+					</div><!-- .thumb-overlay /-->
+				</div><!-- .slide || .grid-item /-->
+			<div data-bg="https://6wrni.com/wp-content/uploads/2019/05/unity20192.jpg" style="" class="slide slide-id-26015 tie-slide-2 tie-standard rocket-lazyload">
+					<a href="https://6wrni.com/unity-2019-2-beta-overview/" class="all-over-thumb-link" aria-label="Ù„Ù…Ø­Ø© Ø­ÙˆÙ„ Ù…ÙŠØ²Ø§Øª 2019.2 Unity Ø§Ù„Ù†Ø³Ø®Ø© Ø§Ù„ØªØ¬Ø±ÙŠØ¨ÙŠØ©"></a>
+					<div class="thumb-overlay">
+								<span class="tie-icon tie-media-icon"></span>
+							<div class="container"><div class="thumb-content"><div class="thumb-meta"><span class="date meta-item tie-icon">Ù…Ø§ÙŠÙˆ 14, 2019</span></div>
+				<h2 class="thumb-title"><a href="https://6wrni.com/unity-2019-2-beta-overview/">Ù„Ù…Ø­Ø© Ø­ÙˆÙ„ Ù…ÙŠØ²Ø§Øª 2019.2 Unity Ø§Ù„Ù†Ø³Ø®Ø© Ø§Ù„ØªØ¬Ø±ÙŠØ¨ÙŠØ©</a></h2>
+			</div> <!-- .thumb-content /--></div><!-- .container -->
+					</div><!-- .thumb-overlay /-->
+				</div><!-- .slide || .grid-item /-->
+			<div data-bg="https://6wrni.com/wp-content/uploads/2018/01/UNITY2018-3.jpg" style="" class="slide slide-id-25995 tie-slide-3 tie-standard rocket-lazyload">
+					<a href="https://6wrni.com/unity-2018-1-beta-overview/" class="all-over-thumb-link" aria-label="Ù„Ù…Ø­Ø© Ø­ÙˆÙ„ Ù…ÙŠØ²Ø§Øª  2018.1 Unity Ø§Ù„Ù†Ø³Ø®Ø© Ø§Ù„ØªØ¬Ø±ÙŠØ¨ÙŠØ©"></a>
+					<div class="thumb-overlay">
+								<span class="tie-icon tie-media-icon"></span>
+							<div class="container"><div class="thumb-content"><div class="thumb-meta"><span class="date meta-item tie-icon">ÙŠÙ†Ø§ÙŠØ± 10, 2018</span></div>
+				<h2 class="thumb-title"><a href="https://6wrni.com/unity-2018-1-beta-overview/">Ù„Ù…Ø­Ø© Ø­ÙˆÙ„ Ù…ÙŠØ²Ø§Øª  2018.1 Unity Ø§Ù„Ù†Ø³Ø®Ø© Ø§Ù„ØªØ¬Ø±ÙŠØ¨ÙŠØ©</a></h2>
+			</div> <!-- .thumb-content /--></div><!-- .container -->
+					</div><!-- .thumb-overlay /-->
+				</div><!-- .slide || .grid-item /-->
+			<div data-bg="https://6wrni.com/wp-content/uploads/2017/11/Cover.jpg" style="" class="slide slide-id-25978 tie-slide-4 tie-standard rocket-lazyload">
+					<a href="https://6wrni.com/unity-game-engine-features/" class="all-over-thumb-link" aria-label="10 Ù…ÙŠØ²Ø§Øª Ù„Ù…Ø­Ø±Ùƒ Ø§Ù„Ø£Ù„Ø¹Ø§Ø¨ Unity ÙŠØ¬Ø¨ Ø£Ù† ØªØ¹Ø±ÙÙ‡Ø§"></a>
+					<div class="thumb-overlay">
+								<span class="tie-icon tie-media-icon"></span>
+							<div class="container"><div class="thumb-content"><div class="thumb-meta"><span class="date meta-item tie-icon">Ù†ÙˆÙÙ…Ø¨Ø± 23, 2017</span></div>
+				<h2 class="thumb-title"><a href="https://6wrni.com/unity-game-engine-features/">10 Ù…ÙŠØ²Ø§Øª Ù„Ù…Ø­Ø±Ùƒ Ø§Ù„Ø£Ù„Ø¹Ø§Ø¨ Unity ÙŠØ¬Ø¨ Ø£Ù† ØªØ¹Ø±ÙÙ‡Ø§</a></h2>
+			</div> <!-- .thumb-content /--></div><!-- .container -->
+					</div><!-- .thumb-overlay /-->
+				</div><!-- .slide || .grid-item /-->
+			
+									</div><!-- .tie-slick-slider /-->
+								</div><!-- .slider-main-container /-->
+
+							
+						</div><!-- .main-slider-inner  /-->
+					</div><!-- .main-slider /-->
+
+					</div><!-- .slider-area-inner -->		</section><!-- .slider-area -->
+
+			
+		
+			
+			
+				</div><!-- .section-item /-->
+</div><!-- .tiepost-26454-section-4373 /-->
+
+	
+<div id="tiepost-26454-section-2190" class="section-wrapper container-full has-background">
+	<div class="section-item full-width dark-skin" style="background-color: #9b59b6; background-size: cover;" >
+
+		
+				<div class="container">
+					<div class="tie-row main-content-row">
+						<div class="main-content tie-col-md-12">
+			<section id="tie-block_794" class="slider-area mag-box tie-video-main-slider">
+
+				
+<div class="videos-block">
+	<div class="video-playlist-wrapper">
+
+		<div class="loader-overlay"><div class="spinner-circle"></div></div>
+		<div class="video-player-wrapper tie-ignore-fitvid">
+							<div class="rll-youtube-player" data-src="https://www.youtube.com/embed/KH33TkFVMRw" data-id="KH33TkFVMRw" data-query="enablejsapi=1&amp;rel=0&amp;showinfo=0"></div><noscript><iframe class="video-frame" id="video-block_794-1" src="https://www.youtube.com/embed/KH33TkFVMRw?enablejsapi=1&amp;rel=0&amp;showinfo=0" title="Videos List" width="771" height="434" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen async></iframe></noscript>
+					</div><!-- .video-player-wrapper -->
+
+	</div><!-- .video-playlist-wrapper /-->
+
+	<div class="video-playlist-nav-wrapper">
+
+					<div class="playlist-title">
+				<div class="playlist-title-icon"><span class="tie-icon-play" aria-hidden="true"></span></div>
+				<h2>Ù‚Ù†Ø§Ø© ÙŠÙˆØªÙŠÙˆØ¨ Ø·ÙˆØ±Ù†ÙŠ</h2>
+				<span class="videos-number">
+					<span class="video-playing-number">1</span> / <span class="video-totlal-number">5</span> ÙÙŠØ¯ÙŠÙˆÙ‡Ø§Øª				</span>
+			</div> <!-- .playlist-title /-->
+		
+		<div data-height="window" class="video-playlist-nav has-custom-scroll playlist-has-title">
+
+						<div data-name="video-block_794-1" data-video-src="https://www.youtube.com/embed/KH33TkFVMRw?enablejsapi=1&amp;rel=0&amp;showinfo=0" class="video-playlist-item">
+					<div class="video-number">1</div>
+					<div class="video-play-icon"><span class="tie-icon-play" aria-hidden="true"></span></div>
+					<div class="video-paused-icon"><span class="tie-icon-pause" aria-hidden="true"></span></div>
+
+												<div data-bg="https://i.ytimg.com/vi/KH33TkFVMRw/default.jpg" style="" class="video-thumbnail post-thumb rocket-lazyload"></div>
+							
+					<div class="video-info">
+						<h2>ÙƒÙŠÙ ØªØµØ¨Ø­ Ù…ØµÙ…Ù… Ø£Ù„Ø¹Ø§Ø¨ Ù†Ø§Ø¬Ø­</h2>
+						<span class="video-duration">17:17</span>
+					</div><!-- .video-info -->
+				</div><!-- video-playlist-item -->
+								<div data-name="video-block_794-2" data-video-src="https://www.youtube.com/embed/NzU-JIQN5vY?enablejsapi=1&amp;rel=0&amp;showinfo=0" class="video-playlist-item">
+					<div class="video-number">2</div>
+					<div class="video-play-icon"><span class="tie-icon-play" aria-hidden="true"></span></div>
+					<div class="video-paused-icon"><span class="tie-icon-pause" aria-hidden="true"></span></div>
+
+												<div data-bg="https://i.ytimg.com/vi/NzU-JIQN5vY/default.jpg" style="" class="video-thumbnail post-thumb rocket-lazyload"></div>
+							
+					<div class="video-info">
+						<h2>Game Jam || Ù…Ø§ Ù‡ÙŠ Ù…Ø³Ø§Ø¨Ù‚Ø© Ø§Ù„Ù‚ÙŠÙ… Ø¬Ø§Ù…ØŸ</h2>
+						<span class="video-duration">04:19</span>
+					</div><!-- .video-info -->
+				</div><!-- video-playlist-item -->
+								<div data-name="video-block_794-3" data-video-src="https://www.youtube.com/embed/bpi_1kMxCk0?enablejsapi=1&amp;rel=0&amp;showinfo=0" class="video-playlist-item">
+					<div class="video-number">3</div>
+					<div class="video-play-icon"><span class="tie-icon-play" aria-hidden="true"></span></div>
+					<div class="video-paused-icon"><span class="tie-icon-pause" aria-hidden="true"></span></div>
+
+												<div data-bg="https://i.ytimg.com/vi/bpi_1kMxCk0/default.jpg" style="" class="video-thumbnail post-thumb rocket-lazyload"></div>
+							
+					<div class="video-info">
+						<h2>Publish Unity to itch.io || ÙƒÙŠÙ ØªØ¨ÙŠØ¹ Ù„Ø¹Ø¨ØªÙƒ</h2>
+						<span class="video-duration">09:32</span>
+					</div><!-- .video-info -->
+				</div><!-- video-playlist-item -->
+								<div data-name="video-block_794-4" data-video-src="https://www.youtube.com/embed/PnuFhcj3880?enablejsapi=1&amp;rel=0&amp;showinfo=0" class="video-playlist-item">
+					<div class="video-number">4</div>
+					<div class="video-play-icon"><span class="tie-icon-play" aria-hidden="true"></span></div>
+					<div class="video-paused-icon"><span class="tie-icon-pause" aria-hidden="true"></span></div>
+
+												<div data-bg="https://i.ytimg.com/vi/PnuFhcj3880/default.jpg" style="" class="video-thumbnail post-thumb rocket-lazyload"></div>
+							
+					<div class="video-info">
+						<h2>Unity Save/Load || PlayerPrefs Ø­ÙØ¸ Ø§Ù„Ù…Ø¹Ù„ÙˆÙ…Ø§Øª Ø¨ÙˆØ§Ø³Ø·Ø©</h2>
+						<span class="video-duration">08:30</span>
+					</div><!-- .video-info -->
+				</div><!-- video-playlist-item -->
+								<div data-name="video-block_794-5" data-video-src="https://www.youtube.com/embed/E6LN-P8zRlw?enablejsapi=1&amp;rel=0&amp;showinfo=0" class="video-playlist-item">
+					<div class="video-number">5</div>
+					<div class="video-play-icon"><span class="tie-icon-play" aria-hidden="true"></span></div>
+					<div class="video-paused-icon"><span class="tie-icon-pause" aria-hidden="true"></span></div>
+
+												<div data-bg="https://i.ytimg.com/vi/E6LN-P8zRlw/default.jpg" style="" class="video-thumbnail post-thumb rocket-lazyload"></div>
+							
+					<div class="video-info">
+						<h2>Unity Bolt || ØªØ·ÙˆÙŠØ± Ù„Ø¹Ø¨Ø© Ù…Ù† ØºÙŠØ± ÙƒØªØ§Ø¨Ø© Ø£Ø³Ø·Ø± Ø¨Ø±Ù…Ø¬ÙŠØ©</h2>
+						<span class="video-duration">15:32</span>
+					</div><!-- .video-info -->
+				</div><!-- video-playlist-item -->
+				
+		</div><!-- .video-playlist-nav /-->
+	</div><!-- .video-playlist-nav-wrapper /-->
+</div><!-- .videos-block /-->
+		</section><!-- .slider-area -->
+
+			
+
+				<div id="tie-block_1133" class="mag-box block-custom-content">
+				
+					<div class="container-wrapper">
+
+						
+		<div class="mag-box-title the-global-title">
+			<h3>
+				Ø£ÙƒØ«Ø± Ù…Ù† 100 Ø¯Ø±Ø³ Ù…Ø¬Ø§Ù†ÙŠ			</h3>
+
+			</div><!-- .mag-box-title /-->
+						<div class="mag-box-container clearfix">
+
+							
+										<div class="entry clearfix"><p><div class="rll-youtube-player" data-src="https://www.youtube.com/embed/IRnJ1wPO8Ss" data-id="IRnJ1wPO8Ss" data-query=""></div><noscript><iframe width="560" height="315" src="https://www.youtube.com/embed/IRnJ1wPO8Ss" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></noscript></p>
+</div>
+									
+						</div><!-- .mag-box-container /-->
+
+
+						
+					</div><!-- .container-wrapper /-->
+
+				
+			</div><!-- .mag-box /-->
+
+			
+		
+			
+			
+			
+						</div><!-- .main-content /-->
+					</div><!-- .main-content-row /-->
+				</div><!-- .container /-->	</div><!-- .section-item /-->
+</div><!-- .tiepost-26454-section-2190 /-->
+
+	
+<div id="tiepost-26454-section-8924" class="section-wrapper container-full without-background has-title">
+	<div class="section-item full-width" style="" >
+
+		<div class="container"><h2 class="section-title section-title-centered"><span class="the-section-title">ØªÙŽØ¹Ù„ÙÙ…Ù Ø§Ù„Ø¨Ø±Ù…Ø¬Ø©Ù Ù„Ù„Ù…Ø¨ØªØ¯Ø¦ÙŠÙ†ÙŽ</span></h2></div>
+				<div class="container">
+					<div class="tie-row main-content-row">
+						<div class="main-content tie-col-md-12">
+			<section id="tie-block_1320" class="slider-area mag-box">
+
+				
+				<div class="slider-area-inner">
+
+					<div id="tie-main-slider-14-block_1320" class="tie-main-slider main-slider grid-5-first-big grid-5-slider boxed-slider grid-slider-wrapper tie-slick-slider-wrapper" data-slider-id="14"  data-speed="3000">
+
+						
+						<div class="main-slider-inner">
+
+							
+								<div class="containerblock_1320">
+									<div class="tie-slick-slider">
+
+										<ul class="tie-slider-nav"></ul><div class="slide"><div data-bg="https://6wrni.com/wp-content/uploads/2017/11/18-780x470.jpg" style="" class="grid-item slide-id-25928 tie-slide-1 tie-standard rocket-lazyload">
+					<a href="https://6wrni.com/csharp-working-with-classes/" class="all-over-thumb-link" aria-label="#18 Ø§Ù„ÙØ¦Ø§Øª Classes â€“ Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C"></a>
+					<div class="thumb-overlay"><div class="thumb-content"><div class="thumb-meta"><span class="date meta-item tie-icon">Ù†ÙˆÙÙ…Ø¨Ø± 3, 2017</span></div>
+				<h2 class="thumb-title"><a href="https://6wrni.com/csharp-working-with-classes/">#18 Ø§Ù„ÙØ¦Ø§Øª Classes â€“ Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C</a></h2>
+			<div class="thumb-desc">Ø±Ù…Ø² ÙØªØ­ Ù…Ø±Ø­Ù„Ø© Ù‡Ø°Ø§ Ø§Ù„Ø¯Ø±Ø³ ÙÙŠ ØªØ·Ø¨ÙŠÙ‚ Ø·ÙˆØ±Ù†ÙŠ : IOR ØªÙŽØ¹Ù„ÙÙ…Ù Ø§Ù„Ø¨Ø±Ù…Ø¬Ø©Ù Ù„Ù„Ù…Ø¨ØªØ¯Ø¦ÙŠÙ†ÙŽ ÙƒÙ„ÙŠØ§Ù‹ Ø¨ÙˆØ§Ø³Ø·Ø©Ù #C &#8211;Â  Ø§Ù„ØªØ¹Ø§Ù…Ù„ Ù…Ø¹ Ø§Ù„ÙØ¦Ø§Øª&hellip;</div><!-- .thumb-desc --></div> <!-- .thumb-content /-->
+					</div><!-- .thumb-overlay /-->
+				</div><!-- .slide || .grid-item /-->
+			<div data-bg="https://6wrni.com/wp-content/uploads/2017/07/11-780x470.jpg" style="" class="grid-item slide-id-25625 tie-slide-2 tie-standard rocket-lazyload">
+					<a href="https://6wrni.com/operators-expressions-statements/" class="all-over-thumb-link" aria-label="#11 Ø§Ù„ØªØ¹Ø¨ÙŠØ±Ø§Øª Expressions â€“ Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C"></a>
+					<div class="thumb-overlay"><div class="thumb-content"><div class="thumb-meta"><span class="date meta-item tie-icon">ÙŠÙˆÙ„ÙŠÙˆ 16, 2017</span></div>
+				<h2 class="thumb-title"><a href="https://6wrni.com/operators-expressions-statements/">#11 Ø§Ù„ØªØ¹Ø¨ÙŠØ±Ø§Øª Expressions â€“ Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C</a></h2>
+			<div class="thumb-desc">Ø±Ù…Ø² ÙØªØ­ Ù…Ø±Ø­Ù„Ø© Ù‡Ø°Ø§ Ø§Ù„Ø¯Ø±Ø³ ÙÙŠ ØªØ·Ø¨ÙŠÙ‚ Ø·ÙˆØ±Ù†ÙŠ :Â OSO ØªÙŽØ¹Ù„ÙÙ…Ù Ø§Ù„Ø¨Ø±Ù…Ø¬Ø©Ù Ù„Ù„Ù…Ø¨ØªØ¯Ø¦ÙŠÙ†ÙŽ ÙƒÙ„ÙŠØ§Ù‹ Ø¨ÙˆØ§Ø³Ø·Ø©Ù #C &#8211;Â Â Ø§Ù„Ø¹ÙˆØ§Ù…Ù„ ÙˆØ§Ù„Ø¬Ù…Ù„ ÙˆØ§Ù„ØªØ¹Ø¨ÙŠØ±Ø§Øª Ø§Ù„Ø¹ÙˆØ§Ù…Ù„ ÙˆØ§Ù„Ø¬Ù…Ù„&hellip;</div><!-- .thumb-desc --></div> <!-- .thumb-content /-->
+					</div><!-- .thumb-overlay /-->
+				</div><!-- .slide || .grid-item /-->
+			<div data-bg="https://6wrni.com/wp-content/uploads/2017/03/10-csharp-tutorial-if-statement-780x470.jpg" style="" class="grid-item slide-id-25556 tie-slide-3 tie-standard rocket-lazyload">
+					<a href="https://6wrni.com/if-statement/" class="all-over-thumb-link" aria-label="#10 Ø§Ù„Ø¬Ù…Ù„Ø© Ø§Ù„Ø´Ø±Ø·ÙŠØ© IF â€“ Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C"></a>
+					<div class="thumb-overlay"><div class="thumb-content"><div class="thumb-meta"><span class="date meta-item tie-icon">Ù…Ø§Ø±Ø³ 8, 2017</span></div>
+				<h2 class="thumb-title"><a href="https://6wrni.com/if-statement/">#10 Ø§Ù„Ø¬Ù…Ù„Ø© Ø§Ù„Ø´Ø±Ø·ÙŠØ© IF â€“ Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C</a></h2>
+			<div class="thumb-desc">Ø±Ù…Ø² ÙØªØ­ Ù…Ø±Ø­Ù„Ø© Ù‡Ø°Ø§ Ø§Ù„Ø¯Ø±Ø³ ÙÙŠ ØªØ·Ø¨ÙŠÙ‚ Ø·ÙˆØ±Ù†ÙŠ :Â MHD ØªÙŽØ¹Ù„ÙÙ…Ù Ø§Ù„Ø¨Ø±Ù…Ø¬Ø©Ù Ù„Ù„Ù…Ø¨ØªØ¯Ø¦ÙŠÙ†ÙŽ ÙƒÙ„ÙŠØ§Ù‹ Ø¨ÙˆØ§Ø³Ø·Ø©Ù #C &#8211;Â Â Ø§Ù„Ø¬Ù…Ù„Ø© Ø§Ù„Ø´Ø±Ø·ÙŠØ© if Statement Ø§Ù„Ø¬Ù…Ù„Ø©&hellip;</div><!-- .thumb-desc --></div> <!-- .thumb-content /-->
+					</div><!-- .thumb-overlay /-->
+				</div><!-- .slide || .grid-item /-->
+			<div data-bg="https://6wrni.com/wp-content/uploads/2017/03/09-csharp-tutorial-variables-2-780x470.jpg" style="" class="grid-item slide-id-25546 tie-slide-4 tie-standard rocket-lazyload">
+					<a href="https://6wrni.com/variables-02/" class="all-over-thumb-link" aria-label="#9 Ø§Ù„Ù…ØªØºÙŠØ± Ø§Ù„Ù†ØµÙŠ String â€“ Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C"></a>
+					<div class="thumb-overlay"><div class="thumb-content"><div class="thumb-meta"><span class="date meta-item tie-icon">ÙØ¨Ø±Ø§ÙŠØ± 23, 2017</span></div>
+				<h2 class="thumb-title"><a href="https://6wrni.com/variables-02/">#9 Ø§Ù„Ù…ØªØºÙŠØ± Ø§Ù„Ù†ØµÙŠ String â€“ Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C</a></h2>
+			<div class="thumb-desc">Ø±Ù…Ø² ÙØªØ­ Ù…Ø±Ø­Ù„Ø© Ù‡Ø°Ø§ Ø§Ù„Ø¯Ø±Ø³ ÙÙŠ ØªØ·Ø¨ÙŠÙ‚ Ø·ÙˆØ±Ù†ÙŠ :Â ZRO ØªÙŽØ¹Ù„ÙÙ…Ù Ø§Ù„Ø¨Ø±Ù…Ø¬Ø©Ù Ù„Ù„Ù…Ø¨ØªØ¯Ø¦ÙŠÙ†ÙŽ ÙƒÙ„ÙŠØ§Ù‹ Ø¨ÙˆØ§Ø³Ø·Ø©Ù #C &#8211;Â Â Ø§Ù„Ù…ØªØºÙŠØ±Ø§Øª Ø§Ù„Ø¬Ø²Ø¡ Ø§Ù„Ø«Ø§Ù†ÙŠ Ø§Ù„Ù…ØªØºÙŠØ±Ø§Øª Variables&hellip;</div><!-- .thumb-desc --></div> <!-- .thumb-content /-->
+					</div><!-- .thumb-overlay /-->
+				</div><!-- .slide || .grid-item /-->
+			<div data-bg="https://6wrni.com/wp-content/uploads/2017/03/08-csharp-tutorial-variables-780x470.jpg" style="" class="grid-item slide-id-25540 tie-slide-5 tie-standard rocket-lazyload">
+					<a href="https://6wrni.com/variables-01/" class="all-over-thumb-link" aria-label="#8 Ø§Ù„Ù…ØªØºÙŠØ±Ø§Øª Variables â€“ Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C"></a>
+					<div class="thumb-overlay"><div class="thumb-content"><div class="thumb-meta"><span class="date meta-item tie-icon">ÙØ¨Ø±Ø§ÙŠØ± 17, 2017</span></div>
+				<h2 class="thumb-title"><a href="https://6wrni.com/variables-01/">#8 Ø§Ù„Ù…ØªØºÙŠØ±Ø§Øª Variables â€“ Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C</a></h2>
+			<div class="thumb-desc">Ø±Ù…Ø² ÙØªØ­ Ù…Ø±Ø­Ù„Ø© Ù‡Ø°Ø§ Ø§Ù„Ø¯Ø±Ø³ ÙÙŠ ØªØ·Ø¨ÙŠÙ‚ Ø·ÙˆØ±Ù†ÙŠ :Â XVD ØªÙŽØ¹Ù„ÙÙ…Ù Ø§Ù„Ø¨Ø±Ù…Ø¬Ø©Ù Ù„Ù„Ù…Ø¨ØªØ¯Ø¦ÙŠÙ†ÙŽ ÙƒÙ„ÙŠØ§Ù‹ Ø¨ÙˆØ§Ø³Ø·Ø©Ù #C &#8211;Â Â Ø§Ù„Ù…ØªØºÙŠØ±Ø§Øª Ø§Ù„Ø¬Ø²Ø¡ Ø§Ù„Ø£ÙˆÙ„ Ø§Ù„Ù…ØªØºÙŠØ±Ø§Øª Variables&hellip;</div><!-- .thumb-desc --></div> <!-- .thumb-content /-->
+					</div><!-- .thumb-overlay /-->
+				</div><!-- .slide || .grid-item /-->
+			</div> <!-- .slide -->
+									</div><!-- .tie-slick-slider /-->
+								</div><!-- container /-->
+
+							
+						</div><!-- .main-slider-inner  /-->
+					</div><!-- .main-slider /-->
+
+					</div><!-- .slider-area-inner -->		</section><!-- .slider-area -->
+
+			
+		
+			
+			
+			
+						</div><!-- .main-content /-->
+					</div><!-- .main-content-row /-->
+				</div><!-- .container /-->	</div><!-- .section-item /-->
+</div><!-- .tiepost-26454-section-8924 /-->
+
+	
+<div id="tiepost-26454-section-8712" class="section-wrapper container-full has-background has-title">
+	<div class="section-item full-width dark-skin" style="background-size: cover;" >
+
+		<div class="container"><h2 class="section-title section-title-default the-global-title"><span class="the-section-title"> Ø­ÙˆÙ„ Ù…Ø­Ø±Ùƒ Unity</span></h2></div>
+				<div class="container">
+					<div class="tie-row main-content-row">
+						<div class="main-content tie-col-md-12">
+
+				<div id="tie-block_2223" class="mag-box big-post-left-box big-thumb-left-box first-post-gradient content-only media-overlay" data-current="1">
+				
+					<div class="container-wrapper">
+
+						
+						<div class="mag-box-container clearfix">
+
+							<ul class="posts-items posts-list-container">
+	<li class="post-item is-trending tie-standard">
+		<div data-bg="https://6wrni.com/wp-content/uploads/2021/03/08-Game-history-780x470.jpg" class="big-thumb-left-box-inner rocket-lazyload" style="">
+
+			
+			<a aria-label="ØªØ§Ø±ÙŠØ® Ø£Ù„Ø¹Ø§Ø¨ Ø§Ù„ÙÙŠØ¯ÙŠÙˆ" href="https://6wrni.com/history-of-video-games/" class="post-thumb"><span class="trending-post tie-icon-bolt trending-lg" aria-hidden="true"></span></a>
+
+			<div class="post-overlay">
+				<div class="post-content">
+
+					<a class="post-cat tie-cat-138" href="https://6wrni.com/category/%d8%aa%d8%b7%d9%88%d9%8a%d8%b1-%d8%a7%d9%84%d8%a3%d9%84%d8%b9%d8%a7%d8%a8/">ØªØ·ÙˆÙŠØ± Ø§Ù„Ø£Ù„Ø¹Ø§Ø¨</a>
+					<h2 class="post-title"><a href="https://6wrni.com/history-of-video-games/">ØªØ§Ø±ÙŠØ® Ø£Ù„Ø¹Ø§Ø¨ Ø§Ù„ÙÙŠØ¯ÙŠÙˆ</a></h2>
+
+					<div class="thumb-meta"><div class="post-meta clearfix"><span class="author-meta single-author no-avatars"><span class="meta-item meta-author-wrapper"><span class="meta-author"><a href="https://6wrni.com/author/osamadeep/" class="author-name tie-icon" title="osamadeep">osamadeep</a></span></span></span><span class="date meta-item tie-icon">Ù…Ø§Ø±Ø³ 31, 2021</span><div class="tie-alignright"><span class="meta-comment tie-icon meta-item fa-before">1</span><span class="meta-views meta-item warm"><span class="tie-icon-fire" aria-hidden="true"></span> 1Ù¬733 </span></div></div><!-- .post-meta --></div>				</div>
+			</div>
+		</div>
+	</li><!-- .first-post -->
+
+
+	<li class="post-item  is-trending tie-standard">
+
+		
+			<a aria-label="ÙƒÙŠÙ ØªØµØ¨Ø­ Ù…Ø·ÙˆØ± Ø£Ù„Ø¹Ø§Ø¨" href="https://6wrni.com/how-to-be-game-developer/" class="post-thumb"><img width="220" height="150" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20220%20150'%3E%3C/svg%3E" class="attachment-jannah-image-small size-jannah-image-small tie-small-image wp-post-image" alt="" decoding="async" data-lazy-src="https://6wrni.com/wp-content/uploads/2021/01/wp4458578-pubg-vs-fortnite-wallpapers-220x150.jpg" /><noscript><img width="220" height="150" src="https://6wrni.com/wp-content/uploads/2021/01/wp4458578-pubg-vs-fortnite-wallpapers-220x150.jpg" class="attachment-jannah-image-small size-jannah-image-small tie-small-image wp-post-image" alt="" decoding="async" /></noscript></a>
+		<div class="post-details">
+
+			<div class="post-meta clearfix"><span class="trending-post tie-icon-bolt trending-sm meta-item" aria-hidden="true"></span><span class="date meta-item tie-icon">ÙŠÙ†Ø§ÙŠØ± 25, 2021</span></div><!-- .post-meta -->
+			<h2 class="post-title"><a href="https://6wrni.com/how-to-be-game-developer/">ÙƒÙŠÙ ØªØµØ¨Ø­ Ù…Ø·ÙˆØ± Ø£Ù„Ø¹Ø§Ø¨</a></h2>
+		</div><!-- .post-details /-->
+	</li>
+
+
+	<li class="post-item ">
+
+		
+			<a aria-label="#22 Ù…ÙƒØªØ¨Ø§Øª Ø§Ù„Ø¯ÙˆØ§Ù„ Namespace â€“ Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C" href="https://6wrni.com/csharp-namespace/" class="post-thumb"><img width="220" height="150" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20220%20150'%3E%3C/svg%3E" class="attachment-jannah-image-small size-jannah-image-small tie-small-image wp-post-image" alt="" decoding="async" data-lazy-srcset="https://6wrni.com/wp-content/uploads/2020/01/22-220x150.jpg 220w, https://6wrni.com/wp-content/uploads/2020/01/22-2x1.jpg 2w" data-lazy-sizes="(max-width: 220px) 100vw, 220px" data-lazy-src="https://6wrni.com/wp-content/uploads/2020/01/22-220x150.jpg" /><noscript><img width="220" height="150" src="https://6wrni.com/wp-content/uploads/2020/01/22-220x150.jpg" class="attachment-jannah-image-small size-jannah-image-small tie-small-image wp-post-image" alt="" decoding="async" srcset="https://6wrni.com/wp-content/uploads/2020/01/22-220x150.jpg 220w, https://6wrni.com/wp-content/uploads/2020/01/22-2x1.jpg 2w" sizes="(max-width: 220px) 100vw, 220px" /></noscript></a>
+		<div class="post-details">
+
+			<div class="post-meta clearfix"><span class="date meta-item tie-icon">ÙŠÙ†Ø§ÙŠØ± 30, 2020</span></div><!-- .post-meta -->
+			<h2 class="post-title"><a href="https://6wrni.com/csharp-namespace/">#22 Ù…ÙƒØªØ¨Ø§Øª Ø§Ù„Ø¯ÙˆØ§Ù„ Namespace â€“ Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C</a></h2>
+		</div><!-- .post-details /-->
+	</li>
+
+
+	<li class="post-item  tie-standard">
+
+		
+			<a aria-label="ØµÙ†Ø§Ø¹Ø© Ø§Ù„Ø£ÙÙ„Ø§Ù… Ø¯Ø§Ø®Ù„ Ù…Ø­Ø±Ùƒ Unity" href="https://6wrni.com/unity-film-production/" class="post-thumb"><img width="220" height="150" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20220%20150'%3E%3C/svg%3E" class="attachment-jannah-image-small size-jannah-image-small tie-small-image wp-post-image" alt="" decoding="async" data-lazy-srcset="https://6wrni.com/wp-content/uploads/2019/06/film-220x150.jpg 220w, https://6wrni.com/wp-content/uploads/2019/06/film-2x1.jpg 2w" data-lazy-sizes="(max-width: 220px) 100vw, 220px" data-lazy-src="https://6wrni.com/wp-content/uploads/2019/06/film-220x150.jpg" /><noscript><img width="220" height="150" src="https://6wrni.com/wp-content/uploads/2019/06/film-220x150.jpg" class="attachment-jannah-image-small size-jannah-image-small tie-small-image wp-post-image" alt="" decoding="async" srcset="https://6wrni.com/wp-content/uploads/2019/06/film-220x150.jpg 220w, https://6wrni.com/wp-content/uploads/2019/06/film-2x1.jpg 2w" sizes="(max-width: 220px) 100vw, 220px" /></noscript></a>
+		<div class="post-details">
+
+			<div class="post-meta clearfix"><span class="date meta-item tie-icon">ÙŠÙˆÙ†ÙŠÙˆ 22, 2019</span></div><!-- .post-meta -->
+			<h2 class="post-title"><a href="https://6wrni.com/unity-film-production/">ØµÙ†Ø§Ø¹Ø© Ø§Ù„Ø£ÙÙ„Ø§Ù… Ø¯Ø§Ø®Ù„ Ù…Ø­Ø±Ùƒ Unity</a></h2>
+		</div><!-- .post-details /-->
+	</li>
+
+
+	<li class="post-item  tie-standard">
+
+		
+			<a aria-label="ØªØ¶Ù…ÙŠÙ† Ø¥Ø¹Ù„Ø§Ù†Ø§Øª Admob Ø¯Ø§Ø®Ù„ Unity" href="https://6wrni.com/unity-admob/" class="post-thumb"><img width="220" height="150" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20220%20150'%3E%3C/svg%3E" class="attachment-jannah-image-small size-jannah-image-small tie-small-image wp-post-image" alt="" decoding="async" data-lazy-srcset="https://6wrni.com/wp-content/uploads/2019/06/admob-220x150.jpg 220w, https://6wrni.com/wp-content/uploads/2019/06/admob-2x1.jpg 2w" data-lazy-sizes="(max-width: 220px) 100vw, 220px" data-lazy-src="https://6wrni.com/wp-content/uploads/2019/06/admob-220x150.jpg" /><noscript><img width="220" height="150" src="https://6wrni.com/wp-content/uploads/2019/06/admob-220x150.jpg" class="attachment-jannah-image-small size-jannah-image-small tie-small-image wp-post-image" alt="" decoding="async" srcset="https://6wrni.com/wp-content/uploads/2019/06/admob-220x150.jpg 220w, https://6wrni.com/wp-content/uploads/2019/06/admob-2x1.jpg 2w" sizes="(max-width: 220px) 100vw, 220px" /></noscript></a>
+		<div class="post-details">
+
+			<div class="post-meta clearfix"><span class="date meta-item tie-icon">ÙŠÙˆÙ†ÙŠÙˆ 17, 2019</span></div><!-- .post-meta -->
+			<h2 class="post-title"><a href="https://6wrni.com/unity-admob/">ØªØ¶Ù…ÙŠÙ† Ø¥Ø¹Ù„Ø§Ù†Ø§Øª Admob Ø¯Ø§Ø®Ù„ Unity</a></h2>
+		</div><!-- .post-details /-->
+	</li>
+
+
+	<li class="post-item ">
+
+		
+			<a aria-label="#21 Ø§Ù„ØªØºÙ„ÙŠÙ Encapsulation â€“ Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C" href="https://6wrni.com/csharp-encapsulation/" class="post-thumb"><img width="220" height="150" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20220%20150'%3E%3C/svg%3E" class="attachment-jannah-image-small size-jannah-image-small tie-small-image wp-post-image" alt="" decoding="async" data-lazy-srcset="https://6wrni.com/wp-content/uploads/2019/05/21-220x150.jpg 220w, https://6wrni.com/wp-content/uploads/2019/05/21-2x1.jpg 2w" data-lazy-sizes="(max-width: 220px) 100vw, 220px" data-lazy-src="https://6wrni.com/wp-content/uploads/2019/05/21-220x150.jpg" /><noscript><img width="220" height="150" src="https://6wrni.com/wp-content/uploads/2019/05/21-220x150.jpg" class="attachment-jannah-image-small size-jannah-image-small tie-small-image wp-post-image" alt="" decoding="async" srcset="https://6wrni.com/wp-content/uploads/2019/05/21-220x150.jpg 220w, https://6wrni.com/wp-content/uploads/2019/05/21-2x1.jpg 2w" sizes="(max-width: 220px) 100vw, 220px" /></noscript></a>
+		<div class="post-details">
+
+			<div class="post-meta clearfix"><span class="date meta-item tie-icon">Ù…Ø§ÙŠÙˆ 27, 2019</span></div><!-- .post-meta -->
+			<h2 class="post-title"><a href="https://6wrni.com/csharp-encapsulation/">#21 Ø§Ù„ØªØºÙ„ÙŠÙ Encapsulation â€“ Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C</a></h2>
+		</div><!-- .post-details /-->
+	</li>
+
+</ul><div class="clearfix"></div>
+						</div><!-- .mag-box-container /-->
+
+
+						<a class="block-pagination next-posts show-more-button" data-text="Ø§Ø¸Ù‡Ø± Ø§Ù„Ù…Ø²ÙŠØ¯">Ø§Ø¸Ù‡Ø± Ø§Ù„Ù…Ø²ÙŠØ¯</a>
+					</div><!-- .container-wrapper /-->
+
+				
+			</div><!-- .mag-box /-->
+
+			
+					<script type="rocketlazyloadscript">var js_tie_block_2223 = {"order":"latest","source":"id","number":"6","pagi":"show-more","excerpt":"true","post_meta":"true","media_overlay":"true","read_more":"true","breaking_effect":"reveal","content_only":"true","sub_style":"big-thumb","is_full":"true","style":"big-thumb","title_length":"","excerpt_length":"","read_more_text":""};</script>
+
+					
+		
+			
+			
+			
+						</div><!-- .main-content /-->
+					</div><!-- .main-content-row /-->
+				</div><!-- .container /-->	</div><!-- .section-item /-->
+</div><!-- .tiepost-26454-section-8712 /-->
+
+	
+<div id="tiepost-26454-section-512" class="section-wrapper container-full without-background has-title">
+	<div class="section-item sidebar-left has-sidebar" style="" >
+
+		<div class="container"><h2 class="section-title section-title-default the-global-title"><span class="the-section-title">Ø§Ø­Ø¯Ø« Ø§Ù„Ù…Ù‚Ø§Ù„Ø§Øª ÙˆØ§Ù„Ø£Ø®Ø¨Ø§Ø±</span></h2></div>
+				<div class="container">
+					<div class="tie-row main-content-row">
+						<div class="main-content tie-col-md-8 tie-col-xs-12" role="main">
+
+				<div id="tie-block_2116" class="mag-box mini-posts-box">
+				
+					<div class="container-wrapper">
+
+						
+		<div class="mag-box-title the-global-title">
+			<h3>
+				Ø§Ù„Ù…Ø¯ÙˆÙ†Ø©			</h3>
+
+			</div><!-- .mag-box-title /-->
+						<div class="mag-box-container clearfix">
+
+							<ul class="posts-items posts-list-container">
+<li class="post-item  is-trending tie-standard">
+
+	<div class="post-meta clearfix"><span class="trending-post tie-icon-bolt trending-sm meta-item" aria-hidden="true"></span><span class="date meta-item tie-icon">Ù…Ø§Ø±Ø³ 31, 2021</span><div class="tie-alignright"><span class="meta-views meta-item warm"><span class="tie-icon-fire" aria-hidden="true"></span> 1Ù¬733 </span></div></div><!-- .post-meta -->
+	<h2 class="post-title"><a href="https://6wrni.com/history-of-video-games/">ØªØ§Ø±ÙŠØ® Ø£Ù„Ø¹Ø§Ø¨ Ø§Ù„ÙÙŠØ¯ÙŠÙˆ</a></h2>
+
+	
+			<a aria-label="ØªØ§Ø±ÙŠØ® Ø£Ù„Ø¹Ø§Ø¨ Ø§Ù„ÙÙŠØ¯ÙŠÙˆ" href="https://6wrni.com/history-of-video-games/" class="post-thumb"><img width="220" height="150" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20220%20150'%3E%3C/svg%3E" class="attachment-jannah-image-small size-jannah-image-small tie-small-image wp-post-image" alt="" decoding="async" data-lazy-src="https://6wrni.com/wp-content/uploads/2021/03/08-Game-history-220x150.jpg" /><noscript><img width="220" height="150" src="https://6wrni.com/wp-content/uploads/2021/03/08-Game-history-220x150.jpg" class="attachment-jannah-image-small size-jannah-image-small tie-small-image wp-post-image" alt="" decoding="async" /></noscript></a>			<div class="post-details">
+				<p class="post-excerpt">Ù…Ù‚Ø¯Ù…Ø© Ø¹Ù† ØªØ§Ø±ÙŠØ® Ø£Ù„Ø¹Ø§Ø¨ Ø§Ù„ÙÙŠØ¯ÙŠÙˆ Ø§Ù„Ø³Ù„Ø§Ù… Ø¹Ù„ÙŠÙƒÙ…ØŒ ÙƒÙ…Ø·ÙˆØ± Ù„Ù„Ø£Ù„Ø¹Ø§Ø¨ØŒ ÙŠØ¬Ø¨ Ø£Ù† ØªÙÙ„Ù…&hellip;</p>
+			</div>
+			</li>
+
+<li class="post-item  is-trending tie-standard">
+
+	<div class="post-meta clearfix"><span class="trending-post tie-icon-bolt trending-sm meta-item" aria-hidden="true"></span><span class="date meta-item tie-icon">ÙŠÙ†Ø§ÙŠØ± 25, 2021</span><div class="tie-alignright"><span class="meta-views meta-item hot"><span class="tie-icon-fire" aria-hidden="true"></span> 3Ù¬341 </span></div></div><!-- .post-meta -->
+	<h2 class="post-title"><a href="https://6wrni.com/how-to-be-game-developer/">ÙƒÙŠÙ ØªØµØ¨Ø­ Ù…Ø·ÙˆØ± Ø£Ù„Ø¹Ø§Ø¨</a></h2>
+
+	
+			<a aria-label="ÙƒÙŠÙ ØªØµØ¨Ø­ Ù…Ø·ÙˆØ± Ø£Ù„Ø¹Ø§Ø¨" href="https://6wrni.com/how-to-be-game-developer/" class="post-thumb"><img width="220" height="150" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20220%20150'%3E%3C/svg%3E" class="attachment-jannah-image-small size-jannah-image-small tie-small-image wp-post-image" alt="" decoding="async" data-lazy-src="https://6wrni.com/wp-content/uploads/2021/01/wp4458578-pubg-vs-fortnite-wallpapers-220x150.jpg" /><noscript><img width="220" height="150" src="https://6wrni.com/wp-content/uploads/2021/01/wp4458578-pubg-vs-fortnite-wallpapers-220x150.jpg" class="attachment-jannah-image-small size-jannah-image-small tie-small-image wp-post-image" alt="" decoding="async" /></noscript></a>			<div class="post-details">
+				<p class="post-excerpt">ï»¿ï»¿ï»¿ Ø§Ù„Ø³Ù„Ø§Ù… Ø¹Ù„ÙŠÙƒÙ…ØŒ ÙŠØ³Ø£Ù„ Ø§Ù„ÙƒØ«ÙŠØ±ÙŠÙ† Ù…Ù† Ø§Ù„Ù…ØªØ§Ø¨Ø¹ÙŠÙ† Ø¹Ù† ÙƒÙŠÙÙŠØ© Ø§Ù„Ø¯Ø®ÙˆÙ„ ÙÙŠ Ù…Ø¬Ø§Ù„&hellip;</p>
+			</div>
+			</li>
+
+<li class="post-item  tie-standard">
+
+	<div class="post-meta clearfix"><span class="date meta-item tie-icon">Ù…Ø§ÙŠÙˆ 14, 2019</span><div class="tie-alignright"><span class="meta-views meta-item "><span class="tie-icon-fire" aria-hidden="true"></span> 269 </span></div></div><!-- .post-meta -->
+	<h2 class="post-title"><a href="https://6wrni.com/unity-2019-2-beta-overview/">Ù„Ù…Ø­Ø© Ø­ÙˆÙ„ Ù…ÙŠØ²Ø§Øª 2019.2 Unity Ø§Ù„Ù†Ø³Ø®Ø© Ø§Ù„ØªØ¬Ø±ÙŠØ¨ÙŠØ©</a></h2>
+
+	
+			<a aria-label="Ù„Ù…Ø­Ø© Ø­ÙˆÙ„ Ù…ÙŠØ²Ø§Øª 2019.2 Unity Ø§Ù„Ù†Ø³Ø®Ø© Ø§Ù„ØªØ¬Ø±ÙŠØ¨ÙŠØ©" href="https://6wrni.com/unity-2019-2-beta-overview/" class="post-thumb"><img width="220" height="150" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20220%20150'%3E%3C/svg%3E" class="attachment-jannah-image-small size-jannah-image-small tie-small-image wp-post-image" alt="" decoding="async" data-lazy-srcset="https://6wrni.com/wp-content/uploads/2019/05/unity20192-220x150.jpg 220w, https://6wrni.com/wp-content/uploads/2019/05/unity20192-3x1.jpg 3w" data-lazy-sizes="(max-width: 220px) 100vw, 220px" data-lazy-src="https://6wrni.com/wp-content/uploads/2019/05/unity20192-220x150.jpg" /><noscript><img width="220" height="150" src="https://6wrni.com/wp-content/uploads/2019/05/unity20192-220x150.jpg" class="attachment-jannah-image-small size-jannah-image-small tie-small-image wp-post-image" alt="" decoding="async" srcset="https://6wrni.com/wp-content/uploads/2019/05/unity20192-220x150.jpg 220w, https://6wrni.com/wp-content/uploads/2019/05/unity20192-3x1.jpg 3w" sizes="(max-width: 220px) 100vw, 220px" /></noscript></a>			<div class="post-details">
+				<p class="post-excerpt">Ø§Ù„Ø³Ù„Ø§Ù… Ø¹Ù„ÙŠÙƒÙ… ÙˆØ±Ø­Ù…Ø© Ø§Ù„Ù„Ù‡ ÙˆØ¨Ø±ÙƒØ§ØªÙ‡ ØŒ Ø·Ø±Ø­Øª Ø´Ø±ÙƒØ© unity ØªØ³Ø®Ø© ØªØ¬Ø±ÙŠØ¨ÙŠØ© Ù„Ù„Ø¥ØµØ¯Ø§Ø±&hellip;</p>
+			</div>
+			</li>
+
+<li class="post-item  tie-standard">
+
+	<div class="post-meta clearfix"><span class="date meta-item tie-icon">ÙŠÙ†Ø§ÙŠØ± 10, 2018</span><div class="tie-alignright"><span class="meta-views meta-item "><span class="tie-icon-fire" aria-hidden="true"></span> 115 </span></div></div><!-- .post-meta -->
+	<h2 class="post-title"><a href="https://6wrni.com/unity-2018-1-beta-overview/">Ù„Ù…Ø­Ø© Ø­ÙˆÙ„ Ù…ÙŠØ²Ø§Øª  2018.1 Unity Ø§Ù„Ù†Ø³Ø®Ø© Ø§Ù„ØªØ¬Ø±ÙŠØ¨ÙŠØ©</a></h2>
+
+	
+			<a aria-label="Ù„Ù…Ø­Ø© Ø­ÙˆÙ„ Ù…ÙŠØ²Ø§Øª  2018.1 Unity Ø§Ù„Ù†Ø³Ø®Ø© Ø§Ù„ØªØ¬Ø±ÙŠØ¨ÙŠØ©" href="https://6wrni.com/unity-2018-1-beta-overview/" class="post-thumb"><img width="220" height="150" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20220%20150'%3E%3C/svg%3E" class="attachment-jannah-image-small size-jannah-image-small tie-small-image wp-post-image" alt="" decoding="async" data-lazy-srcset="https://6wrni.com/wp-content/uploads/2018/01/UNITY2018-3-220x150.jpg 220w, https://6wrni.com/wp-content/uploads/2018/01/UNITY2018-3-3x1.jpg 3w" data-lazy-sizes="(max-width: 220px) 100vw, 220px" data-lazy-src="https://6wrni.com/wp-content/uploads/2018/01/UNITY2018-3-220x150.jpg" /><noscript><img width="220" height="150" src="https://6wrni.com/wp-content/uploads/2018/01/UNITY2018-3-220x150.jpg" class="attachment-jannah-image-small size-jannah-image-small tie-small-image wp-post-image" alt="" decoding="async" srcset="https://6wrni.com/wp-content/uploads/2018/01/UNITY2018-3-220x150.jpg 220w, https://6wrni.com/wp-content/uploads/2018/01/UNITY2018-3-3x1.jpg 3w" sizes="(max-width: 220px) 100vw, 220px" /></noscript></a>			<div class="post-details">
+				<p class="post-excerpt">Ø§Ù„Ø³Ù„Ø§Ù… Ø¹Ù„ÙŠÙƒÙ… ÙˆØ±Ø­Ù…Ø© Ø§Ù„Ù„Ù‡ ÙˆØ¨Ø±ÙƒØ§ØªÙ‡ ØŒ Ø·Ø±Ø­Øª Ø´Ø±ÙƒØ© unity ØªØ³Ø®Ø© ØªØ¬Ø±ÙŠØ¨ÙŠØ© Ù„Ù„Ø¥ØµØ¯Ø§Ø±&hellip;</p>
+			</div>
+			</li>
+
+<li class="post-item ">
+
+	<div class="post-meta clearfix"><span class="date meta-item tie-icon">Ù†ÙˆÙÙ…Ø¨Ø± 6, 2017</span><div class="tie-alignright"><span class="meta-views meta-item very-hot"><span class="tie-icon-fire" aria-hidden="true"></span> 5Ù¬155 </span></div></div><!-- .post-meta -->
+	<h2 class="post-title"><a href="https://6wrni.com/csharp-oop/">Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© ÙƒØ§Ø¦Ù†ÙŠØ© Ø§Ù„ØªÙˆØ¬Ù‡ OOP &#8211; Ø§Ù„Ø¬Ø²Ø¡ Ø§Ù„Ø£ÙˆÙ„</a></h2>
+
+	
+			<a aria-label="Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© ÙƒØ§Ø¦Ù†ÙŠØ© Ø§Ù„ØªÙˆØ¬Ù‡ OOP &#8211; Ø§Ù„Ø¬Ø²Ø¡ Ø§Ù„Ø£ÙˆÙ„" href="https://6wrni.com/csharp-oop/" class="post-thumb"><img width="220" height="150" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20220%20150'%3E%3C/svg%3E" class="attachment-jannah-image-small size-jannah-image-small tie-small-image wp-post-image" alt="" decoding="async" data-lazy-srcset="https://6wrni.com/wp-content/uploads/2017/11/csharp-oop-220x150.jpg 220w, https://6wrni.com/wp-content/uploads/2017/11/csharp-oop-3x1.jpg 3w" data-lazy-sizes="(max-width: 220px) 100vw, 220px" data-lazy-src="https://6wrni.com/wp-content/uploads/2017/11/csharp-oop-220x150.jpg" /><noscript><img width="220" height="150" src="https://6wrni.com/wp-content/uploads/2017/11/csharp-oop-220x150.jpg" class="attachment-jannah-image-small size-jannah-image-small tie-small-image wp-post-image" alt="" decoding="async" srcset="https://6wrni.com/wp-content/uploads/2017/11/csharp-oop-220x150.jpg 220w, https://6wrni.com/wp-content/uploads/2017/11/csharp-oop-3x1.jpg 3w" sizes="(max-width: 220px) 100vw, 220px" /></noscript></a>			<div class="post-details">
+				<p class="post-excerpt">Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© ÙƒØ§Ø¦Ù†ÙŠØ© Ø§Ù„ØªÙˆØ¬Ù‡ OOP : Ø§Ù„Ø³Ù„Ø§Ù… Ø¹Ù„ÙŠÙƒÙ… ÙˆØ±Ø­Ù…Ø© Ø§Ù„Ù„Ù‡ ÙˆØ¨Ø±ÙƒØ§ØªÙ‡ØŒ Ø¹Ù†Ø¯Ù…Ø§ ØªÙ…&hellip;</p>
+			</div>
+			</li>
+
+<li class="post-item ">
+
+	<div class="post-meta clearfix"><span class="date meta-item tie-icon">Ù†ÙˆÙÙ…Ø¨Ø± 2, 2017</span><div class="tie-alignright"><span class="meta-views meta-item "><span class="tie-icon-fire" aria-hidden="true"></span> 230 </span></div></div><!-- .post-meta -->
+	<h2 class="post-title"><a href="https://6wrni.com/google-poly-vr-ar-objects/">Ø¨ÙˆÙ„ÙŠ Poly Ù…Ù‚ØµØ¯Ùƒ Ù„Ù„Ù…Ø¬Ø³Ù…Ø§Øª Ø§Ù„Ø®Ø§ØµØ© Ø¨Ø§Ù„ÙˆØ§Ù‚Ø¹ Ø§Ù„Ø¥ÙØªØ±Ø§Ø¶ÙŠ</a></h2>
+
+	
+			<a aria-label="Ø¨ÙˆÙ„ÙŠ Poly Ù…Ù‚ØµØ¯Ùƒ Ù„Ù„Ù…Ø¬Ø³Ù…Ø§Øª Ø§Ù„Ø®Ø§ØµØ© Ø¨Ø§Ù„ÙˆØ§Ù‚Ø¹ Ø§Ù„Ø¥ÙØªØ±Ø§Ø¶ÙŠ" href="https://6wrni.com/google-poly-vr-ar-objects/" class="post-thumb"><img width="220" height="150" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20220%20150'%3E%3C/svg%3E" class="attachment-jannah-image-small size-jannah-image-small tie-small-image wp-post-image" alt="" decoding="async" data-lazy-srcset="https://6wrni.com/wp-content/uploads/2017/11/poly-google-vr-objects-2-220x150.jpg 220w, https://6wrni.com/wp-content/uploads/2017/11/poly-google-vr-objects-2-3x1.jpg 3w" data-lazy-sizes="(max-width: 220px) 100vw, 220px" data-lazy-src="https://6wrni.com/wp-content/uploads/2017/11/poly-google-vr-objects-2-220x150.jpg" /><noscript><img width="220" height="150" src="https://6wrni.com/wp-content/uploads/2017/11/poly-google-vr-objects-2-220x150.jpg" class="attachment-jannah-image-small size-jannah-image-small tie-small-image wp-post-image" alt="" decoding="async" srcset="https://6wrni.com/wp-content/uploads/2017/11/poly-google-vr-objects-2-220x150.jpg 220w, https://6wrni.com/wp-content/uploads/2017/11/poly-google-vr-objects-2-3x1.jpg 3w" sizes="(max-width: 220px) 100vw, 220px" /></noscript></a>			<div class="post-details">
+				<p class="post-excerpt">Ø§Ù„Ø³Ù„Ø§Ù… Ø¹Ù„ÙŠÙƒ ÙˆØ±Ø­Ù…Ø© Ø§Ù„Ù„Ù‡ ÙˆØ¨Ø±ÙƒØ§ØªÙ‡ØŒ Ø£Ø·Ù„Ù‚Øª Ø´Ø±ÙƒØ© Google Ù…ÙˆÙ‚Ø¹ Ù…ØªØ®ØµØµ Ø¨ØªØ­Ù…ÙŠÙ„ Ø§Ù„Ù…Ø¬Ø³Ù…Ø§Øª&hellip;</p>
+			</div>
+			</li>
+</ul><div class="clearfix"></div>
+						</div><!-- .mag-box-container /-->
+
+
+						
+					</div><!-- .container-wrapper /-->
+
+				
+			</div><!-- .mag-box /-->
+
+			
+		</div><!-- .main-content /-->
+			
+					<aside class="sidebar tie-col-md-4 tie-col-xs-12 normal-side" aria-label="Ø§Ù„Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø¬Ø§Ù†Ø¨ÙŠØ© Ø§Ù„Ø±Ø¦ÙŠØ³ÙŠØ©">
+						<div class="theiaStickySidebar">
+							<div id="comments_avatar-widget-3" class="container-wrapper widget recent-comments-widget"><div class="widget-title the-global-title"><div class="the-subtitle">Ø£Ø®Ø± Ø§Ù„ØªØ¹Ù„ÙŠÙ‚Ø§Øª<span class="widget-title-icon tie-icon"></span></div></div><ul>			<li>
+									<div class="post-widget-thumbnail" style="width:70px">
+						<a class="author-avatar" href="https://6wrni.com/csharp-working-with-classes/#comment-944">
+							<img alt='ØµÙˆØ±Ø© Ø³ÙˆØ³Ùˆ' src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2070%2070'%3E%3C/svg%3E" data-lazy-srcset='https://secure.gravatar.com/avatar/2dc8c26d81764579419f55d8743548b5?s=140&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' decoding='async' data-lazy-src="https://secure.gravatar.com/avatar/2dc8c26d81764579419f55d8743548b5?s=70&#038;r=g"/><noscript><img alt='ØµÙˆØ±Ø© Ø³ÙˆØ³Ùˆ' src='https://secure.gravatar.com/avatar/2dc8c26d81764579419f55d8743548b5?s=70&#038;r=g' srcset='https://secure.gravatar.com/avatar/2dc8c26d81764579419f55d8743548b5?s=140&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' decoding='async'/></noscript>						</a>
+					</div>
+					
+				<div class="comment-body ">
+					<a class="comment-author" href="https://6wrni.com/csharp-working-with-classes/#comment-944">
+						Ø³ÙˆØ³Ùˆ					</a>
+					<p>Ù…ÙˆÙ‚Ø¹ Ø±Ø§Ø¦Ø¹...</p>
+				</div>
+
+			</li>
+						<li>
+									<div class="post-widget-thumbnail" style="width:70px">
+						<a class="author-avatar" href="https://6wrni.com/unity-game-engine-features/#comment-943">
+							<img alt='ØµÙˆØ±Ø© ÙƒÙŠØ±Ù„Ø³ ÙˆØ¬ÙŠÙ‡ Ù…Ø±Ø²ÙˆÙ‚' src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2070%2070'%3E%3C/svg%3E" data-lazy-srcset='https://secure.gravatar.com/avatar/e93ae9f4e58bedb7d32f7ed0052927ee?s=140&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' decoding='async' data-lazy-src="https://secure.gravatar.com/avatar/e93ae9f4e58bedb7d32f7ed0052927ee?s=70&#038;r=g"/><noscript><img alt='ØµÙˆØ±Ø© ÙƒÙŠØ±Ù„Ø³ ÙˆØ¬ÙŠÙ‡ Ù…Ø±Ø²ÙˆÙ‚' src='https://secure.gravatar.com/avatar/e93ae9f4e58bedb7d32f7ed0052927ee?s=70&#038;r=g' srcset='https://secure.gravatar.com/avatar/e93ae9f4e58bedb7d32f7ed0052927ee?s=140&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' decoding='async'/></noscript>						</a>
+					</div>
+					
+				<div class="comment-body ">
+					<a class="comment-author" href="https://6wrni.com/unity-game-engine-features/#comment-943">
+						ÙƒÙŠØ±Ù„Ø³ ÙˆØ¬ÙŠÙ‡ Ù…Ø±Ø²ÙˆÙ‚					</a>
+					<p>Ø§Ø±ÙŠØ¯ Ø§Ù†Ø¶Ù…Ø§Ù… Ø§Ù„ÙŠÙƒÙ… Ø§Ù†Ù†ÙŠ Ø§Ø­Ø¨ Ù‡Ø°Ø§ Ø§Ù„Ù…Ø¬Ø§Ù„...</p>
+				</div>
+
+			</li>
+						<li>
+									<div class="post-widget-thumbnail" style="width:70px">
+						<a class="author-avatar" href="https://6wrni.com/unity-game-engine-features/#comment-940">
+							<img alt='ØµÙˆØ±Ø© rima' src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2070%2070'%3E%3C/svg%3E" data-lazy-srcset='https://secure.gravatar.com/avatar/f5fb7158f4afd5c57341bed27e71d3c2?s=140&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' decoding='async' data-lazy-src="https://secure.gravatar.com/avatar/f5fb7158f4afd5c57341bed27e71d3c2?s=70&#038;r=g"/><noscript><img alt='ØµÙˆØ±Ø© rima' src='https://secure.gravatar.com/avatar/f5fb7158f4afd5c57341bed27e71d3c2?s=70&#038;r=g' srcset='https://secure.gravatar.com/avatar/f5fb7158f4afd5c57341bed27e71d3c2?s=140&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' decoding='async'/></noscript>						</a>
+					</div>
+					
+				<div class="comment-body ">
+					<a class="comment-author" href="https://6wrni.com/unity-game-engine-features/#comment-940">
+						rima					</a>
+					<p>Ù„Ùˆ Ø³Ù…Ø­Øª Ø§Ø±ÙŠØ¯ Ø§Ù† Ø§ØªØ¹Ù„Ù… ÙƒÙŠÙÙŠØ© Ø±Ø¨Ø· Ø§Ù„Ù…Ø´Ø§Ù‡Ø¯ ÙˆØ§Ù„Ù…Ø±Ø§Ø­Ù„ Ù…Ø¹ Ø¨Ø¹Ø¶Ù‡Ø§ Ø§Ù„...</p>
+				</div>
+
+			</li>
+						<li>
+									<div class="post-widget-thumbnail" style="width:70px">
+						<a class="author-avatar" href="https://6wrni.com/understand-first-program/#comment-932">
+							<img alt='ØµÙˆØ±Ø© Ø­Ø³ÙŠÙ† ÙØ¶Ù„ Ø§Ù„ØºØ§Ù†Ù…ÙŠ Ø§Ù„ÙŠÙ…Ø§Ù†ÙŠ' src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2070%2070'%3E%3C/svg%3E" data-lazy-srcset='https://secure.gravatar.com/avatar/d0191b46718ca911a2d3600df2311573?s=140&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' decoding='async' data-lazy-src="https://secure.gravatar.com/avatar/d0191b46718ca911a2d3600df2311573?s=70&#038;r=g"/><noscript><img alt='ØµÙˆØ±Ø© Ø­Ø³ÙŠÙ† ÙØ¶Ù„ Ø§Ù„ØºØ§Ù†Ù…ÙŠ Ø§Ù„ÙŠÙ…Ø§Ù†ÙŠ' src='https://secure.gravatar.com/avatar/d0191b46718ca911a2d3600df2311573?s=70&#038;r=g' srcset='https://secure.gravatar.com/avatar/d0191b46718ca911a2d3600df2311573?s=140&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' decoding='async'/></noscript>						</a>
+					</div>
+					
+				<div class="comment-body ">
+					<a class="comment-author" href="https://6wrni.com/understand-first-program/#comment-932">
+						Ø­Ø³ÙŠÙ† ÙØ¶Ù„ Ø§Ù„ØºØ§Ù†Ù…ÙŠ Ø§Ù„ÙŠÙ…Ø§Ù†ÙŠ					</a>
+					<p>Ø¬Ø²Ø§ÙƒÙ… Ø§Ù„Ù„Ù‡ Ø®ÙŠØ± Ø§Ù„Ø¬Ø²Ø§Ø¡ Ø¨Ù…Ø§ ØªØ³Ø¹ÙˆÙ† Ù„ØªØ¹Ù„ÙŠÙ… Ø§Ù„Ù…Ø¬ØªÙ…Ø¹ Ø§Ù„Ø¹Ù„ÙˆÙ… Ø§Ù„Ù†Ø§ÙØ¹...</p>
+				</div>
+
+			</li>
+						<li>
+									<div class="post-widget-thumbnail" style="width:70px">
+						<a class="author-avatar" href="https://6wrni.com/csharp-oop/#comment-930">
+							<img alt='ØµÙˆØ±Ø© Ø¹Ø¨Ø¯Ø§Ù„Ø±Ø­Ù…Ù† ÙØ¤Ø§Ø¯ Ø¹Ù„Ù‰ Ø§Ø­Ù…Ø¯' src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2070%2070'%3E%3C/svg%3E" data-lazy-srcset='https://secure.gravatar.com/avatar/0e6b70348e5cd374a67aa1c31b277dbe?s=140&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' decoding='async' data-lazy-src="https://secure.gravatar.com/avatar/0e6b70348e5cd374a67aa1c31b277dbe?s=70&#038;r=g"/><noscript><img alt='ØµÙˆØ±Ø© Ø¹Ø¨Ø¯Ø§Ù„Ø±Ø­Ù…Ù† ÙØ¤Ø§Ø¯ Ø¹Ù„Ù‰ Ø§Ø­Ù…Ø¯' src='https://secure.gravatar.com/avatar/0e6b70348e5cd374a67aa1c31b277dbe?s=70&#038;r=g' srcset='https://secure.gravatar.com/avatar/0e6b70348e5cd374a67aa1c31b277dbe?s=140&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' decoding='async'/></noscript>						</a>
+					</div>
+					
+				<div class="comment-body ">
+					<a class="comment-author" href="https://6wrni.com/csharp-oop/#comment-930">
+						Ø¹Ø¨Ø¯Ø§Ù„Ø±Ø­Ù…Ù† ÙØ¤Ø§Ø¯ Ø¹Ù„Ù‰ Ø§Ø­Ù…Ø¯					</a>
+					<p>Ø§Ù„Ø³Ù„Ø§Ù… Ø¹Ù„ÙŠÙƒÙ… ÙˆØ±Ø­Ù…Ø© Ø§Ù„Ù„Ù‡ ÙˆØ¨Ø±ÙƒØ§ØªÙ‡ Ø§Ù†Ø§ Ø§Ø®ÙˆÙƒ Ø§Ù„ØµØºÙŠØ± Ø¹Ø¨Ø¯Ø§Ù„Ø­Ù…Ù† ÙØ¤Ø§...</p>
+				</div>
+
+			</li>
+						<li>
+									<div class="post-widget-thumbnail" style="width:70px">
+						<a class="author-avatar" href="https://6wrni.com/unity-film-production/#comment-925">
+							<img alt='ØµÙˆØ±Ø© yassine' src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2070%2070'%3E%3C/svg%3E" data-lazy-srcset='https://secure.gravatar.com/avatar/32682da324d6d66aaeb1528b43bf2907?s=140&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' decoding='async' data-lazy-src="https://secure.gravatar.com/avatar/32682da324d6d66aaeb1528b43bf2907?s=70&#038;r=g"/><noscript><img alt='ØµÙˆØ±Ø© yassine' src='https://secure.gravatar.com/avatar/32682da324d6d66aaeb1528b43bf2907?s=70&#038;r=g' srcset='https://secure.gravatar.com/avatar/32682da324d6d66aaeb1528b43bf2907?s=140&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' decoding='async'/></noscript>						</a>
+					</div>
+					
+				<div class="comment-body ">
+					<a class="comment-author" href="https://6wrni.com/unity-film-production/#comment-925">
+						yassine					</a>
+					<p>Ø±Ø§Ø³Ù„Ù†ÙŠ Ù„Ùˆ ÙƒØ§Ù† Ù…Ù…ÙƒÙ† Ù„Ù„Ø¹Ù…Ù„ Ø¹Ù„Ù‰ Ù…Ø´Ø±ÙˆØ¹ Ø³ÙˆÙŠØ§ Ø£Ø±Ø§Ù‡ ÙÙŠ ØºØ§ÙŠØ© Ø§Ù„Ø±ÙˆØ¹Ø©...</p>
+				</div>
+
+			</li>
+			</ul><div class="clearfix"></div></div><!-- .widget /-->						</div><!-- .theiaStickySidebar /-->
+					</aside><!-- .sidebar /-->
+				
+			
+					</div><!-- .main-content-row -->
+				</div><!-- .container /-->
+				</div><!-- .section-item /-->
+</div><!-- .tiepost-26454-section-512 /-->
+
+	
+<footer id="footer" class="site-footer dark-skin dark-widgetized-area">
+
+	
+			<div id="footer-widgets-container">
+				<div class="container">
+					
+		<div class="footer-widget-area ">
+			<div class="tie-row">
+
+									<div class="fullwidth-area tie-col-sm-12">
+						<div id="tag_cloud-4" class="container-wrapper widget widget_tag_cloud"><div class="widget-title the-global-title"><div class="the-subtitle">ØªØ¹Ø±Ù Ø§ÙƒØ«Ø±<span class="widget-title-icon tie-icon"></span></div></div><div class="tagcloud"><a href="https://6wrni.com/tag/c/" class="tag-cloud-link tag-link-143 tag-link-position-1" style="font-size: 17.78313253012pt;" aria-label="#C (14 Ø¹Ù†ØµØ±)">#C</a>
+<a href="https://6wrni.com/tag/visual-c/" class="tag-cloud-link tag-link-185 tag-link-position-2" style="font-size: 9.6867469879518pt;" aria-label="#Visual C (4 Ø¹Ù†Ø§ØµØ±)">#Visual C</a>
+<a href="https://6wrni.com/tag/console/" class="tag-cloud-link tag-link-173 tag-link-position-3" style="font-size: 11.036144578313pt;" aria-label="Console (5 Ø¹Ù†Ø§ØµØ±)">Console</a>
+<a href="https://6wrni.com/tag/csharp/" class="tag-cloud-link tag-link-146 tag-link-position-4" style="font-size: 11.036144578313pt;" aria-label="csharp (5 Ø¹Ù†Ø§ØµØ±)">csharp</a>
+<a href="https://6wrni.com/tag/design/" class="tag-cloud-link tag-link-149 tag-link-position-5" style="font-size: 8pt;" aria-label="Design (3 Ø¹Ù†Ø§ØµØ±)">Design</a>
+<a href="https://6wrni.com/tag/game/" class="tag-cloud-link tag-link-148 tag-link-position-6" style="font-size: 13.060240963855pt;" aria-label="Game (7 Ø¹Ù†Ø§ØµØ±)">Game</a>
+<a href="https://6wrni.com/tag/game-design/" class="tag-cloud-link tag-link-153 tag-link-position-7" style="font-size: 8pt;" aria-label="game design (3 Ø¹Ù†Ø§ØµØ±)">game design</a>
+<a href="https://6wrni.com/tag/intellisense/" class="tag-cloud-link tag-link-160 tag-link-position-8" style="font-size: 8pt;" aria-label="IntelliSense (3 Ø¹Ù†Ø§ØµØ±)">IntelliSense</a>
+<a href="https://6wrni.com/tag/project/" class="tag-cloud-link tag-link-183 tag-link-position-9" style="font-size: 8pt;" aria-label="project (3 Ø¹Ù†Ø§ØµØ±)">project</a>
+<a href="https://6wrni.com/tag/unity/" class="tag-cloud-link tag-link-140 tag-link-position-10" style="font-size: 16.096385542169pt;" aria-label="unity (11 Ø¹Ù†ØµØ±)">unity</a>
+<a href="https://6wrni.com/tag/visual-studio/" class="tag-cloud-link tag-link-157 tag-link-position-11" style="font-size: 13.060240963855pt;" aria-label="Visual Studio (7 Ø¹Ù†Ø§ØµØ±)">Visual Studio</a>
+<a href="https://6wrni.com/tag/%d8%a3%d9%84%d8%b9%d8%a7%d8%a8/" class="tag-cloud-link tag-link-147 tag-link-position-12" style="font-size: 9.6867469879518pt;" aria-label="Ø£Ù„Ø¹Ø§Ø¨ (4 Ø¹Ù†Ø§ØµØ±)">Ø£Ù„Ø¹Ø§Ø¨</a>
+<a href="https://6wrni.com/tag/%d8%a8%d8%b1%d9%85%d8%ac%d8%a9/" class="tag-cloud-link tag-link-4 tag-link-position-13" style="font-size: 21.493975903614pt;" aria-label="Ø¨Ø±Ù…Ø¬Ø© (24 Ø¹Ù†ØµØ±)">Ø¨Ø±Ù…Ø¬Ø©</a>
+<a href="https://6wrni.com/tag/%d8%aa%d8%b7%d9%88%d9%8a%d8%b1/" class="tag-cloud-link tag-link-5 tag-link-position-14" style="font-size: 22pt;" aria-label="ØªØ·ÙˆÙŠØ± (26 Ø¹Ù†ØµØ±)">ØªØ·ÙˆÙŠØ±</a>
+<a href="https://6wrni.com/tag/%d8%aa%d8%b7%d9%88%d9%8a%d8%b1-%d8%a7%d9%84%d8%a3%d9%84%d8%b9%d8%a7%d8%a8/" class="tag-cloud-link tag-link-156 tag-link-position-15" style="font-size: 12.21686746988pt;" aria-label="ØªØ·ÙˆÙŠØ± Ø§Ù„Ø£Ù„Ø¹Ø§Ø¨ (6 Ø¹Ù†Ø§ØµØ±)">ØªØ·ÙˆÙŠØ± Ø§Ù„Ø£Ù„Ø¹Ø§Ø¨</a>
+<a href="https://6wrni.com/tag/%d8%aa%d8%b9%d9%84%d9%85/" class="tag-cloud-link tag-link-7 tag-link-position-16" style="font-size: 19.469879518072pt;" aria-label="ØªØ¹Ù„Ù… (18 Ø¹Ù†ØµØ±)">ØªØ¹Ù„Ù…</a>
+<a href="https://6wrni.com/tag/%d8%aa%d8%b9%d9%84%d9%8a%d9%85/" class="tag-cloud-link tag-link-6 tag-link-position-17" style="font-size: 19.132530120482pt;" aria-label="ØªØ¹Ù„ÙŠÙ… (17 Ø¹Ù†ØµØ±)">ØªØ¹Ù„ÙŠÙ…</a>
+<a href="https://6wrni.com/tag/%d8%b3%d9%8a-%d8%b4%d8%a7%d8%b1%d8%a8/" class="tag-cloud-link tag-link-144 tag-link-position-18" style="font-size: 13.060240963855pt;" aria-label="Ø³ÙŠ Ø´Ø§Ø±Ø¨ (7 Ø¹Ù†Ø§ØµØ±)">Ø³ÙŠ Ø´Ø§Ø±Ø¨</a></div>
+<div class="clearfix"></div></div><!-- .widget /-->					</div><!-- .tie-col /-->
+				
+									<div class="">
+											</div><!-- .tie-col /-->
+				
+									<div class="">
+											</div><!-- .tie-col /-->
+				
+									<div class="">
+											</div><!-- .tie-col /-->
+				
+			</div><!-- .tie-row /-->
+		</div><!-- .footer-widget-area /-->
+
+						</div><!-- .container /-->
+			</div><!-- #Footer-widgets-container /-->
+			
+			<div id="site-info" class="site-info site-info-layout-2">
+				<div class="container">
+					<div class="tie-row">
+						<div class="tie-col-md-12">
+
+							<div class="copyright-text copyright-text-first">Copyright 2023, All Rights Reserved</div><ul class="social-icons"><li class="social-icons-item"><a class="social-link facebook-social-icon" rel="external noopener nofollow" target="_blank" href="https://www.facebook.com/6wrni"><span class="tie-social-icon tie-icon-facebook"></span><span class="screen-reader-text">ÙÙŠØ³Ø¨ÙˆÙƒ</span></a></li><li class="social-icons-item"><a class="social-link twitter-social-icon" rel="external noopener nofollow" target="_blank" href="https://twitter.com/6wrni"><span class="tie-social-icon tie-icon-twitter"></span><span class="screen-reader-text">ØªÙˆÙŠØªØ±</span></a></li><li class="social-icons-item"><a class="social-link youtube-social-icon" rel="external noopener nofollow" target="_blank" href="https://www.youtube.com/c/6wrni"><span class="tie-social-icon tie-icon-youtube"></span><span class="screen-reader-text">ÙŠÙˆØªÙŠÙˆØ¨</span></a></li><li class="social-icons-item"><a class="social-link instagram-social-icon" rel="external noopener nofollow" target="_blank" href="https://www.instagram.com/6wrni/"><span class="tie-social-icon tie-icon-instagram"></span><span class="screen-reader-text">Ø§Ù†Ø³ØªÙ‚Ø±Ø§Ù…</span></a></li></ul> 
+
+						</div><!-- .tie-col /-->
+					</div><!-- .tie-row /-->
+				</div><!-- .container /-->
+			</div><!-- #site-info /-->
+			
+</footer><!-- #footer /-->
+
+
+		<a id="go-to-top" class="go-to-top-button" href="#go-to-tie-body">
+			<span class="tie-icon-angle-up"></span>
+			<span class="screen-reader-text">Ø²Ø± Ø§Ù„Ø°Ù‡Ø§Ø¨ Ø¥Ù„Ù‰ Ø§Ù„Ø£Ø¹Ù„Ù‰</span>
+		</a>
+	
+		</div><!-- #tie-wrapper /-->
+
+		
+	<aside class=" side-aside normal-side dark-skin dark-widgetized-area slide-sidebar-desktop is-fullwidth appear-from-left" aria-label="Ø§Ù„Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø¬Ø§Ù†Ø¨ÙŠØ© Ø§Ù„Ø«Ø§Ù†ÙˆÙŠØ©" style="visibility: hidden;">
+		<div data-height="100%" class="side-aside-wrapper has-custom-scroll">
+
+			<a href="#" class="close-side-aside remove big-btn light-btn">
+				<span class="screen-reader-text">Ø¥ØºÙ„Ø§Ù‚</span>
+			</a><!-- .close-side-aside /-->
+
+
+			
+				<div id="mobile-container">
+
+											<div id="mobile-search">
+							<form role="search" method="get" class="search-form" action="https://6wrni.com/">
+				<label>
+					<span class="screen-reader-text">Ø§Ù„Ø¨Ø­Ø« Ø¹Ù†:</span>
+					<input type="search" class="search-field" placeholder="Ø¨Ø­Ø« &hellip;" value="" name="s" />
+				</label>
+				<input type="submit" class="search-submit" value="Ø¨Ø­Ø«" />
+			</form>						</div><!-- #mobile-search /-->
+						
+					<div id="mobile-menu" class="">
+											</div><!-- #mobile-menu /-->
+
+											<div id="mobile-social-icons" class="social-icons-widget solid-social-icons">
+							<ul><li class="social-icons-item"><a class="social-link facebook-social-icon" rel="external noopener nofollow" target="_blank" href="https://www.facebook.com/6wrni"><span class="tie-social-icon tie-icon-facebook"></span><span class="screen-reader-text">ÙÙŠØ³Ø¨ÙˆÙƒ</span></a></li><li class="social-icons-item"><a class="social-link twitter-social-icon" rel="external noopener nofollow" target="_blank" href="https://twitter.com/6wrni"><span class="tie-social-icon tie-icon-twitter"></span><span class="screen-reader-text">ØªÙˆÙŠØªØ±</span></a></li><li class="social-icons-item"><a class="social-link youtube-social-icon" rel="external noopener nofollow" target="_blank" href="https://www.youtube.com/c/6wrni"><span class="tie-social-icon tie-icon-youtube"></span><span class="screen-reader-text">ÙŠÙˆØªÙŠÙˆØ¨</span></a></li><li class="social-icons-item"><a class="social-link instagram-social-icon" rel="external noopener nofollow" target="_blank" href="https://www.instagram.com/6wrni/"><span class="tie-social-icon tie-icon-instagram"></span><span class="screen-reader-text">Ø§Ù†Ø³ØªÙ‚Ø±Ø§Ù…</span></a></li></ul> 
+						</div><!-- #mobile-social-icons /-->
+						
+				</div><!-- #mobile-container /-->
+			
+
+							<div id="slide-sidebar-widgets">
+					<div id="posts-list-widget-2" class="container-wrapper widget posts-list"><div class="widget-title the-global-title"><div class="the-subtitle">Ø£ÙƒØ«Ø± Ø§Ù„Ù…Ù‚Ø§Ù„Ø§Øª Ù…Ø´Ø§Ù‡Ø¯Ø©<span class="widget-title-icon tie-icon"></span></div></div><div class="widget-posts-list-container posts-list-big-first has-first-big-post" ><ul class="posts-list-items widget-posts-wrapper">
+<li class="widget-single-post-item widget-post-list tie-standard">
+
+			<div class="post-widget-thumbnail">
+
+			
+			<a aria-label="#10 Ø§Ù„Ø¬Ù…Ù„Ø© Ø§Ù„Ø´Ø±Ø·ÙŠØ© IF â€“ Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C" href="https://6wrni.com/if-statement/" class="post-thumb"><span class="post-cat-wrap"><span class="post-cat tie-cat-139">C# .Net</span></span><img width="390" height="220" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20390%20220'%3E%3C/svg%3E" class="attachment-jannah-image-large size-jannah-image-large wp-post-image" alt="" decoding="async" data-lazy-srcset="https://6wrni.com/wp-content/uploads/2017/03/10-csharp-tutorial-if-statement-390x220.jpg 390w, https://6wrni.com/wp-content/uploads/2017/03/10-csharp-tutorial-if-statement-400x225.jpg 400w, https://6wrni.com/wp-content/uploads/2017/03/10-csharp-tutorial-if-statement-1024x576.jpg 1024w, https://6wrni.com/wp-content/uploads/2017/03/10-csharp-tutorial-if-statement-360x203.jpg 360w, https://6wrni.com/wp-content/uploads/2017/03/10-csharp-tutorial-if-statement-768x432.jpg 768w, https://6wrni.com/wp-content/uploads/2017/03/10-csharp-tutorial-if-statement-300x169.jpg 300w, https://6wrni.com/wp-content/uploads/2017/03/10-csharp-tutorial-if-statement-2x1.jpg 2w, https://6wrni.com/wp-content/uploads/2017/03/10-csharp-tutorial-if-statement.jpg 1280w" data-lazy-sizes="(max-width: 390px) 100vw, 390px" data-lazy-src="https://6wrni.com/wp-content/uploads/2017/03/10-csharp-tutorial-if-statement-390x220.jpg" /><noscript><img width="390" height="220" src="https://6wrni.com/wp-content/uploads/2017/03/10-csharp-tutorial-if-statement-390x220.jpg" class="attachment-jannah-image-large size-jannah-image-large wp-post-image" alt="" decoding="async" srcset="https://6wrni.com/wp-content/uploads/2017/03/10-csharp-tutorial-if-statement-390x220.jpg 390w, https://6wrni.com/wp-content/uploads/2017/03/10-csharp-tutorial-if-statement-400x225.jpg 400w, https://6wrni.com/wp-content/uploads/2017/03/10-csharp-tutorial-if-statement-1024x576.jpg 1024w, https://6wrni.com/wp-content/uploads/2017/03/10-csharp-tutorial-if-statement-360x203.jpg 360w, https://6wrni.com/wp-content/uploads/2017/03/10-csharp-tutorial-if-statement-768x432.jpg 768w, https://6wrni.com/wp-content/uploads/2017/03/10-csharp-tutorial-if-statement-300x169.jpg 300w, https://6wrni.com/wp-content/uploads/2017/03/10-csharp-tutorial-if-statement-2x1.jpg 2w, https://6wrni.com/wp-content/uploads/2017/03/10-csharp-tutorial-if-statement.jpg 1280w" sizes="(max-width: 390px) 100vw, 390px" /></noscript></a>		</div><!-- post-alignleft /-->
+	
+	<div class="post-widget-body ">
+		<h3 class="post-title"><a href="https://6wrni.com/if-statement/">#10 Ø§Ù„Ø¬Ù…Ù„Ø© Ø§Ù„Ø´Ø±Ø·ÙŠØ© IF â€“ Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C</a></h3>
+
+		<div class="post-meta">
+			<span class="date meta-item tie-icon">Ù…Ø§Ø±Ø³ 8, 2017</span>		</div>
+	</div>
+</li>
+
+<li class="widget-single-post-item widget-post-list">
+
+			<div class="post-widget-thumbnail">
+
+			
+			<a aria-label="#14 Ø§Ù„Ø¯ÙˆØ§Ù„ Methods â€“ Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C" href="https://6wrni.com/csharp-methods/" class="post-thumb"><img width="220" height="150" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20220%20150'%3E%3C/svg%3E" class="attachment-jannah-image-small size-jannah-image-small tie-small-image wp-post-image" alt="" decoding="async" data-lazy-srcset="https://6wrni.com/wp-content/uploads/2017/08/14-220x150.jpg 220w, https://6wrni.com/wp-content/uploads/2017/08/14-2x1.jpg 2w" data-lazy-sizes="(max-width: 220px) 100vw, 220px" data-lazy-src="https://6wrni.com/wp-content/uploads/2017/08/14-220x150.jpg" /><noscript><img width="220" height="150" src="https://6wrni.com/wp-content/uploads/2017/08/14-220x150.jpg" class="attachment-jannah-image-small size-jannah-image-small tie-small-image wp-post-image" alt="" decoding="async" srcset="https://6wrni.com/wp-content/uploads/2017/08/14-220x150.jpg 220w, https://6wrni.com/wp-content/uploads/2017/08/14-2x1.jpg 2w" sizes="(max-width: 220px) 100vw, 220px" /></noscript></a>		</div><!-- post-alignleft /-->
+	
+	<div class="post-widget-body ">
+		<h3 class="post-title"><a href="https://6wrni.com/csharp-methods/">#14 Ø§Ù„Ø¯ÙˆØ§Ù„ Methods â€“ Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C</a></h3>
+
+		<div class="post-meta">
+			<span class="date meta-item tie-icon">Ø£ØºØ³Ø·Ø³ 7, 2017</span>		</div>
+	</div>
+</li>
+
+<li class="widget-single-post-item widget-post-list tie-standard">
+
+			<div class="post-widget-thumbnail">
+
+			
+			<a aria-label="#9 Ø§Ù„Ù…ØªØºÙŠØ± Ø§Ù„Ù†ØµÙŠ String â€“ Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C" href="https://6wrni.com/variables-02/" class="post-thumb"><img width="220" height="150" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20220%20150'%3E%3C/svg%3E" class="attachment-jannah-image-small size-jannah-image-small tie-small-image wp-post-image" alt="" decoding="async" data-lazy-srcset="https://6wrni.com/wp-content/uploads/2017/03/09-csharp-tutorial-variables-2-220x150.jpg 220w, https://6wrni.com/wp-content/uploads/2017/03/09-csharp-tutorial-variables-2-2x1.jpg 2w" data-lazy-sizes="(max-width: 220px) 100vw, 220px" data-lazy-src="https://6wrni.com/wp-content/uploads/2017/03/09-csharp-tutorial-variables-2-220x150.jpg" /><noscript><img width="220" height="150" src="https://6wrni.com/wp-content/uploads/2017/03/09-csharp-tutorial-variables-2-220x150.jpg" class="attachment-jannah-image-small size-jannah-image-small tie-small-image wp-post-image" alt="" decoding="async" srcset="https://6wrni.com/wp-content/uploads/2017/03/09-csharp-tutorial-variables-2-220x150.jpg 220w, https://6wrni.com/wp-content/uploads/2017/03/09-csharp-tutorial-variables-2-2x1.jpg 2w" sizes="(max-width: 220px) 100vw, 220px" /></noscript></a>		</div><!-- post-alignleft /-->
+	
+	<div class="post-widget-body ">
+		<h3 class="post-title"><a href="https://6wrni.com/variables-02/">#9 Ø§Ù„Ù…ØªØºÙŠØ± Ø§Ù„Ù†ØµÙŠ String â€“ Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C</a></h3>
+
+		<div class="post-meta">
+			<span class="date meta-item tie-icon">ÙØ¨Ø±Ø§ÙŠØ± 23, 2017</span>		</div>
+	</div>
+</li>
+
+<li class="widget-single-post-item widget-post-list">
+
+			<div class="post-widget-thumbnail">
+
+			
+			<a aria-label="#13 Ø§Ù„Ù…ØµÙÙˆÙØ§Øª Arrays â€“ Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C" href="https://6wrni.com/understand-arrays-csharp/" class="post-thumb"><img width="220" height="150" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20220%20150'%3E%3C/svg%3E" class="attachment-jannah-image-small size-jannah-image-small tie-small-image wp-post-image" alt="" decoding="async" data-lazy-srcset="https://6wrni.com/wp-content/uploads/2017/07/13-220x150.jpg 220w, https://6wrni.com/wp-content/uploads/2017/07/13-2x1.jpg 2w" data-lazy-sizes="(max-width: 220px) 100vw, 220px" data-lazy-src="https://6wrni.com/wp-content/uploads/2017/07/13-220x150.jpg" /><noscript><img width="220" height="150" src="https://6wrni.com/wp-content/uploads/2017/07/13-220x150.jpg" class="attachment-jannah-image-small size-jannah-image-small tie-small-image wp-post-image" alt="" decoding="async" srcset="https://6wrni.com/wp-content/uploads/2017/07/13-220x150.jpg 220w, https://6wrni.com/wp-content/uploads/2017/07/13-2x1.jpg 2w" sizes="(max-width: 220px) 100vw, 220px" /></noscript></a>		</div><!-- post-alignleft /-->
+	
+	<div class="post-widget-body ">
+		<h3 class="post-title"><a href="https://6wrni.com/understand-arrays-csharp/">#13 Ø§Ù„Ù…ØµÙÙˆÙØ§Øª Arrays â€“ Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C</a></h3>
+
+		<div class="post-meta">
+			<span class="date meta-item tie-icon">ÙŠÙˆÙ„ÙŠÙˆ 20, 2017</span>		</div>
+	</div>
+</li>
+
+<li class="widget-single-post-item widget-post-list">
+
+			<div class="post-widget-thumbnail">
+
+			
+			<a aria-label="#17 Ø§Ù„ØªØ§Ø±ÙŠØ® ÙˆØ§Ù„ÙˆÙ‚Øª DateTime â€“ Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C" href="https://6wrni.com/csharp-datetime/" class="post-thumb"><img width="220" height="150" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20220%20150'%3E%3C/svg%3E" class="attachment-jannah-image-small size-jannah-image-small tie-small-image wp-post-image" alt="" decoding="async" data-lazy-srcset="https://6wrni.com/wp-content/uploads/2017/10/17-220x150.jpg 220w, https://6wrni.com/wp-content/uploads/2017/10/17-2x1.jpg 2w" data-lazy-sizes="(max-width: 220px) 100vw, 220px" data-lazy-src="https://6wrni.com/wp-content/uploads/2017/10/17-220x150.jpg" /><noscript><img width="220" height="150" src="https://6wrni.com/wp-content/uploads/2017/10/17-220x150.jpg" class="attachment-jannah-image-small size-jannah-image-small tie-small-image wp-post-image" alt="" decoding="async" srcset="https://6wrni.com/wp-content/uploads/2017/10/17-220x150.jpg 220w, https://6wrni.com/wp-content/uploads/2017/10/17-2x1.jpg 2w" sizes="(max-width: 220px) 100vw, 220px" /></noscript></a>		</div><!-- post-alignleft /-->
+	
+	<div class="post-widget-body ">
+		<h3 class="post-title"><a href="https://6wrni.com/csharp-datetime/">#17 Ø§Ù„ØªØ§Ø±ÙŠØ® ÙˆØ§Ù„ÙˆÙ‚Øª DateTime â€“ Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C</a></h3>
+
+		<div class="post-meta">
+			<span class="date meta-item tie-icon">Ø£ÙƒØªÙˆØ¨Ø± 26, 2017</span>		</div>
+	</div>
+</li>
+</ul></div><div class="clearfix"></div></div><!-- .widget /--><div id="posts-list-widget-3" class="container-wrapper widget posts-list"><div class="widget-title the-global-title"><div class="the-subtitle">Ø£ÙƒØ«Ø± Ø§Ù„Ù…Ù‚Ø§Ù„Ø§Øª ØªØ¹Ù„ÙŠÙ‚Ø§ÙŽ<span class="widget-title-icon tie-icon"></span></div></div><div class="widget-posts-list-container timeline-widget" ><ul class="posts-list-items widget-posts-wrapper">					<li class="widget-single-post-item">
+						<a href="https://6wrni.com/learn-programming-using-c-sharp-intro/">
+							<span class="date meta-item tie-icon">Ø¯ÙŠØ³Ù…Ø¨Ø± 22, 2016</span>							<h3>#1 Ø§Ù„Ù…Ù‚Ø¯Ù…Ø© &#8211; Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C</h3>
+						</a>
+					</li>
+										<li class="widget-single-post-item">
+						<a href="https://6wrni.com/install-visual-studio/">
+							<span class="date meta-item tie-icon">ÙŠÙ†Ø§ÙŠØ± 2, 2017</span>							<h3>#3 ØªÙ†ØµÙŠØ¨ Visual Studio â€“ Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C</h3>
+						</a>
+					</li>
+										<li class="widget-single-post-item">
+						<a href="https://6wrni.com/fundamental-c-sharp-basic/">
+							<span class="date meta-item tie-icon">Ù†ÙˆÙÙ…Ø¨Ø± 22, 2016</span>							<h3>ØªÙŽØ¹Ù„ÙÙ…Ù Ø§Ù„Ø¨Ø±Ù…Ø¬Ø©Ù Ù„Ù„Ù…Ø¨ØªØ¯Ø¦ÙŠÙ†ÙŽ ÙƒÙ„ÙŠØ§Ù‹ Ø¨ÙˆØ§Ø³Ø·Ø©Ù #C</h3>
+						</a>
+					</li>
+										<li class="widget-single-post-item">
+						<a href="https://6wrni.com/why-c-sharp/">
+							<span class="date meta-item tie-icon">Ø¯ÙŠØ³Ù…Ø¨Ø± 29, 2016</span>							<h3>#2 Ù„Ù…Ø§Ø°Ø§ Ø§Ù„Ø³ÙŠ Ø´Ø§Ø±Ø¨ â€“ Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C</h3>
+						</a>
+					</li>
+										<li class="widget-single-post-item">
+						<a href="https://6wrni.com/project-files/">
+							<span class="date meta-item tie-icon">ÙŠÙ†Ø§ÙŠØ± 25, 2017</span>							<h3>#7 Ù…Ù„ÙØ§ØªÙ Ø§Ù„Ù…Ø´Ø±ÙˆØ¹Ù Project Files â€“ Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C</h3>
+						</a>
+					</li>
+										<li class="widget-single-post-item">
+						<a href="https://6wrni.com/write-first-program-hello-world/">
+							<span class="date meta-item tie-icon">ÙŠÙ†Ø§ÙŠØ± 5, 2017</span>							<h3>#4 ÙƒØªØ§Ø¨Ø©Ù Ø§Ù„ØªØ·Ø¨ÙŠÙ‚Ù Ø§Ù„Ø£ÙˆÙ„ â€“ Ø§Ù„Ø¨Ø±Ù…Ø¬Ø© Ø¨ÙˆØ§Ø³Ø·Ø© #C</h3>
+						</a>
+					</li>
+					</ul></div><div class="clearfix"></div></div><!-- .widget /--><div id="comments_avatar-widget-1" class="container-wrapper widget recent-comments-widget"><div class="widget-title the-global-title"><div class="the-subtitle">Ø§Ø­Ø¯Ø« Ø§Ù„ØªØ¹Ù„ÙŠÙ‚Ø§Øª<span class="widget-title-icon tie-icon"></span></div></div><ul>			<li>
+									<div class="post-widget-thumbnail" style="width:70px">
+						<a class="author-avatar" href="https://6wrni.com/csharp-working-with-classes/#comment-944">
+							<img alt='ØµÙˆØ±Ø© Ø³ÙˆØ³Ùˆ' src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2070%2070'%3E%3C/svg%3E" data-lazy-srcset='https://secure.gravatar.com/avatar/2dc8c26d81764579419f55d8743548b5?s=140&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' decoding='async' data-lazy-src="https://secure.gravatar.com/avatar/2dc8c26d81764579419f55d8743548b5?s=70&#038;r=g"/><noscript><img alt='ØµÙˆØ±Ø© Ø³ÙˆØ³Ùˆ' src='https://secure.gravatar.com/avatar/2dc8c26d81764579419f55d8743548b5?s=70&#038;r=g' srcset='https://secure.gravatar.com/avatar/2dc8c26d81764579419f55d8743548b5?s=140&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' decoding='async'/></noscript>						</a>
+					</div>
+					
+				<div class="comment-body ">
+					<a class="comment-author" href="https://6wrni.com/csharp-working-with-classes/#comment-944">
+						Ø³ÙˆØ³Ùˆ					</a>
+					<p>Ù…ÙˆÙ‚Ø¹ Ø±Ø§Ø¦Ø¹...</p>
+				</div>
+
+			</li>
+						<li>
+									<div class="post-widget-thumbnail" style="width:70px">
+						<a class="author-avatar" href="https://6wrni.com/unity-game-engine-features/#comment-943">
+							<img alt='ØµÙˆØ±Ø© ÙƒÙŠØ±Ù„Ø³ ÙˆØ¬ÙŠÙ‡ Ù…Ø±Ø²ÙˆÙ‚' src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2070%2070'%3E%3C/svg%3E" data-lazy-srcset='https://secure.gravatar.com/avatar/e93ae9f4e58bedb7d32f7ed0052927ee?s=140&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' decoding='async' data-lazy-src="https://secure.gravatar.com/avatar/e93ae9f4e58bedb7d32f7ed0052927ee?s=70&#038;r=g"/><noscript><img alt='ØµÙˆØ±Ø© ÙƒÙŠØ±Ù„Ø³ ÙˆØ¬ÙŠÙ‡ Ù…Ø±Ø²ÙˆÙ‚' src='https://secure.gravatar.com/avatar/e93ae9f4e58bedb7d32f7ed0052927ee?s=70&#038;r=g' srcset='https://secure.gravatar.com/avatar/e93ae9f4e58bedb7d32f7ed0052927ee?s=140&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' decoding='async'/></noscript>						</a>
+					</div>
+					
+				<div class="comment-body ">
+					<a class="comment-author" href="https://6wrni.com/unity-game-engine-features/#comment-943">
+						ÙƒÙŠØ±Ù„Ø³ ÙˆØ¬ÙŠÙ‡ Ù…Ø±Ø²ÙˆÙ‚					</a>
+					<p>Ø§Ø±ÙŠØ¯ Ø§Ù†Ø¶Ù…Ø§Ù… Ø§Ù„ÙŠÙƒÙ… Ø§Ù†Ù†ÙŠ Ø§Ø­Ø¨ Ù‡Ø°Ø§ Ø§Ù„Ù…Ø¬Ø§Ù„...</p>
+				</div>
+
+			</li>
+						<li>
+									<div class="post-widget-thumbnail" style="width:70px">
+						<a class="author-avatar" href="https://6wrni.com/unity-game-engine-features/#comment-940">
+							<img alt='ØµÙˆØ±Ø© rima' src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2070%2070'%3E%3C/svg%3E" data-lazy-srcset='https://secure.gravatar.com/avatar/f5fb7158f4afd5c57341bed27e71d3c2?s=140&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' decoding='async' data-lazy-src="https://secure.gravatar.com/avatar/f5fb7158f4afd5c57341bed27e71d3c2?s=70&#038;r=g"/><noscript><img alt='ØµÙˆØ±Ø© rima' src='https://secure.gravatar.com/avatar/f5fb7158f4afd5c57341bed27e71d3c2?s=70&#038;r=g' srcset='https://secure.gravatar.com/avatar/f5fb7158f4afd5c57341bed27e71d3c2?s=140&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' decoding='async'/></noscript>						</a>
+					</div>
+					
+				<div class="comment-body ">
+					<a class="comment-author" href="https://6wrni.com/unity-game-engine-features/#comment-940">
+						rima					</a>
+					<p>Ù„Ùˆ Ø³Ù…Ø­Øª Ø§Ø±ÙŠØ¯ Ø§Ù† Ø§ØªØ¹Ù„Ù… ÙƒÙŠÙÙŠØ© Ø±Ø¨Ø· Ø§Ù„Ù…Ø´Ø§Ù‡Ø¯ ÙˆØ§Ù„Ù…Ø±Ø§Ø­Ù„ Ù…Ø¹ Ø¨Ø¹Ø¶Ù‡Ø§ Ø§Ù„...</p>
+				</div>
+
+			</li>
+						<li>
+									<div class="post-widget-thumbnail" style="width:70px">
+						<a class="author-avatar" href="https://6wrni.com/understand-first-program/#comment-932">
+							<img alt='ØµÙˆØ±Ø© Ø­Ø³ÙŠÙ† ÙØ¶Ù„ Ø§Ù„ØºØ§Ù†Ù…ÙŠ Ø§Ù„ÙŠÙ…Ø§Ù†ÙŠ' src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2070%2070'%3E%3C/svg%3E" data-lazy-srcset='https://secure.gravatar.com/avatar/d0191b46718ca911a2d3600df2311573?s=140&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' decoding='async' data-lazy-src="https://secure.gravatar.com/avatar/d0191b46718ca911a2d3600df2311573?s=70&#038;r=g"/><noscript><img alt='ØµÙˆØ±Ø© Ø­Ø³ÙŠÙ† ÙØ¶Ù„ Ø§Ù„ØºØ§Ù†Ù…ÙŠ Ø§Ù„ÙŠÙ…Ø§Ù†ÙŠ' src='https://secure.gravatar.com/avatar/d0191b46718ca911a2d3600df2311573?s=70&#038;r=g' srcset='https://secure.gravatar.com/avatar/d0191b46718ca911a2d3600df2311573?s=140&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' decoding='async'/></noscript>						</a>
+					</div>
+					
+				<div class="comment-body ">
+					<a class="comment-author" href="https://6wrni.com/understand-first-program/#comment-932">
+						Ø­Ø³ÙŠÙ† ÙØ¶Ù„ Ø§Ù„ØºØ§Ù†Ù…ÙŠ Ø§Ù„ÙŠÙ…Ø§Ù†ÙŠ					</a>
+					<p>Ø¬Ø²Ø§ÙƒÙ… Ø§Ù„Ù„Ù‡ Ø®ÙŠØ± Ø§Ù„Ø¬Ø²Ø§Ø¡ Ø¨Ù…Ø§ ØªØ³Ø¹ÙˆÙ† Ù„ØªØ¹Ù„ÙŠÙ… Ø§Ù„Ù…Ø¬ØªÙ…Ø¹ Ø§Ù„Ø¹Ù„ÙˆÙ… Ø§Ù„Ù†Ø§ÙØ¹...</p>
+				</div>
+
+			</li>
+						<li>
+									<div class="post-widget-thumbnail" style="width:70px">
+						<a class="author-avatar" href="https://6wrni.com/csharp-oop/#comment-930">
+							<img alt='ØµÙˆØ±Ø© Ø¹Ø¨Ø¯Ø§Ù„Ø±Ø­Ù…Ù† ÙØ¤Ø§Ø¯ Ø¹Ù„Ù‰ Ø§Ø­Ù…Ø¯' src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2070%2070'%3E%3C/svg%3E" data-lazy-srcset='https://secure.gravatar.com/avatar/0e6b70348e5cd374a67aa1c31b277dbe?s=140&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' decoding='async' data-lazy-src="https://secure.gravatar.com/avatar/0e6b70348e5cd374a67aa1c31b277dbe?s=70&#038;r=g"/><noscript><img alt='ØµÙˆØ±Ø© Ø¹Ø¨Ø¯Ø§Ù„Ø±Ø­Ù…Ù† ÙØ¤Ø§Ø¯ Ø¹Ù„Ù‰ Ø§Ø­Ù…Ø¯' src='https://secure.gravatar.com/avatar/0e6b70348e5cd374a67aa1c31b277dbe?s=70&#038;r=g' srcset='https://secure.gravatar.com/avatar/0e6b70348e5cd374a67aa1c31b277dbe?s=140&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' decoding='async'/></noscript>						</a>
+					</div>
+					
+				<div class="comment-body ">
+					<a class="comment-author" href="https://6wrni.com/csharp-oop/#comment-930">
+						Ø¹Ø¨Ø¯Ø§Ù„Ø±Ø­Ù…Ù† ÙØ¤Ø§Ø¯ Ø¹Ù„Ù‰ Ø§Ø­Ù…Ø¯					</a>
+					<p>Ø§Ù„Ø³Ù„Ø§Ù… Ø¹Ù„ÙŠÙƒÙ… ÙˆØ±Ø­Ù…Ø© Ø§Ù„Ù„Ù‡ ÙˆØ¨Ø±ÙƒØ§ØªÙ‡ Ø§Ù†Ø§ Ø§Ø®ÙˆÙƒ Ø§Ù„ØµØºÙŠØ± Ø¹Ø¨Ø¯Ø§Ù„Ø­Ù…Ù† ÙØ¤Ø§...</p>
+				</div>
+
+			</li>
+			</ul><div class="clearfix"></div></div><!-- .widget /--><div id="text-8" class="container-wrapper widget widget_text">			<div class="textwidget"><p><script type="rocketlazyloadscript" id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/9399294ed17224d186f8a7f19/8b2928cb41a60877a1390f00e.js");</script></p>
+</div>
+		<div class="clearfix"></div></div><!-- .widget /-->				</div>
+			
+		</div><!-- .side-aside-wrapper /-->
+	</aside><!-- .side-aside /-->
+
+	
+	</div><!-- #tie-container /-->
+</div><!-- .background-overlay /-->
+
+<div id="autocomplete-suggestions" class="autocomplete-suggestions"></div><div id="is-scroller-outer"><div id="is-scroller"></div></div><div id="fb-root"></div>	<div id="tie-popup-search-desktop" class="tie-popup tie-popup-search-wrap" style="display: none;">
+		<a href="#" class="tie-btn-close remove big-btn light-btn">
+			<span class="screen-reader-text">Ø¥ØºÙ„Ø§Ù‚</span>
+		</a>
+		<div class="popup-search-wrap-inner">
+			<div class="live-search-parent pop-up-live-search" data-skin="live-search-popup" aria-label="Ø¨Ø­Ø«">
+				<form method="get" class="tie-popup-search-form" action="https://6wrni.com/">
+					<input class="tie-popup-search-input is-ajax-search" inputmode="search" type="text" name="s" title="Ø¨Ø­Ø« Ø¹Ù†" autocomplete="off" placeholder="Ø¥ÙƒØªØ¨ ÙƒÙ„Ù…Ø© Ø§Ù„Ø¨Ø­Ø« Ø«Ù… Ø¥Ø¶ØºØ· Ø²Ø± Ø§Ù„Ø¥Ø¯Ø®Ø§Ù„" />
+					<button class="tie-popup-search-submit" type="submit">
+						<span class="tie-icon-search tie-search-icon" aria-hidden="true"></span>
+						<span class="screen-reader-text">Ø¨Ø­Ø« Ø¹Ù†</span>
+					</button>
+				</form>
+			</div><!-- .pop-up-live-search /-->
+		</div><!-- .popup-search-wrap-inner /-->
+	</div><!-- .tie-popup-search-wrap /-->
+		<div id="tie-popup-search-mobile" class="tie-popup tie-popup-search-wrap" style="display: none;">
+		<a href="#" class="tie-btn-close remove big-btn light-btn">
+			<span class="screen-reader-text">Ø¥ØºÙ„Ø§Ù‚</span>
+		</a>
+		<div class="popup-search-wrap-inner">
+			<div class="live-search-parent pop-up-live-search" data-skin="live-search-popup" aria-label="Ø¨Ø­Ø«">
+				<form method="get" class="tie-popup-search-form" action="https://6wrni.com/">
+					<input class="tie-popup-search-input " inputmode="search" type="text" name="s" title="Ø¨Ø­Ø« Ø¹Ù†" autocomplete="off" placeholder="Ø¨Ø­Ø« Ø¹Ù†" />
+					<button class="tie-popup-search-submit" type="submit">
+						<span class="tie-icon-search tie-search-icon" aria-hidden="true"></span>
+						<span class="screen-reader-text">Ø¨Ø­Ø« Ø¹Ù†</span>
+					</button>
+				</form>
+			</div><!-- .pop-up-live-search /-->
+		</div><!-- .popup-search-wrap-inner /-->
+	</div><!-- .tie-popup-search-wrap /-->
+		<div id="tie-popup-login" class="tie-popup" style="display: none;">
+		<a href="#" class="tie-btn-close remove big-btn light-btn">
+			<span class="screen-reader-text">Ø¥ØºÙ„Ø§Ù‚</span>
+		</a>
+		<div class="tie-popup-container">
+			<div class="container-wrapper">
+				<div class="widget login-widget">
+
+					<div class="widget-title the-global-title">
+						<div class="the-subtitle">ØªØ³Ø¬ÙŠÙ„ Ø§Ù„Ø¯Ø®ÙˆÙ„ <span class="widget-title-icon tie-icon"></span></div>
+					</div>
+
+					<div class="widget-container">
+						
+	<div class="login-form">
+
+		<form name="registerform" action="https://6wrni.com/wp-login.php" method="post">
+			<input type="text" name="log" title="Ø¥Ø³Ù… Ø§Ù„Ù…Ø³ØªØ®Ø¯Ù…" placeholder="Ø¥Ø³Ù… Ø§Ù„Ù…Ø³ØªØ®Ø¯Ù…">
+			<div class="pass-container">
+				<input type="password" name="pwd" title="ÙƒÙ„Ù…Ø© Ø§Ù„Ù…Ø±ÙˆØ±" placeholder="ÙƒÙ„Ù…Ø© Ø§Ù„Ù…Ø±ÙˆØ±">
+				<a class="forget-text" href="https://6wrni.com/wp-login.php?action=lostpassword&redirect_to=https%3A%2F%2F6wrni.com">Ù†Ø³ÙŠØª ÙƒÙ„Ù…Ø© Ø§Ù„Ù…Ø±ÙˆØ±ØŸ</a>
+			</div>
+
+			<input type="hidden" name="redirect_to" value="/"/>
+			<label for="rememberme" class="rememberme">
+				<input id="rememberme" name="rememberme" type="checkbox" checked="checked" value="forever" /> ØªØ°ÙƒØ±Ù†ÙŠ			</label>
+
+			
+			
+			<button type="submit" class="button fullwidth login-submit">ØªØ³Ø¬ÙŠÙ„ Ø§Ù„Ø¯Ø®ÙˆÙ„</button>
+
+					</form>
+
+		
+	</div>
+						</div><!-- .widget-container  /-->
+				</div><!-- .login-widget  /-->
+			</div><!-- .container-wrapper  /-->
+		</div><!-- .tie-popup-container /-->
+	</div><!-- .tie-popup /-->
+	<script type='text/javascript' id='cookie-consent-js-extra'>
+/* <![CDATA[ */
+var ctcc_vars = {"expiry":"30","method":"1","version":"1"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='https://6wrni.com/wp-content/cache/min/1/wp-content/plugins/uk-cookie-consent/assets/js/uk-cookie-consent-js.js?ver=1625238119' id='cookie-consent-js' defer></script>
+<script type='text/javascript' id='tie-scripts-js-extra'>
+/* <![CDATA[ */
+var tie = {"is_rtl":"1","ajaxurl":"https:\/\/6wrni.com\/wp-admin\/admin-ajax.php","is_taqyeem_active":"1","is_sticky_video":"","mobile_menu_top":"","mobile_menu_active":"area_1","mobile_menu_parent":"","lightbox_all":"true","lightbox_gallery":"true","lightbox_skin":"dark","lightbox_thumb":"horizontal","lightbox_arrows":"true","is_singular":"1","autoload_posts":"","reading_indicator":"true","lazyload":"","select_share":"true","select_share_twitter":"true","select_share_facebook":"true","select_share_linkedin":"true","select_share_email":"","facebook_app_id":"5303202981","twitter_username":"","responsive_tables":"true","ad_blocker_detector":"","sticky_behavior":"upwards","sticky_desktop":"true","sticky_mobile":"true","sticky_mobile_behavior":"default","ajax_loader":"<div class=\"loader-overlay\"><div class=\"spinner-circle\"><\/div><\/div>","type_to_search":"1","lang_no_results":"\u0644\u0645 \u064a\u062a\u0645 \u0627\u0644\u0639\u062b\u0648\u0631 \u0639\u0644\u0649 \u0646\u062a\u0627\u0626\u062c","sticky_share_mobile":"true","sticky_share_post":""};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://6wrni.com/wp-content/themes/jannah/assets/js/scripts.min.js?ver=5.2.1' id='tie-scripts-js' defer></script>
+<script type="rocketlazyloadscript" id="tie-scripts-js-after" data-rocket-type="text/javascript">
+var _foxpush = _foxpush || [];
+        _foxpush.push(['_setDomain', '6wrnicom']);
+
+        (function(){
+            var foxscript = document.createElement('script');
+            foxscript.src = '//cdn.foxpush.net/sdk/foxpush_SDK_min.js';
+            foxscript.type = 'text/javascript';
+            foxscript.async = 'true';
+            var fox_s = document.getElementsByTagName('script')[0];
+            fox_s.parentNode.insertBefore(foxscript, fox_s);})();
+			
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='https://6wrni.com/wp-content/cache/min/1/wp-content/themes/jannah/assets/ilightbox/lightbox.js?ver=1625238119' id='tie-js-ilightbox-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://6wrni.com/wp-content/themes/jannah/assets/js/sliders.min.js?ver=5.2.1' id='tie-js-sliders-js' defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='https://6wrni.com/wp-content/cache/min/1/wp-content/themes/jannah/assets/js/shortcodes.js?ver=1625238119' id='tie-js-shortcodes-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://6wrni.com/wp-content/themes/jannah/assets/js/desktop.min.js?ver=5.2.1' id='tie-js-desktop-js' defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='https://6wrni.com/wp-content/cache/min/1/wp-content/themes/jannah/assets/js/live-search.js?ver=1625238119' id='tie-js-livesearch-js' defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='https://6wrni.com/wp-content/cache/min/1/wp-content/themes/jannah/assets/js/videos-playlist.js?ver=1625238119' id='tie-js-videoslist-js' defer></script>
+<script type="rocketlazyloadscript">
+				WebFontConfig ={
+					google:{
+						families: [ 'Cairo:600,regular:latin', 'Cairo:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,800,800italic,900,900italic:latin&display=swap' ]
+					}
+				};
+
+				(function(){
+					var wf   = document.createElement('script');
+					wf.src   = '//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+					wf.type  = 'text/javascript';
+					wf.defer = 'true';
+					var s = document.getElementsByTagName('script')[0];
+					s.parentNode.insertBefore(wf, s);
+				})();
+			</script>			
+				<script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+					jQuery(document).ready(function($){
+												if(!catapultReadCookie("catAccCookies")){ // If the cookie has not been set then show the bar
+							$("html").addClass("has-cookie-bar");
+							$("html").addClass("cookie-bar-bottom-bar");
+							$("html").addClass("cookie-bar-bar");
+													}
+																			ctccFirstPage();
+											});
+				</script>
+			
+			<div id="catapult-cookie-bar" class=""><div class="ctcc-inner "><span class="ctcc-left-side">Ù„ØªØ³Ù‡ÙŠÙ„ ØªØµÙØ­ Ø§Ù„Ù…ÙˆÙ‚Ø¹ Ù†Ø­Ù† Ù†Ø¹Ù„Ù…Ùƒ Ø£Ù†Ù†Ø§ Ù†Ø³ØªØ®Ø¯Ù… Ù…Ù„ÙØ§Øª Ø§Ù„ÙƒÙˆÙƒÙŠØ²  <a class="ctcc-more-info-link" tabindex=0 target="_blank" href="https://6wrni.com/privacy-policy/">ØªØ¹Ø±Ù Ø£ÙƒØ«Ø±</a></span><span class="ctcc-right-side"><button id="catapultCookie" tabindex=0 onclick="catapultAcceptCookies();">Ø­Ø³Ù†Ø§Ù‹</button></span></div><!-- custom wrapper class --></div><!-- #catapult-cookie-bar -->		<script type="rocketlazyloadscript" data-rocket-type='text/javascript'>
+			!function(t){"use strict";t.loadCSS||(t.loadCSS=function(){});var e=loadCSS.relpreload={};if(e.support=function(){var e;try{e=t.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),e.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.addEventListener?t.removeEventListener("load",a):t.attachEvent&&t.detachEvent("onload",a),t.setAttribute("onload",null),t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},e.poly=function(){if(!e.support())for(var a=t.document.getElementsByTagName("link"),n=0;n<a.length;n++){var o=a[n];"preload"!==o.rel||"style"!==o.getAttribute("as")||o.getAttribute("data-loadcss")||(o.setAttribute("data-loadcss",!0),e.bindMediaToggle(o))}},!e.support()){e.poly();var a=t.setInterval(e.poly,500);t.addEventListener?t.addEventListener("load",function(){e.poly(),t.clearInterval(a)}):t.attachEvent&&t.attachEvent("onload",function(){e.poly(),t.clearInterval(a)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:t.loadCSS=loadCSS}("undefined"!=typeof global?global:this);
+		</script>
+
+		<script type="rocketlazyloadscript" data-rocket-type='text/javascript'>
+			var c = document.body.className;
+			c = c.replace(/tie-no-js/, 'tie-js');
+			document.body.className = c;
+		</script>
+		<script>window.lazyLoadOptions={elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}};window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async src="https://6wrni.com/wp-content/plugins/wp-rocket/assets/js/lazyload/16.1/lazyload.min.js"></script><script>function lazyLoadThumb(e){var t='<img loading="lazy" data-lazy-src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"><noscript><img src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"></noscript>',a='<div class="play"></div>';return t.replace("ID",e)+a}function lazyLoadYoutubeIframe(){var e=document.createElement("iframe"),t="ID?autoplay=1";t+=0===this.dataset.query.length?'':'&'+this.dataset.query;e.setAttribute("src",t.replace("ID",this.dataset.src)),e.setAttribute("frameborder","0"),e.setAttribute("allowfullscreen","1"),e.setAttribute("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"),this.parentNode.replaceChild(e,this)}document.addEventListener("DOMContentLoaded",function(){var e,t,a=document.getElementsByClassName("rll-youtube-player");for(t=0;t<a.length;t++)e=document.createElement("div"),e.setAttribute("data-id",a[t].dataset.id),e.setAttribute("data-query", a[t].dataset.query),e.setAttribute("data-src", a[t].dataset.src),e.innerHTML=lazyLoadThumb(a[t].dataset.id),e.onclick=lazyLoadYoutubeIframe,a[t].appendChild(e)});</script>
+<script type="rocketlazyloadscript">"use strict";var wprRemoveCPCSS=function wprRemoveCPCSS(){var elem;document.querySelector('link[data-rocket-async="style"][rel="preload"]')?setTimeout(wprRemoveCPCSS,200):(elem=document.getElementById("rocket-critical-css"))&&"remove"in elem&&elem.remove()};window.addEventListener?window.addEventListener("load",wprRemoveCPCSS):window.attachEvent&&window.attachEvent("onload",wprRemoveCPCSS);</script><noscript><link rel="stylesheet" href="https://6wrni.com/wp-content/cache/min/1/d6ec9a2223209c169fd1bbeafbb020f6.css" media="all" data-minify="1" /></noscript></body>
+</html>
+
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1692164013 -->

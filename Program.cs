@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using System.Net;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -139,7 +141,15 @@ namespace CSharpRef
 
             //Lesson 21 Encapsulation : private variable or function of class cannot be accessed in global scope
 
-            //Lesson 22 
+            //Lesson 22 : Class Library 
+            System.Console.WriteLine("Hello");
+            //we may type the name of library or we may not 
+            string text = "This is a simple file written by C# using System.IO Library.";
+            System.IO.File.WriteAllText(@"C:\Users\Mohamed Khalil\source\repos\CSharpRef\Hello.txt", text);
+
+            WebClient socket = new WebClient();
+            string response = socket.DownloadString("http://6wrni.com");
+            System.IO.File.WriteAllText(@"C:\Users\Mohamed Khalil\source\repos\CSharpRef\6wrni_Text.txt", response);
 
 
 
