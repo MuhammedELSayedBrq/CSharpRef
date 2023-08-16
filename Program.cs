@@ -156,8 +156,8 @@ namespace CSharpRef
 
             //Lesson 23 : DLL Class Library : in new project, class library
             //To import a library press Tools, Nuget package manager, Manage for solution then choose the lib
-            operations newOp = new operations();
-            Console.WriteLine( newOp.sub(1, 2));
+            operations newOp = new operations(1,2);
+            Console.WriteLine( newOp.AllOperations());
 
 
 
