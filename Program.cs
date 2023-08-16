@@ -154,10 +154,13 @@ namespace CSharpRef
             System.IO.File.WriteAllText(@"C:\Users\Mohamed Khalil\source\repos\CSharpRef\6wrni_Text.txt", response);
             */
 
+            /*
             //Lesson 23 : DLL Class Library : in new project, class library
             //To import a library press Tools, Nuget package manager, Manage for solution then choose the lib
             operations newOp = new operations(1,2);
             Console.WriteLine( newOp.AllOperations());
+            */
+
 
 
 
