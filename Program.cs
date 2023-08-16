@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MyClassLibrary;
 
 namespace CSharpRef
 {
@@ -141,6 +142,7 @@ namespace CSharpRef
 
             //Lesson 21 Encapsulation : private variable or function of class cannot be accessed in global scope
 
+            /*
             //Lesson 22 : Class Library 
             System.Console.WriteLine("Hello");
             //we may type the name of library or we may not 
@@ -150,6 +152,12 @@ namespace CSharpRef
             WebClient socket = new WebClient();
             string response = socket.DownloadString("http://6wrni.com");
             System.IO.File.WriteAllText(@"C:\Users\Mohamed Khalil\source\repos\CSharpRef\6wrni_Text.txt", response);
+            */
+
+            //Lesson 23 : DLL Class Library : in new project, class library
+            //To import a library press Tools, Nuget package manager, Manage for solution then choose the lib
+            operations newOp = new operations();
+            Console.WriteLine( newOp.sub(1, 2));
 
 
 
