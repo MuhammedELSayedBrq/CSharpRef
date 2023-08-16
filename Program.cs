@@ -129,9 +129,16 @@ namespace CSharpRef
             Console.WriteLine(MarketValue(car1));
             */
 
+            /*
             //Lesson 19
             cycle myCycle = new cycle("Ferrari", "off-road", 2023, "grey with red seats");
             cycle.printCount();
+            */
+
+            //Lesson 20 : variables in same class can be used anywhere in class
+
+            //Lesson 21
+
 
 
             Console.WriteLine("----------------End of Context----------------");
