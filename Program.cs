@@ -2,6 +2,7 @@
 using System.IO;
 using System.Net;
 using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -161,6 +162,47 @@ namespace CSharpRef
             Console.WriteLine( newOp.AllOperations());
             */
 
+            /*
+            // Lesson 24 : Collections
+            Account acc1 = new Account();
+            acc1.Name = "Account1";
+            acc1.ID = "ACC001";
+            acc1.Balance = 1000000;
+            
+            Account acc2 = new Account();
+            acc2.Name = "Account2";
+            acc2.ID = "ACC002";
+            acc2.Balance = 2000000;
+
+            Book b1 = new Book();
+            b1.Title = "Rich dad, poor dad.";
+            b1.Author = "mike wezouski";
+            b1.ISBN = "0-1234-5678";
+
+            ArrayList myArrayList = new ArrayList();
+            myArrayList.Add(acc1);
+            myArrayList.Add(acc2);
+
+            List<Account> myList = new List<Account>();
+            myList.Add(acc1);
+            myList.Add(acc2);
+
+            Dictionary<string, Account> myDicitionary = new Dictionary<string, Account>();
+            myDicitionary.Add(acc1.ID, acc1);
+            myDicitionary.Add(acc2.ID, acc2);
+
+            Console.WriteLine(myDicitionary["ACC001"].Name);
+
+
+            foreach(Account item in myArrayList)
+            {
+                Console.WriteLine(item.Name);
+            }
+            */
+
+
+
+
 
 
 
@@ -195,6 +237,19 @@ namespace CSharpRef
 
     }
 
+    class Account
+    {
+        public string ID { get; set; }
+        public string Name { get; set; }
+        public int Balance { get; set; }
+    }
+
+    class Book
+    {
+        public string Title { get; set; }
+        public string Author { get; set; }
+        public string ISBN { get; set; }
+    }
     class cycle
     {
         public cycle()
