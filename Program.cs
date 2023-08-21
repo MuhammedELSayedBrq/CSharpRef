@@ -6,6 +6,7 @@ using System.Collections;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using MyClassLibrary;
 
 namespace CSharpRef
@@ -183,6 +184,7 @@ namespace CSharpRef
             myArrayList.Add(acc1);
             myArrayList.Add(acc2);
 
+            // List is better than ArrayList cause it reduces runtime errors by raising errors in compile time.
             List<Account> myList = new List<Account>();
             myList.Add(acc1);
             myList.Add(acc2);
@@ -200,17 +202,27 @@ namespace CSharpRef
             }
             */
 
+            //Lesson 25 : Event Handler
+            /*                         ms
+            Timer myTimer = new Timer(2000);
+            myTimer.Elapsed += MyTimer_Elapsed;
+            myTimer.Start();
 
 
 
-
-
+            */
 
 
             Console.WriteLine("----------------End of Context----------------");
             Console.ReadLine();
             //Console.ReadKey();
 
+        }
+
+        private static void MyTimer_Elapsed(object sender, ElapsedEventArgs e)
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("Elapsed: {0}",e.SignalTime);
         }
 
         private static decimal MarketValue(Car car)
